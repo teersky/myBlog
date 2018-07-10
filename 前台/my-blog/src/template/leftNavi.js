@@ -8,27 +8,12 @@ import {
 import {
     Link,
 } from 'react-router-dom';
+import PropTypes from "prop-types";
 import ChildPage from "./child"
+import "./style.css"
 
 let style = {
-    div_style: {
-        width: "120px",
-        background: "rgb(66,66,66)",
-        height: "100%",
-        paddingTop: "10px"
-    },
-    li_style: {
-        color: "#ffffff",
-        padding: "10px 0",
-        textAlign: "center",
-        borderBottom: "1px solid #cccccc"
-    },
-    scrollBox: {
-        height: '100%',
-        overflow: "hidden",
-        position: "relative"
-    },
-    oUl: {},
+    oUl: {}
 }
 class leftNavi extends Component {
     constructor(props) {
@@ -36,13 +21,6 @@ class leftNavi extends Component {
         //不能调用state
         this.state = { //第二步，赋初始值
             oUl: {
-                width: '100%',
-                overflowX: "hidden",
-                padding: 0,
-                margin: 0,
-                userSelect: 'none',
-                position: 'absolute',
-                left: 0,
                 top: 0
             },
             isListShow: false,
@@ -50,33 +28,42 @@ class leftNavi extends Component {
             run_T: 0,
             end_T: 0,
             canDrag: false,
-            stauts: props,
-            endClickPoint: 0
+            props: props,
+            endClickPoint: 0,
+            pageMulse: 0,
         };
     }
+    static contextTypes = {
+        mouseMoveLen:PropTypes.string,
+        callback:PropTypes.func,
+    }
     mouseDownEv(event) {
-        console.log(event.clientY );
-        this.setState({
-            start_T: event.clientY,
-            canDrag: true
-        });
+        console.log("down")
+        let ScrollBox_all = this.ScrollBox_all.offsetHeight;
+        let ScrollBox = this.ScrollBox.offsetHeight;
+        if(ScrollBox > ScrollBox_all){
+            this.setState({
+                start_T: event.clientY,
+                canDrag: true,
+                pageMulse: ScrollBox - ScrollBox_all
+            });
+        }
         this.props.handleEv("hello");
     }
     mouseMoveEv(event) {
-        
+       
         if (this.state.canDrag == true) {
-            console.log(this.state.endClickPoint);
+            let top_num = -(-event.clientY + this.state.start_T - this.state.endClickPoint);
+            if( top_num > 0){
+                top_num = 0;
+            }
+            if(top_num < -this.state.pageMulse){
+                top_num =  -this.state.pageMulse
+            }
             this.setState({
                 run_T: event.clientY,
                 oUl: {
-                    width: '100%',
-                    overflowX: "hidden",
-                    padding: 0,
-                    margin: 0,
-                    userSelect: 'none',
-                    position: 'absolute',
-                    left: 0,
-                    top: -(event.clientY - this.state.start_T - this.state.endClickPoint)
+                    top: top_num
                 }
             });
         }
@@ -94,18 +81,34 @@ class leftNavi extends Component {
         });
     }
     render() {
+        const mouseMoveLen = { color:this.context.mouseMoveLen }
+        console.log(mouseMoveLen);
         return (
-            <div style={style.div_style}>
-                <div className="scrollBox" style={ style.scrollBox } onMouseDown={(event) => { this.mouseDownEv(event) }} onMouseMove={(event) => { this.mouseMoveEv(event) }} onMouseUp={(event) => { this.mouseUpEv(event) }} onMouseLeave={(event) => { this.mouseLeaveEv(event) }}>
-                    <ul style={this.state.oUl} >
-                        <li style={style.li_style}>第一页</li>
-                        <li style={style.li_style}>第二页</li>
-                        <li style={style.li_style}>第三页</li>
-                        <li style={style.li_style}>第四页</li>
-                        <li style={style.li_style}>第一页</li>
-                        <li style={style.li_style}>第二页</li>
-                        <li style={style.li_style}>第三页</li>
-                        <li style={style.li_style}><ChildPage /></li>
+            <div className="div_style">
+                <div className="scrollBox"  onMouseDown={(event) => { this.mouseDownEv(event) }} onMouseMove={(event) => { this.mouseMoveEv(event) }} onMouseUp={(event) => { this.mouseUpEv(event) }} onMouseLeave={(event) => { this.mouseLeaveEv(event) }} ref={dom => {this.ScrollBox_all = dom}}>
+                    <ul className="oUl" ref={dom => {this.ScrollBox = dom}} style={ this.state.oUl }>
+                        <li className="li_style">第一页</li>
+                        <li className="li_style">第二页</li>
+                        <li className="li_style">第三页</li>
+                        <li className="li_style">第四页</li>
+                        <li className="li_style">第一页</li>
+                        <li className="li_style">第二页</li>
+                        <li className="li_style">第三页</li>
+                        <li className="li_style">第一页</li>
+                        <li className="li_style">第二页</li>
+                        <li className="li_style">第三页</li>
+                        <li className="li_style">第四页</li>
+                        <li className="li_style">第一页</li>
+                        <li className="li_style">第二页</li>
+                        <li className="li_style">第三页</li>
+                        <li className="li_style">第一页</li>
+                        <li className="li_style">第二页</li>
+                        <li className="li_style">第三页</li>
+                        <li className="li_style">第四页</li>
+                        <li className="li_style">第一页</li>
+                        <li className="li_style">第二页</li>
+                        <li className="li_style">第n页</li>
+                        {/*<Route path="/page3" component={Page03}*/}
                     </ul>
                 </div>
             </div>

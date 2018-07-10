@@ -1,7 +1,7 @@
 import React, { Component }from 'react';
 import { Icon } from 'antd';
 import { Link, } from 'react-router-dom';
-import './top.css';
+import './style.css';
 
 let user = "admin";
 var block_index = 0;

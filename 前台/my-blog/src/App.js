@@ -38,7 +38,9 @@ let style = {
   },
   page_detail: {
     width: "100%",
-    height: "calc(100% - 65px)"
+    height: "calc(100% - 65px)",
+    position: "relative",
+    cursor: "pointer"
   },
   left_navi: {
     height: "100%",
@@ -51,59 +53,56 @@ class App extends Component {
     super(props); //第一步，这是必须的
     //不能调用state
     this.state = { //第二步，赋初始值
-      keyUp: false
+      keyUp: false,
+      mouseDownPoint: 0,
+      mouseMoveLen: 0
     };
   }
   MouseUpEv() {
-    console.log("keyUp");
     this.setState({
       keyUp: true
     });
   }
   handleEv(event) {
-    console.log("event:"+event)
+    //console.log("event:"+event)
   }
 
   static childContextTypes = {
-      color:PropTypes.string,
+      mouseMoveLen:PropTypes.string,
       callback:PropTypes.func,
   }
 
   // 父组件提供一个函数，用来返回相应的 context 对象
   getChildContext(){
       return{
-          color:"red",
-          callback:this.callback.bind(this)
+          mouseMoveLen: this.state.mouseMoveLen,
+          callback: this.callback.bind(this)
       }
   }
   callback(msg){
     console.log(msg)
   }
-
+  mouseDownEv (event){
+    //console.log(event.clientX || event.touches[0].clientX);
+    let e = event || event.touches[0]
+    this.setState({
+      mouseDownPoint: e.clientX
+    });
+  }
+  mouseMoveEv(event){
+    let e = event || event.touches[0]
+    this.setState({
+      mouseMoveLen: e.clientX - this.state.mouseDownPoint
+    });
+  }
   render() {
     return (
       <Router>
         <div className="App" style={ style.app } onMouseUp={ () => {this.MouseUpEv() }}>
-         {/*  <Row>
-            <Col span={4}>
-              <LeftNavi title="首页"/>
-            </Col>
-            <Col span={20}>
-              <TopBar title="首页"/>
-              <div>
-                <Route exact path="/" component={Home} />
-                <Route path="/home" component={Home} />
-                <Route path="/page1" component={Page01} />
-                <Route path="/page2" component={Page02} />
-                <Route path="/page3" component={Page03} />
-              </div>
-            </Col>
-          </Row> */}
-
           <div className="page_top" style={ style.page_top }>
             <TopBar title="首页" />
           </div>
-          <div className="page_detail" style={ style.page_detail }>
+          <div className="page_detail" style={ style.page_detail } onMouseDown={(event) => {this.mouseDownEv(event)}} onTouchStart={(event) => {this.mouseDownEv(event)}} onTouchMove={(event) => {console.log(event.touches[0].clientX)}}>
               <LeftNavi title="首页" style={style.left_navi} status={this.state.keyUp} handleEv={this.handleEv.bind(this)} />
           </div>
         </div>
