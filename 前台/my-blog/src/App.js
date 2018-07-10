@@ -63,6 +63,19 @@ class App extends Component {
     console.log("event:"+event)
   }
 
+  static childContextTypes = {
+      color:PropTypes.string,
+      callback:PropTypes.func,
+  }
+
+  // 父组件提供一个函数，用来返回相应的 context 对象
+  getChildContext(){
+      return{
+          color:"red",
+          callback:this.callback.bind(this)
+      }
+  }
+
   render() {
     return (
       <Router>
