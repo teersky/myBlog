@@ -8,6 +8,7 @@ import {
 import {
     Link,
 } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 class leftNavi extends Component {
     constructor(props) {
@@ -19,11 +20,18 @@ class leftNavi extends Component {
         callback:PropTypes.func,
     }
     clickEv(){
-        console.log(this.contextTypes.color);
+        console.log(this);
     }
     render() {
+        const cb = (msg) => {
+            return () => {
+                this.context.callback(msg);
+            }
+        }
         return (
-            <a href="javascript:;" onClick={this.clickEv}>点我</a>
+            <div>
+            <a href="javascript:;" onClick = { cb("我胡汉三又回来了！") }>点我</a>
+            <a href="javascript:;" onClick = { () => {this.clickEv()} }>点我2</a>  </div>
         )
     }
 }

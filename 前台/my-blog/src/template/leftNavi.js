@@ -8,6 +8,7 @@ import {
 import {
     Link,
 } from 'react-router-dom';
+import ChildPage from "./child"
 
 let style = {
     div_style: {
@@ -104,7 +105,7 @@ class leftNavi extends Component {
                         <li style={style.li_style}>第一页</li>
                         <li style={style.li_style}>第二页</li>
                         <li style={style.li_style}>第三页</li>
-                        <li style={style.li_style}>第四页</li>
+                        <li style={style.li_style}><ChildPage /></li>
                     </ul>
                 </div>
             </div>

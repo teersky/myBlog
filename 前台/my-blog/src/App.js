@@ -14,6 +14,7 @@ import {
   Row,
   Col
 } from 'antd';
+import PropTypes from "prop-types";
 import 'antd/dist/antd.css';
 
 import './App.css';
@@ -74,6 +75,9 @@ class App extends Component {
           color:"red",
           callback:this.callback.bind(this)
       }
+  }
+  callback(msg){
+    console.log(msg)
   }
 
   render() {
