@@ -23,7 +23,7 @@
 .li_style.open > p, .LineStyle{border-left-color: #00AAFF; cursor: pointer;}
 .left_tit_nave_icon{font-size: 14px; color: #fff; display: inline-block; margin-right: 6px;}
 .li_style.open > ul p{color: #ccc; border-top: 1px solid #363636; cursor: pointer;}
-.li_style.open > ul li:hover p{color: #fff;}
+.li_style.open > ul li:hover p a{color: #fff;}
 @media screen and (max-width: 530px) {
     .tit_navi{display: block; position: absolute; right: 0; top: 65px; background: #fff; box-shadow: 0px 0px 6px #aaaa; height: initial; } 
     .openList{width: 65px; height: 65px; display: flex; display: -webkit-flex; justify-content: center; align-items: center;}

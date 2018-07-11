@@ -101,6 +101,9 @@ class leftNavi extends Component {
     handleWheel(event) {
         console.log(event)
     }
+    listClick(event){
+        console.log(event.target)
+    }
     render() {
         const mouseMoveLen = Number(this.context.mouseMoveLen);
         const  windowWidth = Number(this.context.windowWidth);
@@ -146,18 +149,18 @@ class leftNavi extends Component {
 
                     <ul className="oUl" ref={dom => {this.ScrollBox = dom}} style={this.state.oUl}>
                         <li className="li_style open">
-                            <p> <Icon type="home" className="left_tit_nave_icon"/>第一页</p>
+                            <p  onClick={(event) => {this.listClick(event)}}> <Icon type="home" className="left_tit_nave_icon"/>第一页</p>
                             <ul>
                                 <li>
-                                    <p><Link to="/page1" className="LineStyle">第一子页</Link></p>
+                                    <p><Link to="/page1" className="LineStyle" style={{display: 'block', width: '100%', height: '100%', color: "#ccc", textDecotation: "none"}}>第一子页</Link></p>
                                 </li>
                                 <li>
-                                    <p><Link to="/page2" >第二子页</Link></p>
+                                    <p><Link to="/page2"  style={{display: 'block', width: '100%', height: '100%', color: "#ccc", textDecotation: "none"}}>第二子页</Link></p>
                                 </li>
                             </ul>
                         </li>
                         <li className="li_style">
-                            <p> <Icon type="home" className="left_tit_nave_icon"/>第一页</p>
+                            <p> <Icon type="home" className="left_tit_nave_icon" />第一页</p>
                             <ul>
                                 <li>
                                     <p>第一子页</p>
