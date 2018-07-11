@@ -34,7 +34,9 @@ let style = {
     height: "65px",
     background: "#ffffff",
     background: "#2d2828",
-    boxShadow: "3px 3px 10px #888888"
+    boxShadow: "3px 3px 10px #888888",
+    position: 'relative',
+    zIndex: 10
   },
   page_detail: {
     width: "100%",
@@ -47,7 +49,7 @@ let style = {
     overflow: 'scroll'
   }
 }
-
+let wid_w = 0;
 class App extends Component {
   constructor(props) {
     super(props); //第一步，这是必须的
@@ -55,7 +57,10 @@ class App extends Component {
     this.state = { //第二步，赋初始值
       keyUp: false,
       mouseDownPoint: 0,
-      mouseMoveLen: 0
+      mouseMoveLen: 0,
+      windowWidth: 0,
+      mouseUp: false,
+      mouseDown: false,
     };
   }
   MouseUpEv() {
@@ -68,42 +73,80 @@ class App extends Component {
   }
 
   static childContextTypes = {
+    isMouseUp:PropTypes.bool,
+      windowWidth:PropTypes.string,
       mouseMoveLen:PropTypes.string,
       callback:PropTypes.func,
   }
+ 
 
   // 父组件提供一个函数，用来返回相应的 context 对象
   getChildContext(){
       return{
-          mouseMoveLen: this.state.mouseMoveLen,
+          isMouseUp: this.state.mouseUp,
+          windowWidth: this.state.windowWidth.toString(),
+          mouseMoveLen: this.state.mouseMoveLen.toString(),
           callback: this.callback.bind(this)
       }
   }
   callback(msg){
-    console.log(msg)
+    //console.log(msg)
   }
   mouseDownEv (event){
-    //console.log(event.clientX || event.touches[0].clientX);
-    let e = event || event.touches[0]
+    let clientX
+    if(event.touches != undefined){
+      clientX = event.touches[0].clientX;
+    }else{
+      clientX = event.clientX;
+    }
+   
     this.setState({
-      mouseDownPoint: e.clientX
+      mouseDownPoint: clientX,
+      mouseUp: false,
+      mouseDown: true
     });
   }
   mouseMoveEv(event){
-    let e = event || event.touches[0]
+    if(this.state.mouseDown){
+      let clientX = null;
+      if(event.touches != undefined){
+        clientX = event.touches[0].clientX;
+      }else{
+        clientX = event.clientX;
+      }
+      this.setState({
+        mouseMoveLen: clientX - this.state.mouseDownPoint
+      });
+    }
+  }
+  mouseUpEv(){
     this.setState({
-      mouseMoveLen: e.clientX - this.state.mouseDownPoint
+      mouseUp: true,
+      mouseDown: false
+    })
+  }
+  componentDidMount(){
+    let el =  this.divStyle;
+    wid_w = el.offsetWidth
+    this.setState({
+      windowWidth: el.offsetWidth
     });
   }
+  
   render() {
     return (
       <Router>
-        <div className="App" style={ style.app } onMouseUp={ () => {this.MouseUpEv() }}>
+        <div className="App" style={ style.app } onMouseUp={ () => {this.MouseUpEv() }} ref={dom => {this.divStyle = dom}}>
           <div className="page_top" style={ style.page_top }>
             <TopBar title="首页" />
           </div>
-          <div className="page_detail" style={ style.page_detail } onMouseDown={(event) => {this.mouseDownEv(event)}} onTouchStart={(event) => {this.mouseDownEv(event)}} onTouchMove={(event) => {console.log(event.touches[0].clientX)}}>
+          <div className="page_detail" style={ style.page_detail }>
               <LeftNavi title="首页" style={style.left_navi} status={this.state.keyUp} handleEv={this.handleEv.bind(this)} />
+              <div className="detailBox"  onMouseDown={(event) => {this.mouseDownEv(event)}} onMouseMove={(event) => {this.mouseMoveEv(event)}} onMouseUp={() => {this.mouseUpEv()}} onTouchStart={(event) => {this.mouseDownEv(event)}} onTouchMove={(event) => {this.mouseMoveEv(event)}} onTouchEnd={() => {this.mouseUpEv()}}>
+                  <Route path="/page1" component={Page01}></Route>
+                  <Route path="/page2" component={Page02}></Route>
+              </div>
+
           </div>
         </div>
       </Router>

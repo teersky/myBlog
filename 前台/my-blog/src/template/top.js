@@ -10,17 +10,14 @@ let style = {
 }
 class NavBar extends Component{
     constructor(props){
-        super(props);//第一步，这是必须的
-        //不能调用state
-        this.state = {//第二步，赋初始值
-        
+        super(props);
+        this.state = {
             isListShow: false
         };
     }
     
     
     list = () => {
-        console.log("hahah");
         block_index++;         
         this.setState({
             isListShow: !this.state.isListShow,

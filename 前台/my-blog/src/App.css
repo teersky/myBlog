@@ -1,5 +1,5 @@
 .App {
   text-align: left;
 }
-
-
+.page_detail{display: flex; display: -webkit-flex; display: -moz-flex;}
+.detailBox{flex: 1}
