@@ -16,13 +16,13 @@
 .scrollBox{height: 100%; overflow: hidden; position: relative }
 .oUl{ width: 100%; overflow-x: hidden; padding: 0; margin: 0; user-select: none; position: absolute; left: 0; top: 0}
 .li_style > p{line-height: 46px; margin: 0; border-left: 3px solid rgb(66,66,66);}
-.li_style > ul{display: none;}
+.li_style > ul{display: none; overflow: hidden;}
 .li_style > ul li p{margin: 0; line-height: 42px;}
-.li_style.open{background: #252c35;}
+.li_style.open{background: #252c35; color: #fff;}
 .li_style.open > ul{display: block;}
 .li_style.open > p, .LineStyle{border-left-color: #00AAFF; cursor: pointer;}
 .left_tit_nave_icon{font-size: 14px; color: #fff; display: inline-block; margin-right: 6px;}
-.li_style.open > ul p{color: #ccc; border-top: 1px solid #363636; cursor: pointer;}
+.li_style.open > ul p{color: #fff; border-top: 1px solid #363636; cursor: pointer;}
 .li_style.open > ul li:hover p a{color: #fff;}
 @media screen and (max-width: 530px) {
     .tit_navi{display: block; position: absolute; right: 0; top: 65px; background: #fff; box-shadow: 0px 0px 6px #aaaa; height: initial; } 

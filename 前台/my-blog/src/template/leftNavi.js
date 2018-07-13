@@ -34,7 +34,8 @@ class leftNavi extends Component {
             props: props,
             endClickPoint: 0,
             pageMulse: 0,
-            oldLocation: -120
+            oldLocation: -120,
+            openIndex: 0
         };
     }
     static contextTypes = {
@@ -101,8 +102,15 @@ class leftNavi extends Component {
     handleWheel(event) {
         console.log(event)
     }
-    listClick(event){
-        console.log(event.target)
+    listClick(event, index){
+        let arr = [];
+        let num = index.toString();
+       for(var i = 1; i <= num.length; i++){
+           arr.push(num.slice(0,i))
+       }
+        this.setState({
+            openIndex: arr
+        })
     }
     render() {
         const mouseMoveLen = Number(this.context.mouseMoveLen);
@@ -138,8 +146,11 @@ class leftNavi extends Component {
                 }
             }
         }
+        var arr = this.state.openIndex;
+        console.log(arr);
+
         return (
-            <div className="div_style" style={{left:  wid_W}}>
+            <div className="div_style" style={{left:  wid_W}} text={"text".split("")[0]}>
                 <div className="scrollBox"  
                     onMouseDown={(event) => { this.mouseDownEv(event) }} onMouseMove={(event) => { this.mouseMoveEv(event) }} 
                     onMouseUp={(event) => { this.mouseUpEv(event) }} onMouseLeave={(event) => { this.mouseLeaveEv(event) }} 
@@ -148,31 +159,33 @@ class leftNavi extends Component {
                     onWheel={this.handleWheel} ref={dom => {this.ScrollBox_all = dom}}>
 
                     <ul className="oUl" ref={dom => {this.ScrollBox = dom}} style={this.state.oUl}>
-                        <li className="li_style open">
-                            <p  onClick={(event) => {this.listClick(event)}}> <Icon type="home" className="left_tit_nave_icon"/>第一页</p>
+                        <li className={ arr[0] == 0 ? "li_style open": "li_style"} >
+                            <p onClick={(event) => {this.listClick(event, 0)}}><Link to="msgShow"> <Icon type="home" className="left_tit_nave_icon"/>信息展示</Link></p>
+                        </li>
+                        <li  className={arr[0]== 1 ? "li_style open": "li_style"} >
+                            <p onClick={(event) => {this.listClick(event, 1)}}><Link to="BlogHandle"><Icon type="home" className="left_tit_nave_icon" />博文处理</Link></p>
                             <ul>
-                                <li>
-                                    <p><Link to="/page1" className="LineStyle" style={{display: 'block', width: '100%', height: '100%', color: "#ccc", textDecotation: "none"}}>第一子页</Link></p>
+                                <li className={arr[1] == 11 ? "li_style open": "li_style"}>
+                                    <p onClick={(event) => {this.listClick(event, 11)}}><Link to="blogShow">博文预览</Link></p>
                                 </li>
-                                <li>
-                                    <p><Link to="/page2"  style={{display: 'block', width: '100%', height: '100%', color: "#ccc", textDecotation: "none"}}>第二子页</Link></p>
+                                <li className={this.state.openIndex[1] == 12 ? "li_style open": "li_style"}>
+                                    <p onClick={(event) => {this.listClick(event, 12)}}><Link to="blogEditor">博文编辑</Link></p>
+                                </li>
+                                <li className={this.state.openIndex[1] == 13 ? "li_style open": "li_style"}>
+                                    <p onClick={(event) => {this.listClick(event, 13)}}><Link to="blogModify">博文修改</Link></p>
                                 </li>
                             </ul>
                         </li>
-                        <li className="li_style">
-                            <p> <Icon type="home" className="left_tit_nave_icon" />第一页</p>
+                        <li  className={this.state.openIndex == 2 ? "li_style open": "li_style"}>
+                            <p onClick={(event) => {this.listClick(event, 2)}}> <Icon type="home" className="left_tit_nave_icon"/><Link to="userComments">用户评论</Link></p>
                             <ul>
-                                <li>
-                                    <p>第一子页</p>
-                                </li>
+                              
                             </ul>
                         </li>
-                        <li className="li_style">
-                            <p> <Icon type="home" className="left_tit_nave_icon"/>第一页</p>
+                        <li  className={this.nstate.openIndex == 3 ? "li_style open": "li_style"}>
+                            <p onClick={(event) => {this.listClick(event, 3)}}><Link to="rightsManagement" className="llistLinkTo"><Icon type="home" className="left_tit_nave_icon"/>权限管理</Link></p>
                             <ul>
-                                <li>
-                                    <p>第一子页</p>
-                                </li>
+
                             </ul>
                         </li>
                     
