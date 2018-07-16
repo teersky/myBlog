@@ -6,14 +6,7 @@ import {
   Route,
 } from 'react-router-dom';
 
-import {
-  Layout,
-  Menu,
-  Breadcrumb,
-  Icon,
-  Row,
-  Col
-} from 'antd';
+
 import PropTypes from "prop-types";
 import 'antd/dist/antd.css';
 
@@ -24,6 +17,7 @@ import Home from './page/Home/index';
 import Page01 from './page/page1/index';
 import Page02 from './page/page2/index';
 import Page03 from './page/page3/index';
+import APIData from "./modules/get-api"
 
 let style = {
   app: {
@@ -90,7 +84,7 @@ class App extends Component {
       }
   }
   callback(msg){
-    //console.log(msg)
+   
   }
   mouseDownEv (event){
     let clientX
@@ -134,6 +128,19 @@ class App extends Component {
   }
   
   render() {
+    APIData.get("http://www.weather.com.cn/data/sk/101190408.html")//调用自定义组件方法，返回一个Promise
+    .then((result) => {//then函数会返回一个新的promise
+        // this.setState({
+        //     result:JSON.stringify(result),//序列化：转换为一个 (字符串)JSON字符串
+        // });
+        console.log(result);
+    })
+    .catch((error) => {
+        console.log(error);
+        // this.setState({
+        //     result: JSON.stringify(error),//把错误信息格式化为字符串
+        // })
+    })
     return (
       <Router>
         <div className="App" style={ style.app } onMouseUp={ () => {this.MouseUpEv() }} ref={dom => {this.divStyle = dom}}>
@@ -143,8 +150,8 @@ class App extends Component {
           <div className="page_detail" style={ style.page_detail }>
               <LeftNavi title="首页" style={style.left_navi} status={this.state.keyUp} handleEv={this.handleEv.bind(this)} />
               <div className="detailBox"  onMouseDown={(event) => {this.mouseDownEv(event)}} onMouseMove={(event) => {this.mouseMoveEv(event)}} onMouseUp={() => {this.mouseUpEv()}} onTouchStart={(event) => {this.mouseDownEv(event)}} onTouchMove={(event) => {this.mouseMoveEv(event)}} onTouchEnd={() => {this.mouseUpEv()}}>
-                  <Route path="/page1" component={Page01}></Route>
-                  <Route path="/page2" component={Page02}></Route>
+                  <Route path="/msgShow" component={Page01}></Route>
+                  <Route path="/BlogHandle" component={Page02}></Route>
               </div>
 
           </div>

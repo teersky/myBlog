@@ -1,6 +1,8 @@
 import React, { Component }from 'react';
 import { Icon } from 'antd';
-import { Link, } from 'react-router-dom';
+import {
+    Link,
+} from 'react-router-dom';
 import './style.css';
 
 let user = "admin";
@@ -41,8 +43,10 @@ class NavBar extends Component{
                             <span className="tit_navi_txt">用户:{user}</span>
                         </li>
                         <li className="tit_navi_list">
-                            <Icon type="home" className="tit_nave_icon"/>
-                            <span className="tit_navi_txt">系统首页</span>
+                            <Link to="/">
+                                <Icon type="home" className="tit_nave_icon"/>
+                                <span className="tit_navi_txt">系统首页</span>
+                            </Link>
                         </li>
                         <li className="tit_navi_list" onClick={() => {this.reloadEv()}}>
                             <Icon type="sync" className="tit_nave_icon"/>

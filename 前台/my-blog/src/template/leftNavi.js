@@ -10,12 +10,14 @@ import {
     Link,
 } from 'react-router-dom';
 import PropTypes from "prop-types";
-import ChildPage from "./child"
+
 import "./style.css"
+import LeftNaviList from './leftNaviList';
 
 let style = {
     oUl: {}
 }
+let oUl_height = 0;
 let old_Wid_W = -120;
 class leftNavi extends Component {
     constructor(props) {
@@ -35,9 +37,10 @@ class leftNavi extends Component {
             endClickPoint: 0,
             pageMulse: 0,
             oldLocation: -120,
-            openIndex: 0
+            openIndex: 0,
         };
     }
+    
     static contextTypes = {
         isMouseUp: PropTypes.bool,
         windowWidth:PropTypes.string,
@@ -51,9 +54,8 @@ class leftNavi extends Component {
           }else{
             clientY = event.clientY;
           }
-     //   let clientY = event.clientY || event.touches[0].clientY;
         let ScrollBox_all = this.ScrollBox_all.offsetHeight;
-        let ScrollBox = this.ScrollBox.offsetHeight;
+        let ScrollBox = oUl_height;
         if(ScrollBox > ScrollBox_all){
             this.setState({
                 start_T: clientY,
@@ -70,7 +72,6 @@ class leftNavi extends Component {
           }else{
             clientY = event.clientY;
           }
-       // let clientY = event.clientY || event.touches[0].clientY;
         if (this.state.canDrag == true) {
             let top_num = -(-clientY + this.state.start_T - this.state.endClickPoint);
             if( top_num > 0){
@@ -87,6 +88,9 @@ class leftNavi extends Component {
             });
         }
     }
+    callBackDate(event) {
+        oUl_height = event;
+    }
     mouseUpEv() {
         this.setState({
             canDrag: false,
@@ -102,16 +106,7 @@ class leftNavi extends Component {
     handleWheel(event) {
         console.log(event)
     }
-    listClick(event, index){
-        let arr = [];
-        let num = index.toString();
-       for(var i = 1; i <= num.length; i++){
-           arr.push(num.slice(0,i))
-       }
-        this.setState({
-            openIndex: arr
-        })
-    }
+    
     render() {
         const mouseMoveLen = Number(this.context.mouseMoveLen);
         const  windowWidth = Number(this.context.windowWidth);
@@ -146,9 +141,6 @@ class leftNavi extends Component {
                 }
             }
         }
-        var arr = this.state.openIndex;
-        console.log(arr);
-
         return (
             <div className="div_style" style={{left:  wid_W}} text={"text".split("")[0]}>
                 <div className="scrollBox"  
@@ -158,39 +150,7 @@ class leftNavi extends Component {
                     onTouchEnd={(event) => { this.mouseUpEv(event) }} onMouseLeave={(event) => { this.mouseLeaveEv(event) }} 
                     onWheel={this.handleWheel} ref={dom => {this.ScrollBox_all = dom}}>
 
-                    <ul className="oUl" ref={dom => {this.ScrollBox = dom}} style={this.state.oUl}>
-                        <li className={ arr[0] == 0 ? "li_style open": "li_style"} >
-                            <p onClick={(event) => {this.listClick(event, 0)}}><Link to="msgShow"> <Icon type="home" className="left_tit_nave_icon"/>信息展示</Link></p>
-                        </li>
-                        <li  className={arr[0]== 1 ? "li_style open": "li_style"} >
-                            <p onClick={(event) => {this.listClick(event, 1)}}><Link to="BlogHandle"><Icon type="home" className="left_tit_nave_icon" />博文处理</Link></p>
-                            <ul>
-                                <li className={arr[1] == 11 ? "li_style open": "li_style"}>
-                                    <p onClick={(event) => {this.listClick(event, 11)}}><Link to="blogShow">博文预览</Link></p>
-                                </li>
-                                <li className={this.state.openIndex[1] == 12 ? "li_style open": "li_style"}>
-                                    <p onClick={(event) => {this.listClick(event, 12)}}><Link to="blogEditor">博文编辑</Link></p>
-                                </li>
-                                <li className={this.state.openIndex[1] == 13 ? "li_style open": "li_style"}>
-                                    <p onClick={(event) => {this.listClick(event, 13)}}><Link to="blogModify">博文修改</Link></p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li  className={this.state.openIndex == 2 ? "li_style open": "li_style"}>
-                            <p onClick={(event) => {this.listClick(event, 2)}}> <Icon type="home" className="left_tit_nave_icon"/><Link to="userComments">用户评论</Link></p>
-                            <ul>
-                              
-                            </ul>
-                        </li>
-                        <li  className={this.nstate.openIndex == 3 ? "li_style open": "li_style"}>
-                            <p onClick={(event) => {this.listClick(event, 3)}}><Link to="rightsManagement" className="llistLinkTo"><Icon type="home" className="left_tit_nave_icon"/>权限管理</Link></p>
-                            <ul>
-
-                            </ul>
-                        </li>
-                    
-                        {/*<Route path="/page3" component={Page03}*/}
-                    </ul>
+                    <LeftNaviList callBackDate={ this.callBackDate.bind(this)} data = {this.state.oUl}/>
                 </div>
             </div>
         )
