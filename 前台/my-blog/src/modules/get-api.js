@@ -2,13 +2,16 @@
 export default class HttpUtils{
     static get=(url)=>{
         return new  Promise(((resolve, reject) => {//resolve 和 reject 函数被调用时，分别将promise的状态改为fulfilled（完成）或rejected（失败）
-            fetch(url)//默认是GET
+            fetch(url,{
+                method:'GET',
+                mode: 'cors',
+            })//默认是GET
                 .then(response=>response.json())//把数据解析成json格式,然后取出
                 .then(result=>{
-                       resolve(result);//表示完成
+                     resolve(result);//表示完成
                 })
                 .catch(error=>{
-                        reject(error);//表示失败
+                     reject(error);//表示失败
                 })
             })
         )
@@ -17,6 +20,8 @@ export default class HttpUtils{
         return new Promise(((resolve, reject) => {
             fetch(url,{
                 method:'POST',
+                mode: 'cors',
+                credentials: 'include',
                 header:{
                     'Accept':'application/json',//告诉服务器，我们能接受json格式的返回类型，
                     'Content-Type':'application/json',//告诉服务器，我们提交的数据类型

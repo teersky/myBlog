@@ -3,7 +3,6 @@ import React, {
 } from 'react';
 import {
   BrowserRouter as Router,
-  Route,
 } from 'react-router-dom';
 
 
@@ -13,10 +12,7 @@ import 'antd/dist/antd.css';
 import './App.css';
 import TopBar from './template/top';
 import LeftNavi from './template/leftNavi';
-import Home from './page/Home/index';
-import Page01 from './page/page1/index';
-import Page02 from './page/page2/index';
-import Page03 from './page/page3/index';
+import Detail from './template/detail';
 import APIData from "./modules/get-api"
 
 let style = {
@@ -26,7 +22,6 @@ let style = {
   page_top: {
     width: "100%",
     height: "65px",
-    background: "#ffffff",
     background: "#2d2828",
     boxShadow: "3px 3px 10px #888888",
     position: 'relative',
@@ -43,18 +38,18 @@ let style = {
     overflow: 'scroll'
   }
 }
-let wid_w = 0;
 class App extends Component {
   constructor(props) {
-    super(props); //第一步，这是必须的
-    //不能调用state
-    this.state = { //第二步，赋初始值
+    super(props);
+    this.state = {
       keyUp: false,
       mouseDownPoint: 0,
       mouseMoveLen: 0,
       windowWidth: 0,
       mouseUp: false,
       mouseDown: false,
+      listArr: [],
+      RouteList: []
     };
   }
   MouseUpEv() {
@@ -62,15 +57,13 @@ class App extends Component {
       keyUp: true
     });
   }
-  handleEv(event) {
-    //console.log("event:"+event)
-  }
-
   static childContextTypes = {
     isMouseUp:PropTypes.bool,
-      windowWidth:PropTypes.string,
-      mouseMoveLen:PropTypes.string,
-      callback:PropTypes.func,
+    windowWidth:PropTypes.string,
+    mouseMoveLen:PropTypes.string,
+    callback:PropTypes.func,
+    apiData: PropTypes.string,
+    RouteList: PropTypes.string,
   }
  
 
@@ -80,7 +73,9 @@ class App extends Component {
           isMouseUp: this.state.mouseUp,
           windowWidth: this.state.windowWidth.toString(),
           mouseMoveLen: this.state.mouseMoveLen.toString(),
-          callback: this.callback.bind(this)
+          callback: this.callback.bind(this),
+          apiData: JSON.stringify(this.state.listArr),
+          RouteList: JSON.stringify(this.state.RouteList),
       }
   }
   callback(msg){
@@ -88,7 +83,7 @@ class App extends Component {
   }
   mouseDownEv (event){
     let clientX
-    if(event.touches != undefined){
+    if(event.touches !== undefined){
       clientX = event.touches[0].clientX;
     }else{
       clientX = event.clientX;
@@ -103,7 +98,7 @@ class App extends Component {
   mouseMoveEv(event){
     if(this.state.mouseDown){
       let clientX = null;
-      if(event.touches != undefined){
+      if(event.touches !== undefined){
         clientX = event.touches[0].clientX;
       }else{
         clientX = event.clientX;
@@ -119,28 +114,28 @@ class App extends Component {
       mouseDown: false
     })
   }
+  componentWillMount(){
+    APIData.get("http://127.0.0.1/Data/data.json")
+    .then((result) => {
+      console.log(result);
+        this.setState({
+          listArr: result.listArr,
+          RouteList: result.RouteIndexList
+        });
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+  }
   componentDidMount(){
     let el =  this.divStyle;
-    wid_w = el.offsetWidth
     this.setState({
       windowWidth: el.offsetWidth
     });
   }
   
   render() {
-    APIData.get("http://www.weather.com.cn/data/sk/101190408.html")//调用自定义组件方法，返回一个Promise
-    .then((result) => {//then函数会返回一个新的promise
-        // this.setState({
-        //     result:JSON.stringify(result),//序列化：转换为一个 (字符串)JSON字符串
-        // });
-        console.log(result);
-    })
-    .catch((error) => {
-        console.log(error);
-        // this.setState({
-        //     result: JSON.stringify(error),//把错误信息格式化为字符串
-        // })
-    })
+    
     return (
       <Router>
         <div className="App" style={ style.app } onMouseUp={ () => {this.MouseUpEv() }} ref={dom => {this.divStyle = dom}}>
@@ -148,12 +143,10 @@ class App extends Component {
             <TopBar title="首页" />
           </div>
           <div className="page_detail" style={ style.page_detail }>
-              <LeftNavi title="首页" style={style.left_navi} status={this.state.keyUp} handleEv={this.handleEv.bind(this)} />
+              <LeftNavi title="首页" style={style.left_navi} status={this.state.keyUp}/>
               <div className="detailBox"  onMouseDown={(event) => {this.mouseDownEv(event)}} onMouseMove={(event) => {this.mouseMoveEv(event)}} onMouseUp={() => {this.mouseUpEv()}} onTouchStart={(event) => {this.mouseDownEv(event)}} onTouchMove={(event) => {this.mouseMoveEv(event)}} onTouchEnd={() => {this.mouseUpEv()}}>
-                  <Route path="/msgShow" component={Page01}></Route>
-                  <Route path="/BlogHandle" component={Page02}></Route>
+                 <Detail />
               </div>
-
           </div>
         </div>
       </Router>

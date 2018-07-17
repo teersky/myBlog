@@ -1,22 +1,12 @@
 import React, {
     Component
 } from 'react';
-import {
-    Avatar,
-    Button,
-    Icon
-} from 'antd';
-import {
-    Link,
-} from 'react-router-dom';
+
 import PropTypes from "prop-types";
 
 import "./style.css"
 import LeftNaviList from './leftNaviList';
 
-let style = {
-    oUl: {}
-}
 let oUl_height = 0;
 let old_Wid_W = -120;
 class leftNavi extends Component {
@@ -49,7 +39,7 @@ class leftNavi extends Component {
     }
     mouseDownEv(event) {
         let clientY = null;
-        if(event.touches != undefined){
+        if(event.touches !== undefined){
              clientY = event.touches[0].clientY;
           }else{
             clientY = event.clientY;
@@ -63,16 +53,15 @@ class leftNavi extends Component {
                 pageMulse: ScrollBox - ScrollBox_all
             });
         }
-        this.props.handleEv("hello");
     }
     mouseMoveEv(event) {
         let clientY = null;
-        if(event.touches != undefined){
+        if(event.touches !== undefined){
             clientY = event.touches[0].clientY;
           }else{
             clientY = event.clientY;
           }
-        if (this.state.canDrag == true) {
+        if (this.state.canDrag === true) {
             let top_num = -(-clientY + this.state.start_T - this.state.endClickPoint);
             if( top_num > 0){
                 top_num = 0;
@@ -112,11 +101,10 @@ class leftNavi extends Component {
         const  windowWidth = Number(this.context.windowWidth);
         const  ismouseup = this.context.isMouseUp;
         let wid_W = null;
-        let w = null;
         
         if(windowWidth < 530){
             if(ismouseup){
-                if(old_Wid_W == -120){
+                if(old_Wid_W === -120){
                     if(mouseMoveLen > 60){
                         wid_W = -5 + "px";
                         old_Wid_W = -5;
@@ -134,7 +122,7 @@ class leftNavi extends Component {
                     } 
                 }
             }else{
-                if(old_Wid_W == -5){
+                if(old_Wid_W === -5){
                     wid_W = (-5 + mouseMoveLen) < -120 ? -120 : (-5 + mouseMoveLen) >= 0?0: (0 + mouseMoveLen) + "px";
                 }else{
                     wid_W = (-120 + mouseMoveLen) < -120 ? -120 : (-120 + mouseMoveLen) >= 0?0: (-120 + mouseMoveLen) + "px";
@@ -147,8 +135,8 @@ class leftNavi extends Component {
                     onMouseDown={(event) => { this.mouseDownEv(event) }} onMouseMove={(event) => { this.mouseMoveEv(event) }} 
                     onMouseUp={(event) => { this.mouseUpEv(event) }} onMouseLeave={(event) => { this.mouseLeaveEv(event) }} 
                     onTouchStart={(event) => { this.mouseDownEv(event) }} onTouchMove={(event) => { this.mouseMoveEv(event) }} 
-                    onTouchEnd={(event) => { this.mouseUpEv(event) }} onMouseLeave={(event) => { this.mouseLeaveEv(event) }} 
-                    onWheel={this.handleWheel} ref={dom => {this.ScrollBox_all = dom}}>
+                    onTouchEnd={(event) => { this.mouseUpEv(event) }} onWheel={(event) => {this.handleWheel(event)}} 
+                    ref={dom => {this.ScrollBox_all = dom}}>
 
                     <LeftNaviList callBackDate={ this.callBackDate.bind(this)} data = {this.state.oUl}/>
                 </div>

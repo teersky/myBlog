@@ -1,8 +1,7 @@
 import React, {Component} from "react";
-import { Avatar, Button, Icon } from 'antd';
+import { Icon } from 'antd';
 import {Link,} from 'react-router-dom';
-import PropTypes from "prop-types"; 
-let el = "";
+import PropTypes from "prop-types";
 class leftNaviList extends Component{
     constructor(props){
         super(props);
@@ -31,20 +30,22 @@ class leftNaviList extends Component{
             arr: arr
         })
     }
-    
+    static contextTypes = {
+        apiData: PropTypes.string,
+    }
     componentDidUpdate (){
         let hei = this.ScrollBox.offsetHeight;
         this.props.callBackDate(hei);
     }
     render(){
-        var oUl = this.props.data;
+        const  apiData = JSON.parse(this.context.apiData) || [];
         return (
-            <ul className="oUl" ref={dom => {this.ScrollBox = dom}} style={this.props.data}>
+            <ul ref={dom => {this.ScrollBox = dom}} style={this.props.data}>
                 {
-                    this.state.listArr.map((list, val) => {
-                        if(list.child.length ==0){
+                    apiData.map((list, val) => {
+                        if(list.child.length === 0){
                             return (
-                                <li  className={this.state.arr[0]  == val ? "li_style open": "li_style"} key = {val}>
+                                <li  className={Number(this.state.arr[0])  === val ? "li_style open": "li_style"} key = {val}>
                                     <Link to={list.linkTo} className="linkTo" onDragStart={ (event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, val)}}><Icon type={list.icons} className="left_tit_nave_icon"/>{ list.title }</p></Link>
                                     <ul>
         
@@ -53,13 +54,13 @@ class leftNaviList extends Component{
                             )
                         }else{
                             return (
-                                <li  className={this.state.arr[0]  == val ? "li_style open": "li_style"} key = {val}>
+                                <li  className={Number(this.state.arr[0])  === val ? "li_style open": "li_style"} key = {val}>
                                     <Link to={list.linkTo} className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, val)}}><Icon type={list.icons} className="left_tit_nave_icon"/>{ list.title }</p></Link>
                                     <ul>
                                         { 
                                             list.child.map((items, index) => {
                                                 return (
-                                                    <li className={this.state.arr[1] == Number(val+""+index) ? "li_style open": "li_style"} key = {Number(val+""+index)}>
+                                                    <li className={Number(this.state.arr[1]) === Number(val+""+index) ? "li_style open": "li_style"} key = {Number(val+""+index)}>
                                                         <Link to={items.linkTo} className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, Number(val+""+index))}}>{ list.title }</p></Link>
                                                     </li>
                                                 )

@@ -6,10 +6,7 @@ import {
 import './style.css';
 
 let user = "admin";
-var block_index = 0;
-let style = {
-    
-}
+
 class NavBar extends Component{
     constructor(props){
         super(props);
@@ -19,8 +16,7 @@ class NavBar extends Component{
     }
     
     
-    list = () => {
-        block_index++;         
+    list = () => {       
         this.setState({
             isListShow: !this.state.isListShow,
         })
@@ -34,9 +30,9 @@ class NavBar extends Component{
             <div className="top_Navi">
                 <span className="page_tit">个人博客后台系统</span>
                 <div className="navi_box">
-                    <a href="javascript:;" className="openList" onClick={() =>{this.list()}}>
+                    <p className="openList" onClick={() =>{this.list()}}>
                         <Icon type="bars" className="tit_nave_icon" style={{ fontSize: 32, color: '#fff' }}/>
-                    </a>
+                    </p>
                     <ul className={ !this.state.isListShow?"tit_navi hide":"tit_navi" }>
                         <li className="tit_navi_list">
                             <Icon type="user" className="tit_nave_icon"/>
