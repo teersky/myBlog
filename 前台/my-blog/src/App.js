@@ -117,7 +117,6 @@ class App extends Component {
   componentWillMount(){
     APIData.get("http://127.0.0.1/Data/data.json")
     .then((result) => {
-      console.log(result);
         this.setState({
           listArr: result.listArr,
           RouteList: result.RouteIndexList

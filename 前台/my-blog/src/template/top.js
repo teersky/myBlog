@@ -39,7 +39,7 @@ class NavBar extends Component{
                             <span className="tit_navi_txt">用户:{user}</span>
                         </li>
                         <li className="tit_navi_list">
-                            <Link to="/">
+                            <Link to="/" className="LinkToIndex">
                                 <Icon type="home" className="tit_nave_icon"/>
                                 <span className="tit_navi_txt">系统首页</span>
                             </Link>
