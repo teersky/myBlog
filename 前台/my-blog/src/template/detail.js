@@ -17,19 +17,11 @@ class Detail extends Component{
         const  RouteList = JSON.parse(this.context.RouteList) || [];
         return(
             <div>
-                {
-                    RouteList.map((items, val) => {
-                        if (RouteList !== []){
-                            console.log(<Route path='/home' component={ Home }></Route>);
-                         /*   <Route path={ items.linkTo } component={ Home }></Route>  */
-                        }
-                    })
-                 }
-                <Route path="" component={Home}></Route>
+                <Route exact path="/" component={Home}></Route>
                 <Route path="/msgShow" component={Page01}></Route>
                 <Route path="/BlogHandle" component={Page02}></Route>
                 <Route path="/userComments" component={Page03}></Route>  
-            
+        
             </div>
         )
     }

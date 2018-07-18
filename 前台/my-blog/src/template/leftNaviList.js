@@ -21,7 +21,6 @@ class leftNaviList extends Component{
     }
     listClick(event, index){
         let arr = [];
-        console.log(index);
         let num = index.toString();
        for(var i = 1; i <= num.length; i++){
            arr.push(num.slice(0,i))
