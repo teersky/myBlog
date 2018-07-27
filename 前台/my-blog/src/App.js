@@ -32,11 +32,11 @@ class App extends Component {
     a.y = 20;
     
 
-    let users = sessionStorage.getItem('user');
-    let key = sessionStorage.getItem('key');
+    let users = sessionStorage.getItem('user') || "";
+    let key = sessionStorage.getItem('key') || "";
     APIData.post("http://127.0.0.1/Data/login.json",JSON.stringify(a))
       .then((result) => {
-          console.log(users.toString(), result.user);
+          console.log(users.toString(), result);
           if(users.toString() === result.user){
             if(key.toString() === result.key){
               console.log(this);
@@ -62,15 +62,39 @@ class App extends Component {
     console.log(this.state.routeIndex);
   }
   render() {
-    
-    return (
+    if(this.state.routeIndex == 0){
+        return (
+          <div style={ Style.box }>
+            <Loading />
+          </div>
+        );
+    }else if((this.state.routeIndex == 1)){
+      return (
+        <div style={ Style.box }>
+          <PageDetail />
+        </div>
+      );
+    }else if((this.state.routeIndex == 2)){
+      return (
+        <div style={ Style.box }>
+          <Login />
+        </div>
+      );
+    }
+  /*  return (
       <Router>
         <div style={ Style.box }>
-            <Route exact path="/" component={PageDetail}/>
-            <Route path="/login" component={Login}/>
+
+          {
+            console.log(this.state.routeIndex)
+           
+          }
+          <Route exact path="/" component={ PageDetail } ></Route>         
+          <Route path="/Login"  component={ Login } ></Route> 
+          <Route path="/Loading" component={ Loading } ></Route>
         </div>
       </Router>
-    );
+    ); */
   }
 }
 
