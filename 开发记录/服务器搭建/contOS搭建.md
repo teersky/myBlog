@@ -10,13 +10,13 @@
 第二步：选择虚拟机的硬件和功能，这里我们选择Workstation 10.x
 ![Image text](images/centOS_2.png)  
 
-第三步： 安装虚拟机操作系统，这里我们选择稍后安装操作系统
+第三步： 安装虚拟机操作系统，这里我们选择稍后安装操作系统  
 ![Image text](images/centOS_3.png)  
 
 第四步： 选择虚拟机操作系统和版本，我们选择Linux系统的CentOS 64X版本
 ![Image text](images/centOS_4.png)  
 
-第五步： 输入虚拟机名称，指定安装的位置
+第五步： 输入虚拟机名称，指定安装的位置  
 ![Image text](images/centOS_5.png)  
 
 第六步： 选择处理机配置， 这个根据电脑情况选择，在不影响宿主机器的情况下选择，我使用的是1个处理器双核版本
@@ -28,44 +28,44 @@
 第八步： 网络类型选择，这里选择使用网络地址转换（Nat）
 ![Image text](images/centOS_8.png)  
 
-第九步： 选择I/O控制器类型，这里我们选择SLILogin(L)控制器
+第九步： 选择I/O控制器类型，这里我们选择SLILogin(L)控制器  
 ![Image text](images/centOS_9.png)  
 
-第十步： 选择磁盘类型， 这里我们选择SCSI（s）
+第十步： 选择磁盘类型， 这里我们选择SCSI（s）  
 ![Image text](images/centOS_10.png)   
 
-第十一步： 选择磁盘，这里我们选择创建新虚拟磁盘
+第十一步： 选择磁盘，这里我们选择创建新虚拟磁盘  
 ![Image text](images/centOS_11.png)  
 
-第十二步： 为新创建的磁盘制定容量， 一般情况下20G足够了， 然后选择将虚拟磁盘拆分为多个文件，下一步
+第十二步： 为新创建的磁盘制定容量， 一般情况下20G足够了， 然后选择将虚拟磁盘拆分为多个文件，下一步  
 ![Image text](images/centOS_12.png)  
 
-第十三步： 制定新建虚拟磁盘的名称，后缀名为vmdk则为虚拟磁盘文件
+第十三步： 制定新建虚拟磁盘的名称，后缀名为vmdk则为虚拟磁盘文件  
 ![Image text](images/centOS_13.png)  
 
-第十四步： 点击完成即可
+第十四步： 点击完成即可  
 
-第十五步： 双击主面板上CD/DVD选项
+第十五步： 双击主面板上CD/DVD选项  
 ![Image text](images/centOS_15.png)  
 
-第十六步： 点击使用IOS镜像文件，然后指定镜像文件的路径
+第十六步： 点击使用IOS镜像文件，然后指定镜像文件的路径  
 ![Image text](images/centOS_16.png)  
  
-第十七步： 点击弹框中的网络适配器， 选择“自定义： 特定虚拟网络”， 下拉菜单中选择VMWare 10选项
+第十七步： 点击弹框中的网络适配器， 选择“自定义： 特定虚拟网络”， 下拉菜单中选择VMWare 10选项  
 ![Image text](images/centOS_17.png)  
   
-第十八步： 在VMWare主页面中的菜单栏中选择“编辑”  -- “虚拟网络编辑器”
+第十八步： 在VMWare主页面中的菜单栏中选择“编辑”  -- “虚拟网络编辑器”  
   
-第十九步： 打开虚拟网络编辑器后提示需要管理员权限才能修改网络适配器权限，点击更改设置
+第十九步： 打开虚拟网络编辑器后提示需要管理员权限才能修改网络适配器权限，点击更改设置  
 ![Image text](images/centOS_19.png)  
 
-第二十步： 选中WMnet8 -- NAT模式，确定
+第二十步： 选中WMnet8 -- NAT模式，确定  
 ![Image text](images/centOS_20.png)  
 
-第二十一步： 开启虚拟机  
+第二十一步： 开启虚拟机   
 ![Image text](images/centOS_21.png)  
   
-第二十二步： 选择install CentOS 7选项， 这儿有点坑， 我的安装时看不太清楚，白色是选中，
+第二十二步： 选择install CentOS 7选项， 这儿有点坑， 我的安装时看不太清楚，白色是选中，  
 ![Image text](images/centOS_22.png)  
   
 第二十三步： 按下回车  
