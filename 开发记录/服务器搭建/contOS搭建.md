@@ -11,7 +11,7 @@
 ![Image text](images/centOS_2.png)  
 
 第三步： 安装虚拟机操作系统，这里我们选择稍后安装操作系统
-![Image text](images/centOS_3png)  
+![Image text](images/centOS_3.png)  
 
 第四步： 选择虚拟机操作系统和版本，我们选择Linux系统的CentOS 64X版本
 ![Image text](images/centOS_4.png)  
