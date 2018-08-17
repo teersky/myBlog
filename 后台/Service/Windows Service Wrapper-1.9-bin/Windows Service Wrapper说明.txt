@@ -1,0 +1,26 @@
+使用方法：
+1. 下载最新版的 Windows Service Wrapper 程序，比如我下载的名称是 "winsw-1.9-bin.exe"，
+2. 将重命名后的 nginx-service.exe 复制到 nginx 的安装目录（我这里是 "E:\Service\nginx-1.11.5"）
+3. 在同一个目录下创建一个Windows Service Wrapper的XML配置文件，名称必须与第一步重命名时使用的名称一致（比如"nginx-service.xml"）
+文件内容如下：
+ 
+<?xml version="1.0" encoding="UTF-8" ?>
+<service>
+  <id>nginx</id>
+  <name>Nginx Service</name>
+  <description>High Performance Nginx Service</description>
+  <executable>E:\Service\nginx-1.11.5\nginx.exe</executable>
+  <logpath>E:\Service\nginx-1.11.5\</logpath>
+  <logmode>roll</logmode>
+  <depend></depend>
+  <startargument>-p E:\Service\nginx-1.11.5</startargument>
+  <stopargument>-p E:\Service\nginx-1.11.5\nginx.exe -s stop</stopargument>
+</service>
+
+4. 打开CMD，命令行下执行以下命令，以便将其安装成Windows服务。
+C:\Users\xxx> E:\Service\nginx-1.11.5\nginx-service.exe install
+想要删除这个服务的话，用下面命令
+C:\Users\xxx> E:\Service\nginx-1.11.5\nginx-service.exe uninstall
+ 
+OK，至此，完工，确认一下：我的电脑 右键 -> 管理 -> 服务 -> 是否有了个 Nginx Service 呢？启动起来，在浏览器中 访问 http://localhost 确认一下，再 停止服务，再访问一下  http://localhost 确认一下。
+如果启动不了，可以查看logs文件夹下的error.log日志，看看提示什么出错了，对应进行修改，很多时修启动不了，都是conf\nginx.conf配置文件没有设置好，比如说80端口被占用了，需要修改端口等；或者里面的路径设置错了，windows下的路径都必须是E:\\xxx\\xxx 这种方式，用linux的路径或少了\都会出错，其他出错的话可以查看error.log日志后，将错误复制到百度进行找看解决方案

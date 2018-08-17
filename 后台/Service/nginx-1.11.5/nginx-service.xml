@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<service>
+  <id>nginx</id>
+  <name>Nginx Service</name>
+  <description>High Performance Nginx Service</description>
+  <executable>E:\Service\nginx-1.11.5\nginx.exe</executable>
+  <logpath>E:\Service\nginx-1.11.5\</logpath>
+  <logmode>roll</logmode>
+  <depend></depend>
+  <startargument>-p E:\Service\nginx-1.11.5</startargument>
+  <stopargument>-p E:\Service\nginx-1.11.5\nginx.exe -s stop</stopargument>
+</service>

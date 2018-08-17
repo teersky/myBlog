@@ -1,0 +1,15 @@
+#!/usr/bin/evn python
+# coding=utf-8
+
+from bottle import default_app, get, run
+from beaker.middleware import SessionMiddleware
+
+@get('/index/')
+def callback():
+    return 'Hello World! Teersky_5'
+
+if __name__ == '__main__':
+    app_argv = SessionMiddleware(default_app())
+    run(app=app_argv, host='0.0.0.0', port=8088, debug=True, reloader=True)
+else:
+    application = SessionMiddleware(default_app())

@@ -1,0 +1,12 @@
+2018-08-14 18:21:16 - Starting E:\Service\nginx-1.11.5\nginx.exe  -p E:\Service\nginx-1.11.5 
+2018-08-14 18:21:16 - Started 13284
+2018-08-14 18:23:51 - Stopping nginx
+2018-08-14 18:23:51 - Started 10832
+2018-08-14 18:23:51 - WaitForProcessToExit 13284+10832
+2018-08-15 08:54:42 - Starting E:\Service\nginx-1.11.5\nginx.exe  -p E:\Service\nginx-1.11.5 
+2018-08-15 08:54:42 - Started 12144
+2018-08-16 18:32:54 - Stopping nginx
+2018-08-16 18:32:58 - Started 6476
+2018-08-16 18:32:58 - WaitForProcessToExit 12144+6476
+2018-08-17 08:32:15 - Starting E:\Service\nginx-1.11.5\nginx.exe  -p E:\Service\nginx-1.11.5 
+2018-08-17 08:32:16 - Started 8

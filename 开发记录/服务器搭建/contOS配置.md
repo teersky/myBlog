@@ -12,19 +12,19 @@
 安装完成后打开SSH客户端，如下图：
 ![Image text](images/SSH_1)
 
-点击图片中指的按钮连接远程服务器
+点击图片中指的按钮连接远程服务器  
 ![Image text](images/SSH_2.png)
 
-host name 为你远程服务器的IP地址， 一般是192.168.0.128， 不过我的IP地址不是，如果你的也不是，就需要使用上面的ifconfig了， 在服务器输入ifconfig获得服务器的IP地址， username一般是root， 端口号是22，然后点击COnnect连接，这时会跳出如下的密码输入框，
+host name 为你远程服务器的IP地址， 一般是192.168.0.128， 不过我的IP地址不是，如果你的也不是，就需要使用上面的ifconfig了， 在服务器输入ifconfig获得服务器的IP地址， username一般是root， 端口号是22，然后点击COnnect连接，这时会跳出如下的密码输入框，  
 ![Image text](images/SSH_3.png)
 
-输入密码就能连接远程服务器了，连接成功界面如下：
+输入密码就能连接远程服务器了，连接成功界面如下：  
 ![Image text](images/SSH_4.png)
 
-当然SSH还有个很强大的功能， 文件传输：
+当然SSH还有个很强大的功能， 文件传输：  
 ![Image text](images/SSH_5.png)
 
-打开文件传输窗口
+打开文件传输窗口  
 ![Image text](images/SSH_6.png) 
-  
+
 在这儿我们能很简单的将文件上传到服务器的指定位置
