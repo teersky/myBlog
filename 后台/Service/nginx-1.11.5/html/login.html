@@ -49,13 +49,14 @@
 					success: function(res){
 						let data = JSON.parse(res);
 						console.log(data.msg);
-						$.ajax({
+						sessionStorage.setItem("dataKey": "0");
+						/*$.ajax({
 							type: 'POST',
 			                url: "/api/testFNS/",
 			                success: (res) => {
 			                	console.log("aaa");
 			                }
-			            });
+			            }); */
 					}
 				})
 			})

@@ -16,6 +16,7 @@ def post_login():
     password = web_helper.get_form('password', '密码')
     verify = web_helper.get_form('verify', '验证码')
     ip = web_helper.get_ip()
+    print("username", username)
 
     ##############################################################
     # 从session中读取验证码信息
@@ -47,7 +48,7 @@ def post_login():
     # pwd = encrypt_helper.md5(encrypt_helper.md5(password)[1:30]).upper()
     # 对客户端提交上来的验证进行md5加密将转为大写（只加密一次）
     pwd = encrypt_helper.md5(password).upper()
-    print(pwd)
+
     # 检查登录密码输入是否正确
     if pwd != manager_result[0].get('login_password', ''):
         return web_helper.return_msg(-1, '密码错误')
@@ -72,5 +73,5 @@ def post_login():
     vars = ('now()', ip, manager_id,)
     # 写入数据库
     db_helper.write(sql, vars)
-
-    return web_helper.return_msg(0, '登录成功')
+    data = [{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}]
+    return web_helper.return_msg(0, '登录成功', data)

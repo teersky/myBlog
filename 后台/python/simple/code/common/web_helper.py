@@ -27,7 +27,7 @@ def get_session():
     return request.environ.get('beaker.session')
 
 
-def return_msg(state, msg, data={}):
+def return_msg(state, msg, data=[]):
     """
     接口输出数据到客户端
     :param state:   状态码（公共参数，-1=出错，0=正常）
@@ -73,6 +73,8 @@ def get_form(args_name, msg, is_strip=True, lenght=0, is_check_null=True, notify
     args_value = ''
     if request.method.upper() in ('POST', 'PUT', 'DELETE'):
         try:
+            print(request.json)
+            return_raise(return_msg(-1, request % msg))
             if request.json:
                 args_value = str(request.json.get(args_name, '')).strip()
             else:
