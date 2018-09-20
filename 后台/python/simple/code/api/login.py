@@ -4,7 +4,6 @@
 from bottle import put, post
 from common import web_helper, encrypt_helper, db_helper
 
-
 @put('/api/login/')
 @post('/api/login/')
 def post_login():
@@ -16,18 +15,19 @@ def post_login():
     password = web_helper.get_form('password', '密码')
     verify = web_helper.get_form('verify', '验证码')
     ip = web_helper.get_ip()
-    print("username", username)
 
     ##############################################################
     # 从session中读取验证码信息
     ##############################################################
     s = web_helper.get_session()
     verify_code = s.get('verify_code')
+    print(verify, s)
     # 删除session中的验证码（验证码每提交一次就失效）
     if 'verify_code' in s:
         del s['verify_code']
         s.save()
     # 判断用户提交的验证码和存储在session中的验证码是否相同
+
     if verify.upper() != verify_code:
         return web_helper.return_msg(-1, '验证码错误')
 

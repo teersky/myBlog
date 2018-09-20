@@ -32,15 +32,14 @@ http {
         charset     utf-8;
         root        E:\\Service\\nginx-1.11.5\\html; # 前端html路径，这里可以修改为你放置前端html的路径
         server_name 127.0.0.1;     # 当前服务的域名，可以有多个，用空格隔开
-        add_header 'Access-Control-Allow-Origin' 'http://192.168.1.250:3000'; #允许来自所有的访问地址
-		# add_header 'Access-Control-Allow-Origin' '*';
+        add_header 'Access-Control-Allow-Origin' '*'; #允许来自所有的访问地址
 		add_header 'Access-Control-Allow-Credentials' 'true';
 		add_header 'Access-Control-Allow-Methods' 'GET, PUT, POST, DELETE, OPTIONS'; #支持请求方式
 		add_header 'Access-Control-Allow-Headers' 'Content-Type,*';
 			
         location /api {
-			proxy_pass  http://127.0.0.1:9090/api/;
-			proxy_redirect off;
+					proxy_pass  http://127.0.0.1:9090/api/;
+					proxy_redirect off;
 		}
 		
         

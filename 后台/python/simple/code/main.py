@@ -50,9 +50,9 @@ session_opts = {
 @hook('before_request')
 def validate():
     """使用勾子处理接口访问事件"""
-    response.headers['Access-Control-Allow-Origin'] = '*'
+    # response.headers['Access-Control-Allow-Origin'] = '*'
     """
-        钩子函数，处理请求路由之前需要做什么的事情
+        钩子函数 ，处理请求路由之前需要做什么的事情
         :return:
         """
     """使用勾子处理页面或接口访问事件"""
@@ -101,6 +101,7 @@ def validate():
         # 判断用户是否登录
         if not manager_id or not login_name:
             web_helper.return_raise(web_helper.return_msg(-404, "您的登录已失效，请重新登录"))
+
 
 
 

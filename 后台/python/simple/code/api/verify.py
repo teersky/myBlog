@@ -16,6 +16,7 @@ def get_verify():
         s = web_helper.get_session()
         s['verify_code'] = verify_code.upper()
         s.save()
+        print("verify_code", s)
 
         # 输出图片流
         buffer = BytesIO()

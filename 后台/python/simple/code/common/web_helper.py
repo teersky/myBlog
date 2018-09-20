@@ -26,7 +26,6 @@ def get_session():
     """获取当前用户session"""
     return request.environ.get('beaker.session')
 
-
 def return_msg(state, msg, data=[]):
     """
     接口输出数据到客户端
@@ -164,3 +163,5 @@ def __request_handle(args_value, msg, is_strip, lenght, is_check_null, notify_ms
         if re_result:
             return_raise(return_msg(-1, "%s 含有特殊字符，请重新输入" % msg))
     return args_value
+
+
