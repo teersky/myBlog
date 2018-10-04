@@ -2,4 +2,5 @@
 ## 开发记录
 ## React前台页面
 ## Pthony 后台
-## MySql数据库
+## postgreSQL数据库
+## nginx搭建反向代理服务器
