@@ -8,10 +8,9 @@ export default class HttpUtils{
         return new  Promise(((resolve, reject) => {//resolve 和 reject 函数被调用时，分别将promise的状态改为fulfilled（完成）或rejected（失败）
             fetch(url,{
                 method:'GET',
-                mode: 'cors',
-            })//默认是GET
-                .then(response=>{response.json()})//把数据解析成json格式,然后取出
-                .then(result=>{
+                credentials: 'include',
+            }).then(res => res.json())//把数据解析成json格式,然后取出
+                .then((result) => {
                      resolve(result);//表示完成
                 })
                 .catch(error=>{

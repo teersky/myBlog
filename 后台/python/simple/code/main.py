@@ -6,7 +6,7 @@ import sys
 import os
 import logging
 import urllib.parse
-from bottle import default_app, get, run, request, hook, response
+from bottle import default_app, get, run, request, hook
 from beaker.middleware import SessionMiddleware
 
 # 导入工具函数包
@@ -89,7 +89,7 @@ def validate():
         request.environ['REQUEST_METHOD'] = request.POST.get('_method', '')
 
     # 过滤不用进行登录权限判断的路由（登录与退出登录不用检查是否已经登录）
-    url_list = ["/api/login/", "/api/logout/"]
+    url_list = ["/apiPost/login/", "/apiPost/logout/"]
     if path_info in url_list:
         pass
     else:

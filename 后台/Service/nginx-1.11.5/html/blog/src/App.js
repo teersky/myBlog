@@ -6,6 +6,7 @@ import {
   Route
 } from 'react-router-dom';
 
+
 import PropTypes from "prop-types";
 import 'antd/dist/antd.css';
 
@@ -27,56 +28,44 @@ class App extends Component {
   }
 
   componentWillMount(){
-    let checkUserList = {}
-    
-    let users = sessionStorage.getItem('user') || "";
-    let key = sessionStorage.getItem('key') || "";
-    if(users === "" && key === ""){
-      this.setState({
-        routeIndex: 2
+    sessionStorage.setItem("ListSelectClose", "")
+    let checkUserList = {};
+    APIData.post("http://192.168.1.250:81/apiPost/CheckLogin/",checkUserList)
+      .then((result) => {
+          if(result.state === -1 || result.state === -404 ){
+            this.setState({
+              routeIndex: 2
+            })
+            
+          }else{
+            this.setState({
+              routeIndex: 1
+            })
+          }
       })
-    }else{
-      checkUserList.username = users;
-      checkUserList.apiKey = key;
-      APIData.post("http://192.168.1.250:81/api/CheckLogin/",JSON.stringify(checkUserList))
-        .then((result) => {
-            console.log(users.toString(), result);
-            if(result.state == "-404"){
-              this.setState({
-                routeIndex: 2
-              })
-              
-            }else{
-              this.setState({
-                routeIndex: 1
-              })
-            }
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-    }
-  }
-  componentDidMount(){
-    console.log(this.state.routeIndex);
+      .catch((error) => {
+          console.log(error);
+      })
+    
   }
   render() {
-    if(this.state.routeIndex == 0){
+    if(this.state.routeIndex === 0){
         return (
           <div style={ Style.box }>
             <Loading />
           </div>
         );
-    }else if((this.state.routeIndex == 1)){
+    }else if((this.state.routeIndex === 1)){
       return (
         <div style={ Style.box }>
           <PageDetail />
         </div>
       );
-    }else if((this.state.routeIndex == 2)){
+    }else if((this.state.routeIndex === 2)){
       return (
         <div style={ Style.box }>
-          <Login />
+           <Login />
+          {/* <Route path="/Login"  component={ Login } ></Route>  */}
         </div>
       );
     }

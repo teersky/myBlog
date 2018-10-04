@@ -42,7 +42,7 @@ class leftNaviList extends Component{
             <ul ref={dom => {this.ScrollBox = dom}} style={this.props.data}>
                 {
                     apiData.map((list, val) => {
-                        if(list.child.length === 0){
+                        if(list.child === undefined || list.child.length === 0){
                             return (
                                 <li  className={Number(this.state.arr[0])  === val ? "li_style open": "li_style"} key = {val}>
                                     <Link to={list.linkTo} className="linkTo" onDragStart={ (event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, val)}}><Icon type={list.icons} className="left_tit_nave_icon"/>{ list.title }</p></Link>

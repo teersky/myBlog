@@ -4,8 +4,8 @@
 from bottle import put, post
 from common import web_helper, encrypt_helper, db_helper
 
-@put('/api/login/')
-@post('/api/login/')
+@put('/apiPost/login/')
+@post('/apiPost/login/')
 def post_login():
     """用户登陆验证"""
     ##############################################################

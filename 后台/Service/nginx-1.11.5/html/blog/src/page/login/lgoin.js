@@ -25,24 +25,16 @@ import "./login.css"
             })
          }
         submitValue(){
-            let self = this;
             let loginUserList = {};
             loginUserList.username = this.refs.username.value;
             loginUserList.password = this.refs.password.value;
             loginUserList.verify = this.refs.verify.value;
             loginUserList._method = 'put';
-            APIDate.post("http://192.168.1.250:81/api/login/",loginUserList)
+            APIDate.post("http://192.168.1.250:81/apiPost/login/",loginUserList)
             .then( (result) => {
-                console.log(result);  
-                self.setState({
-                    imgUrl: "http://192.168.1.250:81/api/verify/?" + 100 * Math.random(),
-                    verifyValue: "aaa"
-                }) 
-                 
+                sessionStorage.setItem("key", document.cookie.split("=")[1]);
+                window.location.reload();
             });  
-            /* APIDate.axiso_Post("http://192.168.1.250:81/api/login/",loginUserList, function(res){
-                console.log(res);
-            });  */
         }
         resetValue(){
             console.log("reset");
@@ -57,7 +49,7 @@ import "./login.css"
                             <input type="text" placeholder="验证码" id="YZM" ref="verify" defaultValue={this.state.verifyValue} />
                         </label>
                         <img className="verify_img" id="verifycode" src={this.state.imgUrl} /> 
-                        <a href="javascript:void(0)" onClick={() => {this.get_verify()}}>看不清，换一张</a>
+                        <a href="javascript:;" onClick={() => {this.get_verify()}}>看不清，换一张</a>
                     </p>
                     <p className="button_box">
                         <button onClick={ () => {this.submitValue()}}>提交</button>  

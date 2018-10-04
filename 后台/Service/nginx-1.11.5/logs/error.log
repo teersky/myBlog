@@ -227,3 +227,39 @@
 2018/09/20 17:26:09 [notice] 1120#15408: signal process started
 2018/09/20 17:30:58 [notice] 3740#7752: signal process started
 2018/09/20 18:04:24 [notice] 13756#15624: signal process started
+2018/09/21 08:51:09 [error] 196#8604: *1 CreateFile() "E:\Service\nginx-1.11.5\html/favicon.ico" failed (2: The system cannot find the file specified), client: 192.168.1.250, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", host: "192.168.1.250:81", referrer: "http://192.168.1.250:81/login.html"
+2018/09/25 09:52:19 [error] 10284#17936: *20 CreateFile() "E:\Service\nginx-1.11.5\html/favicon.ico" failed (2: The system cannot find the file specified), client: 192.168.1.250, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", host: "192.168.1.250:81"
+2018/09/25 09:52:19 [error] 10284#17936: *20 CreateFile() "E:\Service\nginx-1.11.5\html/favicon.ico" failed (2: The system cannot find the file specified), client: 192.168.1.250, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", host: "192.168.1.250:81"
+2018/09/25 10:15:09 [error] 10284#17936: *61 CreateFile() "E:\Service\nginx-1.11.5\html/data/dataInterface" failed (3: The system cannot find the path specified), client: 192.168.1.250, server: 127.0.0.1, request: "GET /data/dataInterface HTTP/1.1", host: "192.168.1.250:81", referrer: "http://192.168.1.250:3000/"
+2018/09/25 10:39:56 [notice] 1448#18188: signal process started
+2018/09/25 10:39:57 [notice] 6892#18704: signal process started
+2018/09/25 10:43:12 [notice] 18944#13932: signal process started
+2018/09/25 10:43:17 [notice] 19296#16604: signal process started
+2018/09/25 10:48:03 [notice] 17724#12832: signal process started
+2018/09/25 10:48:04 [notice] 5944#18420: signal process started
+2018/09/25 10:48:05 [notice] 3256#10820: signal process started
+2018/09/25 10:48:06 [notice] 12008#2556: signal process started
+2018/09/25 10:48:06 [notice] 7696#8672: signal process started
+2018/09/25 10:50:18 [notice] 18236#7544: signal process started
+2018/09/25 10:50:19 [notice] 16204#11980: signal process started
+2018/09/25 10:50:20 [notice] 8436#13436: signal process started
+2018/09/25 10:59:34 [error] 9408#8224: *13 CreateFile() "E:\Service\nginx-1.11.5\html/favicon.ico" failed (2: The system cannot find the file specified), client: 192.168.1.250, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", host: "192.168.1.250:81", referrer: "http://192.168.1.250:81/apiGet/dataInterface"
+2018/09/25 11:02:22 [notice] 5184#16280: signal process started
+2018/09/25 11:02:24 [notice] 11220#18260: signal process started
+2018/09/25 11:02:25 [notice] 3520#6840: signal process started
+2018/09/25 11:02:26 [notice] 1416#11280: signal process started
+2018/09/25 11:02:27 [notice] 11596#3292: signal process started
+2018/09/25 11:02:28 [notice] 10568#4592: signal process started
+2018/09/25 11:05:53 [notice] 19076#16692: signal process started
+2018/09/25 11:05:54 [notice] 18596#13712: signal process started
+2018/09/25 11:05:55 [notice] 10752#16820: signal process started
+2018/09/25 11:10:47 [notice] 17176#8452: signal process started
+2018/09/25 11:10:49 [notice] 13356#11732: signal process started
+2018/09/25 11:10:50 [notice] 10192#15564: signal process started
+2018/09/25 11:10:51 [notice] 7284#12268: signal process started
+2018/09/25 11:10:52 [notice] 13148#3028: signal process started
+2018/09/25 15:10:58 [error] 18652#1380: *32 upstream timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while connecting to upstream, client: 192.168.1.250, server: 127.0.0.1, request: "POST /apiPost/CheckLogin/ HTTP/1.1", upstream: "http://127.0.0.1:9090/apiPost/CheckLogin/", host: "192.168.1.250:81", referrer: "http://192.168.1.250:3000/"
+2018/09/26 14:36:02 [error] 14664#18292: *206 upstream timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while connecting to upstream, client: 192.168.1.250, server: 127.0.0.1, request: "POST /apiPost/CheckLogin/ HTTP/1.1", upstream: "http://127.0.0.1:9090/apiPost/CheckLogin/", host: "192.168.1.250:81", referrer: "http://192.168.1.250:3000/msgShow"
+2018/09/26 17:30:56 [error] 20364#12204: *364 upstream timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while connecting to upstream, client: 192.168.1.250, server: 127.0.0.1, request: "POST /apiPost/CheckLogin/ HTTP/1.1", upstream: "http://127.0.0.1:9090/apiPost/CheckLogin/", host: "192.168.1.250:81", referrer: "http://192.168.1.250:3000/"
+2018/09/27 08:48:35 [error] 19708#13660: *2 upstream timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while connecting to upstream, client: 192.168.1.250, server: 127.0.0.1, request: "POST /apiPost/CheckLogin/ HTTP/1.1", upstream: "http://127.0.0.1:9090/apiPost/CheckLogin/", host: "192.168.1.250:81", referrer: "http://localhost:3000/"
+2018/09/27 08:51:17 [error] 19708#13660: *6 upstream timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while connecting to upstream, client: 192.168.1.250, server: 127.0.0.1, request: "POST /apiPost/CheckLogin/ HTTP/1.1", upstream: "http://127.0.0.1:9090/apiPost/CheckLogin/", host: "192.168.1.250:81", referrer: "http://192.168.1.250:3000/"

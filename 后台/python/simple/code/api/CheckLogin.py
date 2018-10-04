@@ -4,9 +4,12 @@
 from bottle import  post
 from common import web_helper
 
-@post('/api/CheckLogin/')
+@post('/apiPost/CheckLogin/')
 def post_CheckLogin():
     # 验证当前页面是否登录入失效
-    username = web_helper.get_form('username', '帐号')
-    print(username)
-    return web_helper.return_msg(0, '验证成功')
+    s = web_helper.get_session()
+    userName = s.get('login_name')
+    if userName != "":
+        return web_helper.return_msg(0, '验证成功')
+    else:
+        return web_helper.return_msg(-1, '用户未登录')
