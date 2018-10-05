@@ -15,12 +15,13 @@ class Detail extends Component{
     }
     render(){
         const  RouteList = JSON.parse(this.context.RouteList) || [];
+        console.log("aaa")
         return(
             <div>
-                <Route exact path="/" component={Home}></Route>
-                <Route path="/msgShow" component={Page01}></Route>
-                <Route path="/BlogHandle" component={Page02}></Route>
-                <Route path="/userComments" component={Page03}></Route>  
+                <Route exact path="/BackStage/" component={Home}></Route>
+                <Route path="/BackStage/msgShow" component={Page01}></Route>
+                <Route path="/BackStage/BlogHandle" component={Page02}></Route>
+                <Route path="/BackStage/userComments" component={Page03}></Route>  
         
             </div>
         )

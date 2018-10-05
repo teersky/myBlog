@@ -133,6 +133,7 @@ import React, {
           mouseDown: false,
         }) 
     }
+    
     componentWillMount(){
       APIData.get("http://192.168.1.250:81/apiGet/dataInterface/")
       .then((result) => {
@@ -151,7 +152,6 @@ import React, {
       });
     }
     MakeMoney(res) {
-      console.log("res： "+ res);
       if(res === -120){
         moveElement__Length = 0;
         this.setState({

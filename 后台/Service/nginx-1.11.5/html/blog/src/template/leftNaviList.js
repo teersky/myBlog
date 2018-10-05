@@ -45,7 +45,7 @@ class leftNaviList extends Component{
                         if(list.child === undefined || list.child.length === 0){
                             return (
                                 <li  className={Number(this.state.arr[0])  === val ? "li_style open": "li_style"} key = {val}>
-                                    <Link to={list.linkTo} className="linkTo" onDragStart={ (event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, val)}}><Icon type={list.icons} className="left_tit_nave_icon"/>{ list.title }</p></Link>
+                                    <Link to={ "/BackStage/" + list.linkTo } className="linkTo" onDragStart={ (event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, val)}}><Icon type={list.icons} className="left_tit_nave_icon"/>{ list.title }</p></Link>
                                     <ul>
         
                                     </ul>
@@ -54,13 +54,13 @@ class leftNaviList extends Component{
                         }else{
                             return (
                                 <li  className={Number(this.state.arr[0])  === val ? "li_style open": "li_style"} key = {val}>
-                                    <Link to={list.linkTo} className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, val)}}><Icon type={list.icons} className="left_tit_nave_icon"/>{ list.title }</p></Link>
+                                    <Link to={ "/BackStage/" + list.linkTo } className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, val)}}><Icon type={list.icons} className="left_tit_nave_icon"/>{ list.title }</p></Link>
                                     <ul>
                                         { 
                                             list.child.map((items, index) => {
                                                 return (
                                                     <li className={Number(this.state.arr[1]) === Number(val+""+index) ? "li_style open": "li_style"} key = {Number(val+""+index)}>
-                                                        <Link to={items.linkTo} className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, Number(val+""+index))}}>{ list.title }</p></Link>
+                                                        <Link to={ "/BackStage/" + items.linkTo } className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, Number(val+""+index))}}>{ list.title }</p></Link>
                                                     </li>
                                                 )
                                             })

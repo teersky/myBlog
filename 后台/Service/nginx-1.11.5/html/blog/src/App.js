@@ -11,10 +11,8 @@ import PropTypes from "prop-types";
 import 'antd/dist/antd.css';
 
 import './App.css';
-import PageDetail from './pageDetail';
-import Login from './page/login/lgoin';
-import Loading from './page/loading/loading';
-import APIData from "./modules/get-api"
+import BackStage from "./Backstage"
+import Re__index from "./Reception/defaults"
 let Style={
   box:{height: '100%'}
 }
@@ -23,66 +21,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-     routeIndex: 0
     };
   }
 
-  componentWillMount(){
-    sessionStorage.setItem("ListSelectClose", "")
-    let checkUserList = {};
-    APIData.post("http://192.168.1.250:81/apiPost/CheckLogin/",checkUserList)
-      .then((result) => {
-          if(result.state === -1 || result.state === -404 ){
-            this.setState({
-              routeIndex: 2
-            })
-            
-          }else{
-            this.setState({
-              routeIndex: 1
-            })
-          }
-      })
-      .catch((error) => {
-          console.log(error);
-      })
-    
-  }
   render() {
-    if(this.state.routeIndex === 0){
-        return (
+      return (
+        <Router>
           <div style={ Style.box }>
-            <Loading />
+            <Route  exact path="/" component={ Re__index }></Route> 
+            <Route path="/BackStage" component={BackStage}></Route> 
           </div>
-        );
-    }else if((this.state.routeIndex === 1)){
-      return (
-        <div style={ Style.box }>
-          <PageDetail />
-        </div>
-      );
-    }else if((this.state.routeIndex === 2)){
-      return (
-        <div style={ Style.box }>
-           <Login />
-          {/* <Route path="/Login"  component={ Login } ></Route>  */}
-        </div>
-      );
-    }
-  /*  return (
-      <Router>
-        <div style={ Style.box }>
-
-          {
-            console.log(this.state.routeIndex)
-           
-          }
-          <Route exact path="/" component={ PageDetail } ></Route>         
-          <Route path="/Login"  component={ Login } ></Route> 
-          <Route path="/Loading" component={ Loading } ></Route>
-        </div>
-      </Router>
-    ); */
+        </Router>
+      )
   }
 }
 
