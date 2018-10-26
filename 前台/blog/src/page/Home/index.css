@@ -146,7 +146,7 @@
     flex: 1;
     margin: 0; 
     padding: 0;
-    margin-top: -10px;
+    margin-top: -16px;
 }
 .table__box  .likesAndCommentBox p span{
     display: block;
@@ -157,7 +157,7 @@
 }
 .table__box  .likesAndCommentBox p span.txt{
     font-size: 20px;
-    margin-bottom: -10px;
+    margin-bottom: -15px;
 }
 .box-title {
     font: 0/0 a;
@@ -185,5 +185,91 @@
     height: 70%;
     display: block;
     content: url(./images/text/text-khgm.cb3ca65.png);
+    background-size: auto 40%;
+}
+.box-title.text-YHFB::before {
+    height: 70%;
+    display: block;
+    content: url(./images/text/text-fssj.png);
+    background-size: auto 40%;
+}
+.table__left .section{
+    margin-bottom: 20px;
+}
+.table__left .section:last-child{
+    margin-bottom: 0;
+}
+.fansDistribute p{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    background: url(./images/hr-bg.ef8dde9.png);
+    background-position: bottom;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+.fansDistribute p:first-child{
+    margin-top: -16px;
+}
+.fansDistribute p:last-child{
+    margin-bottom: -10px;
+}
+.fansDistribute p span{
+    display: block;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1em;
+}
+.fansDistribute p span.tit{
+    font-size: 13px;
+}
+.fansDistribute p span.txt{
+    font-size: 16px;
+    font-weight: bold;
+}
+.fansDistribute p span.tit:before{
+    content: "";
+    display: block;
+    width: 18px; 
+    height:  18px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    color: #fff;
+    background: url(./images/counter-bg.9ef8724.png) no-repeat center / 100% 100%;
+    margin-right: 8px;
+}
+
+.fansDistribute p:nth-child(1) span.tit:before{
+    content: "1";  
+}
+.fansDistribute p:nth-child(2) span.tit:before{
+    content: "2";  
+}
+.fansDistribute p:nth-child(3) span.tit:before{
+    content: "3";  
+}
+.fansDistribute p:nth-child(4) span.tit:before{
+    content: "4";  
+}
+.fansDistribute p:nth-child(5) span.tit:before{
+    content: "5";  
+}
+
+.box-title.text-FBXX::before {
+    height: 70%;
+    display: block;
+    content: url(./images/text/text-fbxx.png);
     background-size: auto 40%;
 }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Icon } from 'antd';
 import "./index.css";
+import ChinaMap from "./temp/map"
 
 export default class Home extends Component {
     render() {
@@ -56,7 +57,48 @@ export default class Home extends Component {
                                 </p>  
                             </div>
                         </section>
+                        <section className="section">
+                            <h4 className="box-title text-YHFB">用户分布</h4>
+                            <div className="sectionBox fansDistribute">
+                                <p className="likesNum">
+                                    <span className="tit">北京</span>
+                                    <span className="txt">2,201</span>
+                                </p> 
+                                <p className="commentNum">
+                                    <span className="tit">上海</span>
+                                    <span className="txt">2,201</span>
+                                </p> 
+                                <p className="commentNum">
+                                    <span className="tit">广州</span>
+                                    <span className="txt">2,201</span>
+                                </p> 
+                                <p className="commentNum">
+                                    <span className="tit">深圳</span>
+                                    <span className="txt">2,201</span>
+                                </p> 
+                                <p className="commentNum">
+                                    <span className="tit">重庆 </span>
+                                    <span className="txt">2,201</span>
+                                </p>  
+                            </div>
+                        </section>
+                        <section className="section">
+                            <h4 className="box-title text-FBXX">发布信息</h4>
+                            <div className="sectionBox likesAndCommentBox">
+                                <p className="likesNum">
+                                    <span className="tit">文章累计发布量</span>
+                                    <span className="txt">2,201</span>
+                                </p> 
+                                <p className="commentNum">
+                                    <span className="tit">工具累计发布量</span>
+                                    <span className="txt">2,201</span>
+                                </p>  
+                            </div>
+                        </section>
                     </div>
+                    <div class="table__center">
+                        <ChinaMap></ChinaMap>
+                    </div> 
                 </div> 
             </div>
         )
