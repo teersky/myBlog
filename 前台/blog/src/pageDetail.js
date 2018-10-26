@@ -14,6 +14,7 @@ import React, {
   import LeftNavi from './template/leftNavi';
   import Detail from './template/detail';
   import APIData from "./modules/get-api"
+
   
   let style = {
     app: {
@@ -25,7 +26,7 @@ import React, {
       background: "#2d2828",
       boxShadow: "3px 3px 10px #888888",
       position: 'relative',
-      zIndex: 10
+      zIndex: 30
     },
     page_detail: {
       width: "100%",
@@ -38,6 +39,9 @@ import React, {
       overflow: 'scroll'
     }
   }
+
+  let moveElement__Length = 0;
+
   class PageDetail extends Component {
     constructor(props) {
       super(props);
@@ -49,16 +53,14 @@ import React, {
         mouseUp: false,
         mouseDown: false,
         listArr: [],
-        RouteList: []
+        RouteList: [],
+        showListTip: false,
+        listSelect__close: false
       };
-    }
-    MouseUpEv() {
-      this.setState({
-        keyUp: true
-      });
     }
     static childContextTypes = {
       isMouseUp:PropTypes.bool,
+      showListTip:PropTypes.bool,
       windowWidth:PropTypes.string,
       mouseMoveLen:PropTypes.string,
       callback:PropTypes.func,
@@ -72,14 +74,16 @@ import React, {
         return{
             isMouseUp: this.state.mouseUp,
             windowWidth: this.state.windowWidth.toString(),
-            mouseMoveLen: this.state.mouseMoveLen.toString(),
+            mouseMoveLen: moveElement__Length.toString(),
             callback: this.callback.bind(this),
             apiData: JSON.stringify(this.state.listArr),
             RouteList: JSON.stringify(this.state.RouteList),
+            showListTip: this.state.showListTip
         }
     }
     callback(msg){
      
+      //mouseMoveLen_1: this.state.mouseMoveLen.toString(),
     }
     mouseDownEv (event){
       let clientX
@@ -88,38 +92,55 @@ import React, {
       }else{
         clientX = event.clientX;
       }
-     
-      this.setState({
-        mouseDownPoint: clientX,
-        mouseUp: false,
-        mouseDown: true
-      });
-    }
-    mouseMoveEv(event){
-      if(this.state.mouseDown){
-        let clientX = null;
-        if(event.touches !== undefined){
-          clientX = event.touches[0].clientX;
-        }else{
-          clientX = event.clientX;
-        }
+      if(clientX < 15){
         this.setState({
-          mouseMoveLen: clientX - this.state.mouseDownPoint
+          showListTip: true
+        });
+      }else{
+        this.setState({
+          showListTip: false
+        });
+      }
+      this.setState({
+        mouseMoveLen: 0
+      });
+      if(Math.abs(clientX) < 15){
+        this.setState({
+          mouseDownPoint: clientX,
+          mouseUp: false,
+          mouseDown: true
         });
       }
     }
-    mouseUpEv(){
-      this.setState({
-        mouseUp: true,
-        mouseDown: false
-      })
+    mouseMoveEv(event){
+      if(Math.abs(this.state.mouseDownPoint) < 30){
+        if(this.state.mouseDown){
+          let clientX = null;
+          if(event.touches !== undefined){
+            clientX = event.touches[0].clientX;
+          }else{
+            clientX = event.clientX;
+          }
+          moveElement__Length = clientX - this.state.mouseDownPoint;
+          this.setState({
+            mouseMoveLen: clientX - this.state.mouseDownPoint
+          });
+        }
+      }
     }
+    mouseUpEv(event){
+        this.setState({
+          mouseUp: true,
+          mouseDown: false,
+        }) 
+    }
+    
     componentWillMount(){
-      APIData.get("http://127.0.0.1/Data/data.json")
+/*       console.log(staticVariable); */
+      APIData.get("http://192.168.0.250:81/apiGet/dataInterface/")
       .then((result) => {
           this.setState({
-            listArr: result.listArr,
-            RouteList: result.RouteIndexList
+            listArr: result.data,
           });
       })
       .catch((error) => {
@@ -132,18 +153,25 @@ import React, {
         windowWidth: el.offsetWidth
       });
     }
+    MakeMoney(res) {
+      if(res === -120){
+        moveElement__Length = 0;
+        this.setState({
+          mouseMoveLen: 0
+        });
+      }
+    }
     
     render() {
-      
       return (
         <Router>
-          <div className="App" style={ style.app } onMouseUp={ () => {this.MouseUpEv() }} ref={dom => {this.divStyle = dom}}>
+          <div className="App" style={ style.app } ref={dom => {this.divStyle = dom}}>
             <div className="page_top" style={ style.page_top }>
               <TopBar title="首页" />
             </div>
             <div className="page_detail" style={ style.page_detail }>
-                <LeftNavi title="首页" style={style.left_navi} status={this.state.keyUp}/>
-                <div className="detailBox"  onMouseDown={(event) => {this.mouseDownEv(event)}} onMouseMove={(event) => {this.mouseMoveEv(event)}} onMouseUp={() => {this.mouseUpEv()}} onTouchStart={(event) => {this.mouseDownEv(event)}} onTouchMove={(event) => {this.mouseMoveEv(event)}} onTouchEnd={() => {this.mouseUpEv()}}>
+                <LeftNavi title="首页" style={style.left_navi} status={this.state.keyUp} MakeMoney={this.MakeMoney.bind(this)} />
+                <div className="detailBox"  onMouseDown={(event) => {this.mouseDownEv(event)}} onMouseMove={(event) => {this.mouseMoveEv(event)}} onMouseUp={(event) => {this.mouseUpEv(event)}} onTouchStart={(event) => {this.mouseDownEv(event)}} onTouchMove={(event) => {this.mouseMoveEv(event)}} onTouchEnd={(event) => {this.mouseUpEv(event)}}>
                    <Detail />
                 </div>
             </div>

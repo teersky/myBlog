@@ -7,8 +7,11 @@ import PropTypes from "prop-types";
 import "./style.css"
 import LeftNaviList from './leftNaviList';
 
-let oUl_height = 0;
-let old_Wid_W = -120;
+var oUl_height = 0;
+var old_Wid_W = -120;
+var clickTip = 0;
+var wid_W = null;
+
 class leftNavi extends Component {
     constructor(props) {
         super(props); //第一步，这是必须的
@@ -28,14 +31,19 @@ class leftNavi extends Component {
             pageMulse: 0,
             oldLocation: -120,
             openIndex: 0,
+            showList: false,
+            mouseDownPoint: 0,
+            mouseMoveLen_list: 0
         };
     }
     
     static contextTypes = {
         isMouseUp: PropTypes.bool,
+        showListTip: PropTypes.bool,
         windowWidth:PropTypes.string,
         mouseMoveLen:PropTypes.string,
         callback:PropTypes.func,
+        bShowList__Tip: PropTypes.bool,
     }
     mouseDownEv(event) {
         let clientY = null;
@@ -95,42 +103,126 @@ class leftNavi extends Component {
     handleWheel(event) {
         console.log(event)
     }
+    toRight__pointEv(){
+        clickTip = !clickTip;
+        if(clickTip){
+            this.setState({
+                showList: true
+            })
+        }else{
+            this.setState({
+                showList: false
+            }) 
+        }
+    }
     
+    mouseDownEv_2 (event){
+        
+        console.log("aaaa");
+        if(this.context.isMouseUp){
+            let clientX
+            if(event.touches !== undefined){
+            clientX = event.touches[0].clientX;
+            }else{
+            clientX = event.clientX;
+            }
+            if(clientX < 15){
+            this.setState({
+                showListTip: true
+            });
+            }
+            this.setState({
+            mouseDownPoint: clientX,
+            mouseUp: false,
+            mouseDown: true
+            });
+        }
+      }
+      mouseMoveEv_2(event){
+          if(this.context.isMouseUp){
+            if(this.state.mouseDownPoint  >= Number(this.context.windowWidth) - 240){
+                if(this.state.mouseDown){
+                    let clientX = null;
+                    if(event.touches !== undefined){
+                        clientX = event.touches[0].clientX;
+                    }else{
+                        clientX = event.clientX;
+                    }
+                    let a = clientX - this.state.mouseDownPoint;
+                    if(a > 0){
+                        a = 0;
+                    }else if(a < -120){
+                        a = -120;
+                    }
+                    console.log("a: " + a);
+                    this.setState({
+                        mouseMoveLen_list: a
+                    });
+                }
+            }
+        }
+      }
+      mouseUpEv_2(){
+        let a = this.state.mouseMoveLen_list;
+        if(a > -60){
+            a = 0;
+        }else{
+            a = -120;
+        }
+        
+        this.setState({
+            mouseMoveLen_list: a
+        });
+        console.log(a);
+        this.props.MakeMoney(a);
+        wid_W = 0;
+        old_Wid_W = -120;
+      }
+      componentWillReceiveProps(){
+        const mouseMoveLen = Number(this.context.mouseMoveLen);
+        const  ismouseup = this.context.isMouseUp;
+        if(mouseMoveLen === 0 && ismouseup === false){
+            this.setState({
+                mouseMoveLen_list: 0
+            });
+            wid_W = 0;
+            old_Wid_W = -120;
+        } 
+      }
     render() {
         const mouseMoveLen = Number(this.context.mouseMoveLen);
         const  windowWidth = Number(this.context.windowWidth);
         const  ismouseup = this.context.isMouseUp;
-        let wid_W = null;
-        
         if(windowWidth < 530){
             if(ismouseup){
                 if(old_Wid_W === -120){
                     if(mouseMoveLen > 60){
-                        wid_W = -5 + "px";
-                        old_Wid_W = -5;
-                    }else{
-                        wid_W = -125 + "px";
-                        old_Wid_W = -125
+                        wid_W = 0;
+                        old_Wid_W = 0;
+                    }else if(mouseMoveLen < 60 && mouseMoveLen !== 0 ){
+                        wid_W = -120;
+                        old_Wid_W = -120
                     }
                 }else{
                     if(mouseMoveLen < -60){
-                        wid_W = -125 + "px";
-                        old_Wid_W = -125;
-                    }else{
-                        wid_W = -5 + "px";
-                        old_Wid_W = -5
+                        wid_W = -120;
+                        old_Wid_W = -120;
+                    }else if(mouseMoveLen > -60 && mouseMoveLen < 0){
+                        wid_W = 0;
+                        old_Wid_W = 0
                     } 
                 }
             }else{
-                if(old_Wid_W === -5){
-                    wid_W = (-5 + mouseMoveLen) < -120 ? -120 : (-5 + mouseMoveLen) >= 0?0: (0 + mouseMoveLen) + "px";
+                if(old_Wid_W === 0){
+                    wid_W =  mouseMoveLen < -120 ? -120 :  mouseMoveLen >= 0? 0: (0 + mouseMoveLen);
                 }else{
-                    wid_W = (-120 + mouseMoveLen) < -120 ? -120 : (-120 + mouseMoveLen) >= 0?0: (-120 + mouseMoveLen) + "px";
+                    wid_W = (-120 + mouseMoveLen) < -120 ? -120 : (-120 + mouseMoveLen) >= 0?0: (-120 + mouseMoveLen);
                 }
             }
+            
         }
         return (
-            <div className="div_style" style={{left:  wid_W}} text={"text".split("")[0]}>
+            <div className="div_style" style={{left:  wid_W === 0 && ismouseup === true ? this.state.mouseMoveLen_list : wid_W + "px"}} text={"text".split("")[0]}>
                 <div className="scrollBox"  
                     onMouseDown={(event) => { this.mouseDownEv(event) }} onMouseMove={(event) => { this.mouseMoveEv(event) }} 
                     onMouseUp={(event) => { this.mouseUpEv(event) }} onMouseLeave={(event) => { this.mouseLeaveEv(event) }} 
@@ -140,6 +232,8 @@ class leftNavi extends Component {
 
                     <LeftNaviList callBackDate={ this.callBackDate.bind(this)} data = {this.state.oUl}/>
                 </div>
+                {/* <div className={this.state.showList === false ? "toRight__point" : "toRight__point toRight__point__show"} onClick = { () => {this.toRight__pointEv()}} ></div> */}
+                <div className={Math.abs(wid_W === 0 ? this.state.mouseMoveLen_list : wid_W  ) < 30 ? "shadow shadow_SHow" : "shadow" } onMouseDown={(event) => {this.mouseDownEv_2(event)}} onMouseMove={(event) => {this.mouseMoveEv_2(event)}} onMouseUp={(event) => {this.mouseUpEv_2(event)}} onTouchStart={(event) => {this.mouseDownEv_2(event)}} onTouchMove={(event) => {this.mouseMoveEv_2(event)}} onTouchEnd={(event) => {this.mouseUpEv_2(event)}}></div>
             </div>
         )
     }

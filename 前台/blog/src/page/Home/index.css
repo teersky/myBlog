@@ -1,0 +1,189 @@
+.defaultBox{
+    width: 100%; 
+    height: 100%;  
+    background: url(./images/bg.9a702ed.jpg) no-repeat center / 100% 100%; 
+}
+
+.page__title{
+    display: flex; 
+    display: -webkit-flex; 
+    display: -moz-flex;
+    justify-content: space-around;
+}
+.title_List{
+    display: flex; 
+    display: -webkit-flex;
+    display: -moz-flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-top: 24px;
+}
+.title_List li{
+    flex: 1;
+    height: 64px;
+    margin: 0 48px 0 48px;
+    position: relative;
+    display: flex; 
+    display: -webkit-flex;
+    display: -moz-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title_List li:before{
+    content: "";
+    border: 1px solid #4485d6;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transform: skew(-30deg);
+    -ms-transform: skew(-30deg);
+    transform: skew(-30deg);
+    -webkit-box-shadow: -2px -2px 2px rgba(68, 133, 214, .4), 2px 2px 2px rgba(68, 133, 214, .4);
+    box-shadow: -2px -2px 2px rgba(68, 133, 214, .4), 2px 2px 2px rgba(68, 133, 214, .4);
+}
+
+.table__box{
+    display: flex; 
+    display: -webkit-flex;
+    display: -moz-flex;
+    justify-content: space-between;
+    padding: 24px 20px 0 24px;
+    flex: 0 0 auto;
+}
+.table__left{
+    width: 280px;
+}
+.table__box  .sectionBox{
+    display: block;
+    color: #fff;
+    padding: 24px 0;
+    background-image: url(./images/box-bg-head-sm.79e8869.png),url(./images/box-bg-foot-sm.733a5bd.png),url(./images/box-bg-border.abde6c7.png);
+    background-position: center top,center bottom,center top;
+    -webkit-background-clip: border-box,border-box,content-box;
+    background-clip: border-box,border-box,content-box;
+    background-repeat: no-repeat,no-repeat,repeat-y;
+    background-size: contain, contain, contain;
+}
+.detailList li:last-child{
+    margin-right: 0px;
+}
+.title-icons__box{
+    margin: 0; 
+    padding: 0;
+    flex: 1;
+    margin-left: 20px;
+}
+.title-icons__box span{
+    display: block; 
+    text-align: center; 
+    font-size: 16px;
+}
+.title-icons__box .icons{
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+}
+.title-icons__box.LKFW .icons{
+    color: #46d186;
+}
+.title-icons__box.LKFW span{
+    color: #46d186;
+}
+.title-icons__box.BWCK .icons{
+    color: #dd871a;
+}
+.title-icons__box.BWCK span{
+    color: #dd871a;
+}
+.title-icons__box.SYGJ .icons{
+    color: #c6445e;
+}
+.title-icons__box.SYGJ span{
+    color: #c6445e;
+}
+
+
+
+.title_List .cutLine{
+    display: block;
+    width: 1px;
+    height: 32px;
+    background: #423131;
+}
+.title-data__box{
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    margin-right: 20px;
+}
+.title-data__box .yestarday{
+    display: block;
+    white-space: nowrap;
+    text-overflow: hidden;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+.title-data__box .allDay{
+    display: block;
+    white-space: nowrap;
+    text-overflow: hidden;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.table__box  .likesAndCommentBox{
+    display: flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}
+.table__box  .likesAndCommentBox p{
+    flex: 1;
+    margin: 0; 
+    padding: 0;
+    margin-top: -10px;
+}
+.table__box  .likesAndCommentBox p span{
+    display: block;
+    text-align: center;
+}
+.table__box  .likesAndCommentBox p span.tit{
+    font-size: 12px;
+}
+.table__box  .likesAndCommentBox p span.txt{
+    font-size: 20px;
+    margin-bottom: -10px;
+}
+.box-title {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+    height: 40px;
+    background-image: url(./images/box-title.2837237.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 15.5px 0;
+    margin-bottom: 0;
+    padding: 0;
+    margin: 0;    
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-title.text-khgm::before {
+    height: 70%;
+    display: block;
+    content: url(./images/text/text-khgm.cb3ca65.png);
+    background-size: auto 40%;
+}

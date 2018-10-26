@@ -4,10 +4,15 @@ import {
 } from 'react-router-dom';
 import PropTypes from "prop-types";
 import Home from '../page/Home/index';
-import Page01 from '../page/page1/index';
-import Page02 from '../page/page2/index';
-import Page03 from '../page/page3/index';
+import MsgShow from '../page/MsgShow/index';
+import BlogHandle from '../page/BlogHandle/index';
+import userComments from '../page/userComments/index';
 
+const style={
+    width:'100%',
+    height:'100%',
+    padding: '0px'
+};
 
 class Detail extends Component{
     static contextTypes = {
@@ -16,12 +21,11 @@ class Detail extends Component{
     render(){
         const  RouteList = JSON.parse(this.context.RouteList) || [];
         return(
-            <div>
-                <Route exact path="/" component={Home}></Route>
-                <Route path="/msgShow" component={Page01}></Route>
-                <Route path="/BlogHandle" component={Page02}></Route>
-                <Route path="/userComments" component={Page03}></Route>  
-        
+            <div style={ style } >
+                <Route exact path="/BackStage" component={Home}></Route>
+                <Route path="/BackStage/msgShow" component={MsgShow}></Route>
+                <Route path="/BackStage/BlogHandle" component={BlogHandle}></Route>
+                <Route path="/BackStage/userComments" component={userComments}></Route>   
             </div>
         )
     }

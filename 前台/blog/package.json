@@ -2,9 +2,9 @@
   "name": "my-blog",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1",
   "dependencies": {
     "antd": "^3.6.4",
+    "axios": "^0.18.0",
     "eject": "0.0.4",
     "react": "^16.4.1",
     "react-axios": "^2.0.0",
@@ -17,5 +17,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "proxy": { 
+    "/api": {
+        "target": "http://192.168.1.250:81/",
+        "changeOrigin": true, 
+        "pathRewrite": { 
+            "^/api": "/"  
+        }  
+    }  
+} 
 }
