@@ -9,34 +9,34 @@ export default class Home extends Component {
             <div className="defaultBox">
                 <ul className="title_List">
                     <li>
-                        <p class="title-icons__box LKFW">
+                        <p className="title-icons__box LKFW">
                             <Icon type="coffee" theme="twoTone"  className="icons"/>
                             <span>访客</span>    
                         </p>    
                         <i className="cutLine"></i>   
-                        <p class="title-data__box">
+                        <p className="title-data__box">
                             <span className="yestarday">20 昨天</span>
                             <span className="allDay">1024 总数</span>
                         </p>
                     </li>
                     <li>
-                        <p class="title-icons__box BWCK">
+                        <p className="title-icons__box BWCK">
                             <Icon type="file" theme="twoTone"  className="icons"/>
                             <span>文章阅读</span>    
                         </p>    
                         <i className="cutLine"></i>   
-                        <p class="title-data__box">
+                        <p className="title-data__box">
                             <span className="yestarday">32 昨天</span>
                             <span className="allDay">998 总数</span>
                         </p>
                     </li>
                     <li>
-                        <p class="title-icons__box SYGJ">
+                        <p className="title-icons__box SYGJ">
                             <Icon type="tool" theme="twoTone"  className="icons"/>
                             <span>工具使用</span>    
                         </p>    
                         <i className="cutLine"></i>   
-                        <p class="title-data__box">
+                        <p className="title-data__box">
                             <span className="yestarday">32 昨天</span>
                             <span className="allDay">998 总数</span>
                         </p>
@@ -96,7 +96,7 @@ export default class Home extends Component {
                             </div>
                         </section>
                     </div>
-                    <div class="table__center">
+                    <div className="table__center">
                         <ChinaMap></ChinaMap>
                     </div> 
                 </div> 
