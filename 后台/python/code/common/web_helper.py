@@ -10,6 +10,7 @@ from common import json_helper
 
 def get_ip():
     """获取当前客户端ip"""
+    print(request)
     try:
         ip = request.remote_addr
     except:

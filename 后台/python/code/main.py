@@ -61,7 +61,7 @@ def validate():
     # 获取当前访问的Url路径
     path_info = request.environ.get("PATH_INFO")
     # 过滤不用做任何操作的路由（即过滤不用进行判断是否登录和记录日志的url）
-    if path_info in ['/favicon.ico', '/', '/api/verify/']:
+    if path_info in ['/favicon.ico', '/', '/api/verify/', "/api/visitHandle/"]:
         return
     ### 记录客户端提交的参数 ###
     # 获取当前访问url路径与ip

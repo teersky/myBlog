@@ -7,7 +7,6 @@ from common import web_helper
 @post('/apiPost/CheckLogin/')
 def post_CheckLogin():
     # 验证当前页面是否登录入失效
-    print("checkLogin")
 
     s = web_helper.get_session()
     userName = s.get('login_name')

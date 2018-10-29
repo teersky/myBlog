@@ -13,7 +13,6 @@ def datainterface():
     sql = """select * from public.naviList order by id"""
     manager_result = db_helper.read(sql)
     result = []
-    print(manager_result)
     for l in manager_result:
         if l.get('father_Link').strip() == str.strip():
             result.append(l)

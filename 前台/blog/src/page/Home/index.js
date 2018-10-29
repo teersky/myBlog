@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Icon } from 'antd';
 import "./index.css";
-import ChinaMap from "./temp/map"
+import ChinaMap from "./temp/ResMapReviewer"
 
 export default class Home extends Component {
     render() {
@@ -99,7 +99,8 @@ export default class Home extends Component {
                     <div className="table__center">
                         <ChinaMap></ChinaMap>
                     </div> 
-                </div> 
+                    <div className="table_right"></div>
+                </div>  
             </div>
         )
     }

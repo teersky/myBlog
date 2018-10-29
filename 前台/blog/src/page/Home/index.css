@@ -273,3 +273,9 @@
     content: url(./images/text/text-fbxx.png);
     background-size: auto 40%;
 }
+.table__center{
+    flex: 1;
+}
+.table_right{
+    width: 240px;   
+}
