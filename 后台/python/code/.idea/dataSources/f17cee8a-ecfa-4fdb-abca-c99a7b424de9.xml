@@ -70,8 +70,8 @@
     <schema id="15" parent="2" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
-      <IntrospectionTimestamp>2018-10-29.17:02:33.099</IntrospectionTimestamp>
-      <IntrospectionStateNumber>792</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-30.15:31:20.844</IntrospectionTimestamp>
+      <IntrospectionStateNumber>806</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -167,7 +167,7 @@
     </table>
     <table id="30" parent="15" name="visitRecode">
       <ObjectId>16602</ObjectId>
-      <StateNumber>792</StateNumber>
+      <StateNumber>805</StateNumber>
     </table>
     <column id="31" parent="26" name="code">
       <Position>1</Position>
@@ -425,17 +425,17 @@
       <StateNumber>792</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="69" parent="30" name="reserve_1">
+    <column id="69" parent="30" name="ip_inner">
       <Position>4</Position>
-      <DataType>char(4)|0s</DataType>
-      <StateNumber>792</StateNumber>
+      <DataType>char(16)|0s</DataType>
+      <StateNumber>795</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="70" parent="30" name="reserve_2">
+    <column id="70" parent="30" name="valueindex">
       <Position>5</Position>
-      <DataType>char(4)|0s</DataType>
-      <StateNumber>792</StateNumber>
-      <TypeId>1042</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>806</StateNumber>
+      <TypeId>23</TypeId>
     </column>
     <column id="71" parent="30" name="reserve_3">
       <Position>6</Position>

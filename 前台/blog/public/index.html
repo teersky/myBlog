@@ -25,12 +25,15 @@
       #root{height: 100%;}
     </style>
     <title>React App</title>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=hKVAUB5UkC7wOnkfeinSuIAoX2xt6aBQ"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    <div id="allmap" style="display: none;"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -41,5 +44,31 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      window.onload = function(){
+        var ip = returnCitySN["cip"];
+        sessionStorage.setItem("ip", ip);
+        var city ="";
+
+        var map = new BMap.Map("allmap");
+        var point = new BMap.Point(108.95,34.27);
+        map.centerAndZoom(point,12);
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function(r){
+            if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                var mk = new BMap.Marker(r.point);
+                map.addOverlay(mk);
+                map.panTo(r.point);
+                var point = new BMap.Point(r.point.lng,r.point.lat);
+                var gc = new BMap.Geocoder();
+                gc.getLocation(point, function(rs){
+                  var addComp = rs.addressComponents; 
+                  sessionStorage.setItem("location", JSON.stringify(addComp));
+                });
+            }
+        },{enableHighAccuracy: true})
+      }
+
+    </script>
   </body>
 </html>

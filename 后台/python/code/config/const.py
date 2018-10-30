@@ -19,6 +19,7 @@ DB_PASS = 'admin'
 ### 邮件服务参数 ###
 # 邮件服务器
 SMTP = 'smtp.aliyun.com'
+pop3 = "pop3.aliyun.com"
 # 邮件服务器端口
 PORT = 465
 # email发送账号

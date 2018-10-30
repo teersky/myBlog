@@ -2815,3 +2815,241 @@ LINE 1: select * from public.naviList
 2018-10-29 17:36:44,980 log_helper.py[line:14] INFO url:/api/verify ip:192.168.0.250
 2018-10-29 17:38:56,269 log_helper.py[line:14] INFO url:/api/verify ip:192.168.0.250
 2018-10-29 17:38:57,282 log_helper.py[line:14] INFO url:/api/verify ip:192.168.0.250
+2018-10-30 10:10:10,454 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-10-30 10:17:15,247 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-10-30 14:51:34,478 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "\'visitRecode\'" 或附近的\nLINE 1: SELECT COUNT(1) FROM \'visitRecode\' WHERE  code=\'620102      ...\n                             ^\n',) sql:SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102      '
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "'visitRecode'" 或附近的
+LINE 1: SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102      ...
+                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:25)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 14:52:52,283 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "\'visitRecode\'" 或附近的\nLINE 1: SELECT COUNT(1) FROM \'visitRecode\' WHERE  code=\'620102      ...\n                             ^\n',) sql:SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102      '
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "'visitRecode'" 或附近的
+LINE 1: SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102      ...
+                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:25)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 14:53:30,110 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "\'visitRecode\'" 或附近的\nLINE 1: SELECT COUNT(1) FROM \'visitRecode\' WHERE  code=\'620102      ...\n                             ^\n',) sql:SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102      '
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "'visitRecode'" 或附近的
+LINE 1: SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102      ...
+                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:25)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 14:55:54,402 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "\'visitRecode\'" 或附近的\nLINE 1: SELECT COUNT(1) FROM \'visitRecode\' WHERE  code=\'620102\'\n                             ^\n',) sql:SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102'
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "'visitRecode'" 或附近的
+LINE 1: SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102'
+                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:25)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 14:57:12,723 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "\'visitRecode\'" 或附近的\nLINE 1: SELECT COUNT(1) FROM \'visitRecode\' WHERE  code=\'620102\'\n                             ^\n',) sql:SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102'
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "'visitRecode'" 或附近的
+LINE 1: SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102'
+                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:25)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 14:57:54,923 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "\'visitRecode\'" 或附近的\nLINE 1: SELECT COUNT(1) FROM \'visitRecode\' WHERE  code=\'620102\'\n                             ^\n',) sql:SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102'
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "'visitRecode'" 或附近的
+LINE 1: SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102'
+                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:25)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 14:59:06,871 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "\'visitRecode\'" 或附近的\nLINE 1: SELECT COUNT(1) FROM \'visitRecode\' WHERE  code=\'620102\'\n                             ^\n',) sql:SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102'
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "'visitRecode'" 或附近的
+LINE 1: SELECT COUNT(1) FROM 'visitRecode' WHERE  code='620102'
+                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:25)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 15:03:19,937 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "\'visitRecode\'" 或附近的\nLINE 1: insert into \'visitRecode\' (dataTime, visitIP, code, ip_inner...\n                    ^\n',) sql:insert into 'visitRecode' (dataTime, visitIP, code, ip_inner) values (1540882998, 117.157.103.239, 620102, 192.168.0.250)
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "'visitRecode'" 或附近的
+LINE 1: insert into 'visitRecode' (dataTime, visitIP, code, ip_inner...
+                    ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:34)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 15:03:46,802 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 ".103" 或附近的\nLINE 1: ...sitIP, code, ip_inner) values (1540883025, 117.157.103.239, ...\n                                                             ^\n',) sql:insert into "visitRecode" (dataTime, visitIP, code, ip_inner) values (1540883025, 117.157.103.239, 620102, 192.168.0.250)
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 ".103" 或附近的
+LINE 1: ...sitIP, code, ip_inner) values (1540883025, 117.157.103.239, ...
+                                                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:34)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 15:05:09,860 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "\'dataTime\'" 或附近的\nLINE 1: insert into "visitRecode" (\'dataTime\', \'visitIP\', \'code\', \'i...\n                                   ^\n',) sql:insert into "visitRecode" ('dataTime', 'visitIP', 'code', 'ip_inner') values (1540883107, 117.157.103.239, 620102, 192.168.0.250)
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "'dataTime'" 或附近的
+LINE 1: insert into "visitRecode" ('dataTime', 'visitIP', 'code', 'i...
+                                   ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:34)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 15:07:32,246 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "\'dataTime\'" 或附近的\nLINE 1: insert into "visitRecode" (\'dataTime\', \'visitIP\', \'code\', \'i...\n                                   ^\n',) sql:insert into "visitRecode" ('dataTime', 'visitIP', 'code', 'ip_inner') values ("1540883251", "117.157.103.239", "620102", "192.168.0.250")
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "'dataTime'" 或附近的
+LINE 1: insert into "visitRecode" ('dataTime', 'visitIP', 'code', 'i...
+                                   ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:34)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 15:08:40,504 log_helper.py[line:24] INFO sql执行失败:('错误:  关系 "visitRecode" 的 "dataTime" 字段不存在\nLINE 1: insert into "visitRecode" ("dataTime", "visitIP", "code", "i...\n                                   ^\n',) sql:insert into "visitRecode" ("dataTime", "visitIP", "code", "ip_inner") values ("1540883318", "117.157.103.239", "620102", "192.168.0.250")
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  关系 "visitRecode" 的 "dataTime" 字段不存在
+LINE 1: insert into "visitRecode" ("dataTime", "visitIP", "code", "i...
+                                   ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:34)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 15:09:19,887 log_helper.py[line:24] INFO sql执行失败:('错误:  字段 "1540883358" 不存在\nLINE 1: ...dateTime", "visitIP", "code", "ip_inner") values ("154088335...\n                                                             ^\n',) sql:insert into "visitRecode" ("dateTime", "visitIP", "code", "ip_inner") values ("1540883358", "117.157.103.239", "620102", "192.168.0.250")
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 33, in read
+    cursor.execute(sql)
+psycopg2.ProgrammingError: 错误:  字段 "1540883358" 不存在
+LINE 1: ...dateTime", "visitIP", "code", "ip_inner") values ("154088335...
+                                                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:34)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 15:13:52,804 log_helper.py[line:24] INFO sql执行失败:('no results to fetch',) sql:insert into "visitRecode" ("dateTime", "visitIP", "code", "ip_inner") values ('1540883630', '117.157.103.239', '620102', '192.168.0.250')
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 35, in read
+    data = [dict((cursor.description[i][0], value) for i, value in enumerate(row)) for row in cursor.fetchall()]
+psycopg2.ProgrammingError: no results to fetch
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:34)->db_helper.py(read:38)->log_helper.py(error:21)->
+
+2018-10-30 15:18:58,721 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "117.157" 或附近的\nLINE 3:               values (\'1540883937\', \'\'117.157.103.239\'\', \'\'6...\n                                              ^\n',) sql:
+              insert into "visitRecode" ("dateTime", "visitIP", "code", "ip_inner") 
+              values ('%s', '%s', '%s', '%s')
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "117.157" 或附近的
+LINE 3:               values ('1540883937', ''117.157.103.239'', ''6...
+                                              ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:38)->db_helper.py(write:71)->log_helper.py(error:21)->
+
+2018-10-30 15:28:17,248 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 "$" 或附近的\nLINE 4:             WHERE code=$s\n                               ^\n',) sql:
+            UPDATE product_class
+               SET value=value+1
+            WHERE code=$s
+            RETURNING id;
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+psycopg2.ProgrammingError: 错误:  语法错误 在 "$" 或附近的
+LINE 4:             WHERE code=$s
+                               ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:37)->db_helper.py(write:71)->log_helper.py(error:21)->
+
+2018-10-30 15:30:16,137 log_helper.py[line:24] INFO sql执行失败:('not all arguments converted during string formatting',) sql:
+            UPDATE "visitRecode"
+               SET value=value+1
+            WHERE code='%s'
+            RETURNING id;
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+TypeError: not all arguments converted during string formatting
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:37)->db_helper.py(write:71)->log_helper.py(error:21)->
+
+2018-10-30 15:32:26,448 log_helper.py[line:24] INFO sql执行失败:('not all arguments converted during string formatting',) sql:
+            UPDATE "visitRecode"
+               SET valueIndex=valueIndex+1
+            WHERE code='%s'
+            RETURNING id;
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+TypeError: not all arguments converted during string formatting
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:37)->db_helper.py(write:71)->log_helper.py(error:21)->
+
+2018-10-30 15:36:39,060 log_helper.py[line:24] INFO sql执行失败:('not all arguments converted during string formatting',) sql:
+            UPDATE "visitRecode"
+               SET valueindex=valueindex+1
+            WHERE code='%s'
+            RETURNING id;
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+TypeError: not all arguments converted during string formatting
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:37)->db_helper.py(write:71)->log_helper.py(error:21)->
+
+2018-10-30 15:37:24,031 log_helper.py[line:24] INFO sql执行失败:('错误:  字段 "id" 不存在\nLINE 5:             RETURNING id;\n                              ^\n',) sql:
+            UPDATE "visitRecode"
+               SET valueindex=valueindex+1
+            WHERE code=code
+            RETURNING id;
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+psycopg2.ProgrammingError: 错误:  字段 "id" 不存在
+LINE 5:             RETURNING id;
+                              ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:37)->db_helper.py(write:71)->log_helper.py(error:21)->
+
