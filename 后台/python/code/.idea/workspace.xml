@@ -55,8 +55,8 @@
       <file leaf-file-name="receive_mails.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/receive_mails.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="-644">
+              <caret line="126" column="15" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="15" />
               <folding>
                 <element signature="e#271#284#0" expanded="true" />
               </folding>
@@ -87,7 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bottle</find>
       <find>login</find>
       <find>post_login</find>
       <find>@hook('before_request')</find>
@@ -117,6 +116,7 @@
       <find>useraccount</find>
       <find>get_mail_details</find>
       <find>get_parsed_msg</find>
+      <find>MailDetails</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -404,10 +404,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4969743" weight="0.32838285" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.18381241" side_tool="true" visible="true" weight="0.27557755" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.18381241" side_tool="true" visible="true" weight="0.47524753" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="14" sideWeight="0.4969743" weight="0.32838285" />
@@ -419,7 +418,7 @@
       <window_info anchor="right" id="SciView" order="4" weight="0.32980332" />
       <window_info id="Structure" order="1" sideWeight="0.5012285" side_tool="true" weight="0.2065053" />
       <window_info id="Favorites" order="2" sideWeight="0.5012285" side_tool="true" weight="0.2065053" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.8161876" visible="true" weight="0.27557755" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.8161876" visible="true" weight="0.47524753" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -777,8 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/receive_mails.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="-644">
+          <caret line="126" column="15" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="15" />
           <folding>
             <element signature="e#271#284#0" expanded="true" />
           </folding>
