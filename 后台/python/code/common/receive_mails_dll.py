@@ -71,6 +71,14 @@ def get_parsed_msg(useraccount, password, limits=1, debuglevel=1):
     total_mail_numbers = len(mails)
     # 获取最新的limits封邮件, 最多获取全部的邮件，用一个列表保存
     recv_mails = []
+
+    ret = server.stat()
+    for i in range(1, ret[0] + 1):
+        mlist = str(list(server.top(i, 0))[1][0])
+        print(mlist)
+        if "SR=1" in mlist:
+           print("未读")
+
     limits = limits if limits <= total_mail_numbers else total_mail_numbers
     for item in mails[-1:-(limits+1):-1]:
         # 为每一封邮件进行实例化处理
@@ -118,40 +126,39 @@ def get_mail_details(msg):
 
     # 获取发件人详情
     fromstr = msg.get('From')
-    print("fromstr:" + fromstr)
-    from_nickname, from_account = get_mail_info(fromstr)
-    maildetails.from_nickname = from_nickname
-    maildetails.from_account = from_account
-    # print(from_nickname, from_account)
+    maildetails.fromstr = fromstr
+
     # 获取收件人详情
     tostr = msg.get('To')
-    to_nickname, to_account = get_mail_info(tostr)
-    # print(to_account, to_nickname)
-    maildetails.to_nickname = to_nickname
-    maildetails.to_account = to_account
+    maildetails.tostr = tostr
 
-
-    # 获取主题信息，也就是标题内容
-    subject = msg.get('Subject')
-    print("原生Subject信息："+subject)
-    maildetails.subject = decode_base64(subject.split("?")[3], charset=subject.split("?")[1])
-    # 获取时间信息，也即是邮件被服务器收到的时间
-    received_time = msg.get("Date")
-    # print(received_time)
+    received_time = msg.get("Received")
     maildetails.receivedtime = received_time
 
-    parts = msg.get_payload()
-    # print('8'*9, parts[0].as_string())
-    content_type = parts[0].get_content_type()
-    content_charset = parts[0].get_content_charset()
-    # parts[0] 默认为文本信息，而parts[1]默认为添加了HTML代码的数据信息
-    content = parts[0].as_string().split('base64')[-1]
-    # print('Content*********', decode_base64(content, content_charset))
-    maildetails.text_content = decode_base64(content, content_charset)
-    content = parts[1].as_string().split('base64')[-1]
-    # print('HTML Content:', decode_base64(content, content_charset))
-    maildetails.html_content = decode_base64(content, content_charset)
+    # 获取头信息
+    receives_header = msg.get("X-Alimail-AntiSpam").split(";")
+    for i in receives_header:
+        if "SR" in i:
+            print(i)
 
+    # # print(msg)
+    # # 获取主题信息，也就是标题内容
+    subject = msg.get('Subject')
+
+    # print(msg)
+
+    maildetails.subject = subject
+    parts = msg.get_payload()
+    if isinstance(parts, list):
+        content = parts[0].as_string().split('base64')[-1]
+        if is_base64_code(content):
+            content_charset = parts[0].get_content_charset()
+            maildetails.text_content = decode_base64(content, content_charset)
+        else:
+            maildetails.text_content = content
+    else:
+        content = decode_base64(parts, "utf-8")
+        maildetails.text_content = content
     return maildetails
 
 # 为base64编码的串进行解码操作，返回字符串信息
@@ -160,16 +167,14 @@ def decode_base64(s, charset='utf8'):
 
 # 获取FROM， TO等字段的解析详情
 def get_mail_info(s):
-    print("----"+ s)
-    nickname, account = s.split(" ")
-    # 获取字串的编码信息
-    charset = nickname.split('?')[1]
-    # print('编码：{}'.format(charset))
-    nickname = nickname.split('?')[3]
-    nickname = str(base64.decodebytes(nickname.encode(encoding=charset)), encoding=charset)
-    account = account.lstrip('<')
-    account = account.rstrip('>')
+    nickname, account = s.split("@")
     return nickname, account
+# 判断是否为base64位码
+def is_base64_code(s):
+    if s.find("_") <= 0 or s.find(" ") <= 0:
+        return True
+    else:
+        return False
 
 # 因为邮件中格式是由英文确定的，所以在此处查找文本的编码时可以使用utf8作为临时解码集，用于查找文本正文编码信息
 def get_rawcontent_charset(rawcontent):
@@ -195,8 +200,8 @@ def decode_byte(bstr, charset='utf8'):
 if __name__ == '__main__':
     useraccount = "teersky@aliyun.com"
     password = "19950913zhd"
-    limits = int(input('How many mails you want to receive:'))
-    debug_level = int(input('the debug level, default is on which is number 1'))
+    limits = 7
+    debug_level = 0
 
     # 获取到limits限制下的所有的邮件
     mails = get_parsed_msg(useraccount=useraccount, password=password, limits=limits, debuglevel=debug_level)
@@ -210,7 +215,7 @@ if __name__ == '__main__':
         print('\n')
         # 给出可选菜单，让用户选择输出哪些字段的值，另新增全字段显示ALL
         maildetails = get_mail_details(mails[choice].data)
-        print("["+str(index)+": "+maildetails.subject+", "+ maildetails.from_nickname+", "+maildetails.receivedtime+", "+maildetails.text_content+"]")
+        # print(maildetails.receivedtime)
         # 询问是否退出邮件查询系统，是则退出，否则继续进行下一步的查询操作
         userinput = input('ready to exit? (Y/N)')
         exitcode = 0 if (userinput=='y' or userinput=='Y') else 1
