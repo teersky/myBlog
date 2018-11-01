@@ -77,6 +77,7 @@ def parse_data(msg):
 
 # 调用socket的send方法发送str信息给web端
 def sendMessage(msg):
+    print(msg)
     global connectionlist
     send_msg = b""  # 使用bytes格式,避免后面拼接的时候出现异常
     send_msg += b"\x81"
@@ -209,7 +210,7 @@ class WebSocket(threading.Thread):
                     else:
                         nowTime = time.strftime('%H:%M:%S', time.localtime(time.time()))
                         sendMessage("%s %s say: %s" % (nowTime, self.remote, recv_message))
-                    json={test: "1929129"}
+                    json={"test": "1929129"}
                     sendMessage("你也好啊")
                     g_code_length = 0
                     self.length_buffer = 0
@@ -221,7 +222,7 @@ class WebSocketServer(object):
     def __init__(self):
         self.socket = None
         self.i = 0
-
+        self.newSocket = None
     # 开启操作
     def begin(self):
         if PRINT_FLAG:
@@ -231,7 +232,7 @@ class WebSocketServer(object):
         port = 9000
         if PRINT_FLAG:
             print("WebServer is listening %s,%d" % (ip, port))
-        self.socket.bind((ip, port))
+        # self.socket.bind((ip, port))
         self.socket.listen(50)
         # 全局连接集合
         global connectionlist
@@ -241,13 +242,12 @@ class WebSocketServer(object):
             connection, address = self.socket.accept()
             # 根据连接的客户信息,创建WebSocket对象(本质为一个线程)
             # sockfd，index，用户名，地址
-            newSocket = WebSocket(connection, self.i, address[0], address)
+            self.newSocket = WebSocket(connection, self.i, address[0], address)
             # 线程启动
-            newSocket.start()
+            self.newSocket.start()
             # 更新连接的集合(hash表的对应关系)-name->sockfd
             connectionlist['connection' + str(self.i)] = connection
             self.i += 1
-            return newSocket
 
 def new_websocket():
     server = WebSocketServer()

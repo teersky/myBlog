@@ -2,14 +2,14 @@
 # coding=utf-8
 
 from bottle import get
-from common import web_helper, encrypt_helper, db_helper, timeOut_helper
+from common import web_helper, encrypt_helper, db_helper, scanEmail_helper
 import time
 
 import socket
 
 @get('/api/visitHandle/')
 def get_visit():
-    timeOut_helper.fun_timer()
+    scanEmail_helper.fun_timer()
     ip_inner = web_helper.get_ip()
     ip_outer = web_helper.get_query("IP","ip_outer")
     province = web_helper.get_query('province', '省')

@@ -74,4 +74,5 @@ def post_login():
     # 写入数据库
     db_helper.write(sql, vars)
     data = [{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}]
+
     return web_helper.return_msg(0, '登录成功', data)

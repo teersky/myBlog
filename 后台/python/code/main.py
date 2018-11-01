@@ -13,7 +13,7 @@ from beaker.middleware import SessionMiddleware
 from common import web_helper, log_helper
 # 导入api代码模块（初始化api文件夹里的各个访问路由，这一句不能删除，删除后将无法访问api文件夹里的各个接口）
 import api
-
+from common import websocket_helper
 #############################################
 # 初始化bottle框架相关参数
 #############################################
@@ -101,7 +101,9 @@ def validate():
         # 判断用户是否登录
         if not manager_id or not login_name:
             web_helper.return_raise(web_helper.return_msg(-404, "您的登录已失效，请重新登录"))
-
+        #else:
+            # socket = websocket_helper.new_websocket()
+            # socket.begin()
 
 
 

@@ -3053,3 +3053,28 @@ LINE 5:             RETURNING id;
 
 程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:111)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->visitHandle.py(get_visit:37)->db_helper.py(write:71)->log_helper.py(error:21)->
 
+2018-11-01 15:37:18,633 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 15:37:33,341 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'password': ['123456'], 'username': ['admin'], 'verify': ['f1jt'], '_method': ['put']}}
+2018-11-01 15:37:35,205 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 15:37:35,255 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-01 15:42:11,195 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 15:42:11,351 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-01 15:47:34,491 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 15:47:34,601 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-01 16:16:26,064 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 16:16:26,167 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-01 16:17:39,939 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 16:17:40,102 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-01 16:19:03,528 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 16:19:03,620 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-01 16:19:55,416 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 16:19:55,570 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-01 16:26:23,088 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 16:26:23,163 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-01 16:26:35,695 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 16:26:35,779 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-01 16:33:43,994 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 16:38:06,055 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 16:38:25,605 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'verify': ['edh2'], '_method': ['put'], 'username': ['admin'], 'password': ['123456']}}
+2018-11-01 16:38:28,086 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-01 16:38:28,160 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1

@@ -3,6 +3,7 @@
 
 from bottle import get, response
 from common import web_helper, db_helper
+from service import scanEmail
 
 
 @get('/apiGet/dataInterface/')
