@@ -23,8 +23,10 @@
     <SUITE FILE_PATH="coverage/code$Unittests_in_mail_helper_test_py.coverage" NAME="Unittests in mail_helper_test.py Coverage Results" MODIFIED="1534403800363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/code$Unittests_in_string_helper_test_py.coverage" NAME="Unittests in string_helper_test.py Coverage Results" MODIFIED="1540868266670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/code$timeOut_helper.coverage" NAME="timeOut_helper Coverage Results" MODIFIED="1540888582259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/code$wevsocket_test.coverage" NAME="wevsocket_test Coverage Results" MODIFIED="1541045177632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/code$receive_mails.coverage" NAME="receive_mails Coverage Results" MODIFIED="1540979429559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/code$mainTest.coverage" NAME="mainTest Coverage Results" MODIFIED="1540868240043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/code$websocket_helper.coverage" NAME="websocket_helper Coverage Results" MODIFIED="1541040986374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/code$Unittests_in_EmailSendEv_py.coverage" NAME="Unittests in EmailSendEv.py Coverage Results" MODIFIED="1534327581574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/code$mail_helper.coverage" NAME="mail_helper Coverage Results" MODIFIED="1534403172062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
   </component>
@@ -52,25 +54,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="receive_mails.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common/receive_mails.py">
+      <file leaf-file-name="websocket_helper.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/websocket_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-644">
-              <caret line="126" column="15" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="15" />
+            <state relative-caret-position="155">
+              <caret line="252" column="28" selection-start-line="252" selection-start-column="13" selection-end-line="252" selection-end-column="28" />
               <folding>
-                <element signature="e#271#284#0" expanded="true" />
+                <element signature="e#16#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mail_helper.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/mail_helper.py">
+      <file leaf-file-name="wevsocket_test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/wevsocket_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="220">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
               <folding>
-                <element signature="e#38#60#0" expanded="true" />
+                <element signature="e#38#53#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,14 +89,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>login</find>
-      <find>post_login</find>
-      <find>@hook('before_request')</find>
-      <find>不允许为空</find>
-      <find>帐号 不允许为空</find>
-      <find>return_msg</find>
-      <find>get_session</find>
-      <find>_creation_time</find>
       <find>SessionMiddleware</find>
       <find>return_</find>
       <find>http://192.168.8.36</find>
@@ -117,6 +111,14 @@
       <find>get_mail_details</find>
       <find>get_parsed_msg</find>
       <find>MailDetails</find>
+      <find>TypeError: a bytes-like object is required, not 'str'</find>
+      <find>send</find>
+      <find>10.1.80.83</find>
+      <find>new websocket client joined!</find>
+      <find>WebSocketServer</find>
+      <find>sendMessage</find>
+      <find>WebSocket</find>
+      <find>WebSocket(</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -153,6 +155,8 @@
         <option value="$PROJECT_DIR$/config/const.py" />
         <option value="$PROJECT_DIR$/common/mail_helper.py" />
         <option value="$PROJECT_DIR$/common/receive_mails.py" />
+        <option value="$PROJECT_DIR$/common/websocket_helper.py" />
+        <option value="$PROJECT_DIR$/test/wevsocket_test.py" />
       </list>
     </option>
   </component>
@@ -176,6 +180,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,11 +203,15 @@
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -235,26 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.receive_mails">
-    <configuration name="getLocation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="code" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/getLocation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.wevsocket_test">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -293,25 +283,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="timeOut" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="code" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\我的博客\后台\python\code\common\timeOut_helper.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="timeOut_helper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -331,20 +302,58 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="websocket_helper" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/websocket_helper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="wevsocket_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/wevsocket_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.getLocation" />
-      <item itemvalue="Python.timeOut" />
       <item itemvalue="Python.timeOut_helper" />
       <item itemvalue="Python.receive_mails" />
+      <item itemvalue="Python.websocket_helper" />
+      <item itemvalue="Python.wevsocket_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.wevsocket_test" />
+        <item itemvalue="Python.websocket_helper" />
         <item itemvalue="Python.receive_mails" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.timeOut_helper" />
-        <item itemvalue="Python.timeOut" />
-        <item itemvalue="Python.getLocation" />
       </list>
     </recent_temporary>
   </component>
@@ -404,21 +413,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4969743" weight="0.32838285" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.18381241" side_tool="true" visible="true" weight="0.47524753" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4969743" weight="0.339934" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.18683812" side_tool="true" weight="0.44554454" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="14" sideWeight="0.4969743" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49546143" weight="0.32838285" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.72617245" weight="0.40264025" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.32838285" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987715" visible="true" weight="0.25189108" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49579832" visible="true" weight="0.25567323" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.21633889" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.519802" />
       <window_info anchor="right" id="SciView" order="4" weight="0.32980332" />
-      <window_info id="Structure" order="1" sideWeight="0.5012285" side_tool="true" weight="0.2065053" />
-      <window_info id="Favorites" order="2" sideWeight="0.5012285" side_tool="true" weight="0.2065053" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.8161876" visible="true" weight="0.47524753" />
+      <window_info id="Structure" order="1" sideWeight="0.5042017" side_tool="true" weight="0.25567323" />
+      <window_info id="Favorites" order="2" sideWeight="0.5042017" side_tool="true" weight="0.25567323" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.81316185" visible="true" weight="0.24257426" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -427,7 +438,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.6891074" weight="0.4768977" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.519802" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,35 +465,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="56" />
+      <option name="time" value="60" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/logs/info.log" />
-    <entry file="file://$PROJECT_DIR$/log/info.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="66" selection-start-column="66" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/json_helper_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-196" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/string_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python/Lib/unittest/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="218" selection-start-line="218" selection-end-line="218" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python/Lib/contextlib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
@@ -626,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/string_helper_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1012">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/getLocation.py" />
     <entry file="file://$PROJECT_DIR$/test/log_helper_test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -732,9 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="11" column="28" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <element signature="e#38#60#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -742,9 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="24" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,22 +736,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/mail_helper.py">
+    <entry file="file://C:/Python/Lib/traceback.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="e#38#60#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="113">
+          <caret line="281" selection-start-line="281" selection-end-line="281" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python/Lib/tokenize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="382" selection-start-line="382" selection-end-line="382" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="913" selection-start-line="913" selection-end-line="913" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/receive_mails.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="126" column="15" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="15" />
+        <state relative-caret-position="2244">
+          <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
           <folding>
-            <element signature="e#271#284#0" expanded="true" />
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/mail_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/string_helper_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="19" column="64" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/websocket_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="252" column="28" selection-start-line="252" selection-start-column="13" selection-end-line="252" selection-end-column="28" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/wevsocket_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="e#38#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
