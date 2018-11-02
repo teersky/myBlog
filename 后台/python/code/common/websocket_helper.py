@@ -4,6 +4,10 @@ import struct
 import hashlib, base64
 import threading
 import time
+from config import const
+
+WSIP = const.WSIP
+WSPORT = const.WSPORT
 
 connectionlist = {}  # 存放链接客户fd,元组
 g_code_length = 0
@@ -228,11 +232,9 @@ class WebSocketServer(object):
         if PRINT_FLAG:
             print('WebSocketServer Start!')
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        ip = '127.0.0.1'
-        port = 9000
         if PRINT_FLAG:
-            print("WebServer is listening %s,%d" % (ip, port))
-        # self.socket.bind((ip, port))
+            print("WebServer is listening %s,%d" % (WSIP, WSPORT))
+        self.socket.bind((WSIP, WSPORT))
         self.socket.listen(50)
         # 全局连接集合
         global connectionlist

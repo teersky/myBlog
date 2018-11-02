@@ -15,6 +15,8 @@ import React, {
   import Login from './page/login/lgoin';
   import Loading from './page/loading/loading';
   import APIData from "./modules/get-api"
+  import Socket from './modules/webSocket'
+
   let Style={
     box:{height: '100%'}
   }
@@ -26,10 +28,15 @@ import React, {
        routeIndex: 0
       };
     }
-  
+    
     componentWillMount(){
+
+      let aa = Socket.init();
+      console.log(aa);
+
+
       let checkUserList = {};
-      APIData.post("http://192.168.0.250:81/apiPost/CheckLogin/",checkUserList)
+      /* APIData.post("http://192.168.0.250:81/apiPost/CheckLogin/",checkUserList)
         .then((result) => {
             if(result.state === -1 || result.state === -404 ){
               this.setState({
@@ -44,7 +51,13 @@ import React, {
         })
         .catch((error) => {
             console.log(error);
-        })
+        }) */
+      
+    }
+    componentDidMount(){
+      setInterval(function(){
+        Socket.send("你好世界")
+      }, 2000)
       
     }
     render() {

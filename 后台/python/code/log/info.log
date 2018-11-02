@@ -3078,3 +3078,20 @@ LINE 5:             RETURNING id;
 2018-11-01 16:38:25,605 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'verify': ['edh2'], '_method': ['put'], 'username': ['admin'], 'password': ['123456']}}
 2018-11-01 16:38:28,086 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
 2018-11-01 16:38:28,160 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-02 09:04:42,741 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 09:05:05,014 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'password': ['123456'], 'username': ['admin'], 'verify': ['KJZL']}}
+2018-11-02 09:05:07,401 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 09:06:06,750 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 09:10:16,104 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 09:12:39,622 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 09:19:35,054 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 09:26:51,263 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 09:26:51,419 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-02 09:33:04,339 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 09:33:04,416 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-02 09:33:39,354 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 11:48:50,246 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 11:50:28,929 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 11:50:29,711 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-02 11:50:42,714 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'username': ['admin'], 'password': ['123456'], 'verify': ['ibk3'], '_method': ['put']}}
+2018-11-02 11:50:43,052 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}

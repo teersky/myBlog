@@ -101,9 +101,9 @@ def validate():
         # 判断用户是否登录
         if not manager_id or not login_name:
             web_helper.return_raise(web_helper.return_msg(-404, "您的登录已失效，请重新登录"))
-        #else:
-            # socket = websocket_helper.new_websocket()
-            # socket.begin()
+        # else:
+        #     socket = websocket_helper.new_websocket()
+        #     socket.begin()
 
 
 
