@@ -101,18 +101,18 @@ def validate():
         # 判断用户是否登录
         if not manager_id or not login_name:
             web_helper.return_raise(web_helper.return_msg(-404, "您的登录已失效，请重新登录"))
-        else:
-            socket = websocket_helper.new_websocket()
-            socket.begin()
+        # else:
+        #     socket = websocket_helper.new_websocket()
+        #     socket.begin()
 
 
 
 # 函数主入口
 if __name__ == '__main__':
-    socket = websocket_helper.new_websocket()
-    socket.begin()
-    # app_argv = SessionMiddleware(default_app(), session_opts)
-    # run(app=app_argv, host='0.0.0.0', port=9090, debug=True, reloader=True)
+    # socket = websocket_helper.new_websocket()
+    # socket.begin()
+    app_argv = SessionMiddleware(default_app(), session_opts)
+    run(app=app_argv, host='0.0.0.0', port=9090, debug=True, reloader=True)
 else:
     # 使用uwsgi方式处理python访问时，必须要添加这一句代码，不然无法访问
     application = SessionMiddleware(default_app(), session_opts)

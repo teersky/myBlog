@@ -36,7 +36,7 @@ import React, {
 
 
       let checkUserList = {};
-      /* APIData.post("http://192.168.0.250:81/apiPost/CheckLogin/",checkUserList)
+      APIData.post("http://192.168.0.250:81/apiPost/CheckLogin/",checkUserList)
         .then((result) => {
             if(result.state === -1 || result.state === -404 ){
               this.setState({
@@ -51,7 +51,7 @@ import React, {
         })
         .catch((error) => {
             console.log(error);
-        }) */
+        }) 
       
     }
     componentDidMount(){

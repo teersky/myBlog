@@ -1,7 +1,7 @@
 var socket = "";
 export default class websocket{
     static init = () => {
-        var host = "ws://192.168.0.250:81/WS/";
+        var host = "ws://192.168.0.250:81/api/websocket/";
         try{
             socket = new WebSocket(host);
             socket.onopen    = function(msg){ 
