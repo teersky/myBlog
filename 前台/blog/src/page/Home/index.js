@@ -2,8 +2,49 @@ import React, {Component} from 'react';
 import { Icon } from 'antd';
 import "./index.css";
 import ChinaMap from "./temp/ResMapReviewer"
+import Spread from "./temp/spread"
+
+let articalData = [{
+    "title": "Node.js用法和注意事项",
+    "value": "320"
+}, {
+    "title": "nginx的配置1",
+    "value": "210" 
+}, {
+    "title": "python的用法2",
+    "value": "200" 
+}, {
+    "title": "python的用法3",
+    "value": "182" 
+}, {
+    "title": "python的用法4",
+    "value": "160" 
+}, {
+    "title": "python的用法5",
+    "value": "122" 
+}, {
+    "title": "python的用法6",
+    "value": "120" 
+}, {
+    "title": "python的用法7",
+    "value": "118" 
+}]
+
+/* , {
+    "title": "python的用法8",
+    "value": "113" 
+}, {
+    "title": "python的用法9",
+    "value": "102" 
+} */
 
 export default class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            articalData: articalData
+        };
+    }
     render() {
         return (
             <div className="defaultBox">
@@ -99,7 +140,20 @@ export default class Home extends Component {
                     <div className="table__center">
                         <ChinaMap></ChinaMap>
                     </div> 
-                    <div className="table_right"></div>
+                    <div className="table__right">
+                        <section className="section">
+                            <h4 className="box-title text-YHFB">文章英雄榜</h4>
+                            <div className="sectionBox artical__userSort">
+                                <Spread data_Value = {this.state.articalData}/>
+                            </div>
+                        </section>
+                        <section className="section">
+                            <h4 className="box-title text-YHFB">工具英雄榜</h4>
+                            <div className="sectionBox tools__userSort">
+                                <Spread data_Value = {this.state.articalData}/>
+                            </div>
+                        </section>
+                    </div>
                 </div>  
             </div>
         )

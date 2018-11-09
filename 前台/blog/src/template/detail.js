@@ -7,6 +7,7 @@ import Home from '../page/Home/index';
 import MsgShow from '../page/MsgShow/index';
 import BlogHandle from '../page/BlogHandle/index';
 import userComments from '../page/userComments/index';
+import blogEditor from "../page/BlogHandle/blogEditor/index"
 
 const style={
     width:'100%',
@@ -26,6 +27,7 @@ class Detail extends Component{
                 <Route path="/BackStage/msgShow" component={MsgShow}></Route>
                 <Route path="/BackStage/BlogHandle" component={BlogHandle}></Route>
                 <Route path="/BackStage/userComments" component={userComments}></Route>   
+                <Route path="/BackStage/blogEditor" component={blogEditor}></Route>   
             </div>
         )
     }

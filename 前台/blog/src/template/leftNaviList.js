@@ -61,7 +61,7 @@ class leftNaviList extends Component{
                                             list.child.map((items, index) => {
                                                 return (
                                                     <li className={Number(this.state.arr[1]) === Number(val+""+index) ? "li_style open": "li_style"} key = {Number(val+""+index)}>
-                                                        <Link to={ "/BackStage/" + items.linkTo.split(" ")[0] } className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, Number(val+""+index))}}>{ list.title }</p></Link>
+                                                        <Link to={ "/BackStage/" + items.linkTo.split(" ")[0] } className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, Number(val+""+index))}}>{ items.title }</p></Link>
                                                     </li>
                                                 )
                                             })

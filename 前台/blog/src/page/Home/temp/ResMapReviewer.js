@@ -452,7 +452,7 @@ class ResMapReviewer extends Component {
                 }
             },
             title: {
-                text: '登录用户分布图',
+                text: '访问用户分布图',
                 left: 'center',
                 textStyle: {
                    color: '#fff'

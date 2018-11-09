@@ -5,7 +5,7 @@
 .tit_navi_list{width: 80px; border-right: 1px solid #999; cursor: pointer;}
 .tit_navi_list:last-child{border-right: none; }
 .tit_nave_icon{font-size: 20px; color: #fff; display: block; margin: 0 auto}
-.tit_navi_txt{display: block; text-align: center; color: #fff; font-size: 12px; margin-top: 2px;}
+.tit_navi_txt{display: block; text-align: center; color: #fff; font-size: 12px; margin-top: 2px; white-space: nowrap;}
 .openList{display: none;}
 .navi_box{position: relative;}
 

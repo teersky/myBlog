@@ -31,8 +31,8 @@ import React, {
     
     componentWillMount(){
 
-      let aa = Socket.init();
-      console.log(aa);
+      // let aa = Socket.init();
+      // console.log(aa);
 
 
       let checkUserList = {};
@@ -55,9 +55,9 @@ import React, {
       
     }
     componentDidMount(){
-      setInterval(function(){
+     /*  setInterval(function(){
         Socket.send("你好世界")
-      }, 2000)
+      }, 2000) */
       
     }
     render() {
