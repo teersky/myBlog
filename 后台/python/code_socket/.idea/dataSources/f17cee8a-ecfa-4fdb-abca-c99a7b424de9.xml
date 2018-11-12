@@ -70,8 +70,8 @@
     <schema id="15" parent="2" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
-      <IntrospectionTimestamp>2018-10-30.15:31:20.844</IntrospectionTimestamp>
-      <IntrospectionStateNumber>806</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-11-12.11:36:20.411</IntrospectionTimestamp>
+      <IntrospectionStateNumber>845</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -148,80 +148,144 @@
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="26" parent="15" name="cityInfomation">
+    <table id="26" parent="15" name="articalTable">
+      <ObjectId>16641</ObjectId>
+      <StateNumber>845</StateNumber>
+    </table>
+    <table id="27" parent="15" name="cityInfomation">
       <ObjectId>16592</ObjectId>
       <StateNumber>785</StateNumber>
     </table>
-    <table id="27" parent="15" name="manager">
+    <table id="28" parent="15" name="manager">
       <ObjectId>16485</ObjectId>
       <Comment>管理员管理表</Comment>
       <StateNumber>626</StateNumber>
     </table>
-    <table id="28" parent="15" name="navilist">
+    <table id="29" parent="15" name="navilist">
       <ObjectId>16541</ObjectId>
       <StateNumber>729</StateNumber>
     </table>
-    <table id="29" parent="15" name="product_class">
+    <table id="30" parent="15" name="product_class">
       <ObjectId>16467</ObjectId>
       <StateNumber>612</StateNumber>
     </table>
-    <table id="30" parent="15" name="visitRecode">
+    <table id="31" parent="15" name="visitRecode">
       <ObjectId>16602</ObjectId>
       <StateNumber>805</StateNumber>
     </table>
-    <column id="31" parent="26" name="code">
+    <column id="32" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>char(16)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>845</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="33" parent="26" name="name">
+      <Position>2</Position>
+      <DataType>char(48)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>845</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="34" parent="26" name="type">
+      <Position>3</Position>
+      <DataType>char(12)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>845</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="35" parent="26" name="likesNum">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>845</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="36" parent="26" name="answerNum">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>845</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="37" parent="26" name="readNum">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>845</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="38" parent="26" name="artical">
+      <Position>7</Position>
+      <DataType>char(1024)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>845</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <index id="39" parent="26" name="articalTable_pkey">
+      <ObjectId>16647</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="26" name="articalTable_pkey">
+      <ObjectId>16648</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>articalTable_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="27" name="code">
       <Position>1</Position>
       <DataType>char(12)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>785</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="32" parent="26" name="parentCode">
+    <column id="42" parent="27" name="parentCode">
       <Position>2</Position>
       <DataType>char(12)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>785</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="33" parent="26" name="level">
+    <column id="43" parent="27" name="level">
       <Position>3</Position>
       <DataType>char(4)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>785</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="34" parent="26" name="name">
+    <column id="44" parent="27" name="name">
       <Position>4</Position>
       <DataType>char(48)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>785</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="35" parent="26" name="latitude">
+    <column id="45" parent="27" name="latitude">
       <Position>5</Position>
       <DataType>char(48)|0s</DataType>
       <StateNumber>785</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="36" parent="26" name="longitude">
+    <column id="46" parent="27" name="longitude">
       <Position>6</Position>
       <DataType>char(48)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>785</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <index id="37" parent="26" name="cityInfomation_pkey">
+    <index id="47" parent="27" name="cityInfomation_pkey">
       <ObjectId>16595</ObjectId>
       <ColNames>code</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="38" parent="26" name="cityInfomation_pkey">
+    <key id="48" parent="27" name="cityInfomation_pkey">
       <ObjectId>16596</ObjectId>
       <ColNames>code</ColNames>
       <UnderlyingIndexName>cityInfomation_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="39" parent="27" name="id">
+    <column id="49" parent="28" name="id">
       <Position>1</Position>
       <Comment>主键Id</Comment>
       <DataType>integer|0s</DataType>
@@ -231,7 +295,7 @@
       <TypeId>23</TypeId>
       <SequenceName>manager_id_seq</SequenceName>
     </column>
-    <column id="40" parent="27" name="login_name">
+    <column id="50" parent="28" name="login_name">
       <Position>2</Position>
       <Comment>登陆账号</Comment>
       <DataType>text|0s</DataType>
@@ -240,7 +304,7 @@
       <DefaultExpression>&apos;&apos;::text</DefaultExpression>
       <TypeId>25</TypeId>
     </column>
-    <column id="41" parent="27" name="login_password">
+    <column id="51" parent="28" name="login_password">
       <Position>3</Position>
       <Comment>登陆密码</Comment>
       <DataType>text|0s</DataType>
@@ -249,14 +313,14 @@
       <DefaultExpression>&apos;&apos;::text</DefaultExpression>
       <TypeId>25</TypeId>
     </column>
-    <column id="42" parent="27" name="last_login_time">
+    <column id="52" parent="28" name="last_login_time">
       <Position>4</Position>
       <Comment>最后登陆时间</Comment>
       <DataType>timestamp(0)|0s</DataType>
       <StateNumber>616</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="43" parent="27" name="last_login_ip">
+    <column id="53" parent="28" name="last_login_ip">
       <Position>5</Position>
       <Comment>最后登陆IP</Comment>
       <DataType>text|0s</DataType>
@@ -264,7 +328,7 @@
       <DefaultExpression>&apos;&apos;::text</DefaultExpression>
       <TypeId>25</TypeId>
     </column>
-    <column id="44" parent="27" name="login_count">
+    <column id="54" parent="28" name="login_count">
       <Position>6</Position>
       <Comment>登陆次数</Comment>
       <DataType>integer|0s</DataType>
@@ -272,7 +336,7 @@
       <DefaultExpression>0</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="45" parent="27" name="is_enable">
+    <column id="55" parent="28" name="is_enable">
       <Position>7</Position>
       <Comment>账号是否启用，1=true(启用)，0=false（禁用）</Comment>
       <DataType>integer|0s</DataType>
@@ -280,7 +344,7 @@
       <DefaultExpression>1</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="46" parent="27" name="add_time">
+    <column id="56" parent="28" name="add_time">
       <Position>8</Position>
       <Comment>注册时间</Comment>
       <DataType>timestamp(0)|0s</DataType>
@@ -289,36 +353,36 @@
       <DefaultExpression>now()</DefaultExpression>
       <TypeId>1114</TypeId>
     </column>
-    <column id="47" parent="27" name="LoginChecked">
+    <column id="57" parent="28" name="LoginChecked">
       <Position>9</Position>
       <DataType>text|0s</DataType>
       <StateNumber>626</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="48" parent="27" name="manager_pkey">
+    <index id="58" parent="28" name="manager_pkey">
       <ObjectId>16498</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="49" parent="27" name="manager_login_name_idx">
+    <index id="59" parent="28" name="manager_login_name_idx">
       <ObjectId>16500</ObjectId>
       <ColNames>login_name</ColNames>
     </index>
-    <index id="50" parent="27" name="manager_last_login_time_idx">
+    <index id="60" parent="28" name="manager_last_login_time_idx">
       <ObjectId>16501</ObjectId>
       <ColNames>last_login_time</ColNames>
     </index>
-    <index id="51" parent="27" name="manager_is_enable_idx">
+    <index id="61" parent="28" name="manager_is_enable_idx">
       <ObjectId>16502</ObjectId>
       <ColNames>is_enable</ColNames>
     </index>
-    <key id="52" parent="27" name="manager_pkey">
+    <key id="62" parent="28" name="manager_pkey">
       <ObjectId>16499</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>manager_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="53" parent="28" name="id">
+    <column id="63" parent="29" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -327,52 +391,52 @@
       <TypeId>23</TypeId>
       <SequenceName>navilist_id_seq</SequenceName>
     </column>
-    <column id="54" parent="28" name="powerLeval">
+    <column id="64" parent="29" name="powerLeval">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>707</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="55" parent="28" name="title">
+    <column id="65" parent="29" name="title">
       <Position>3</Position>
       <DataType>char(24)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>726</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="56" parent="28" name="linkTo">
+    <column id="66" parent="29" name="linkTo">
       <Position>4</Position>
       <DataType>char(24)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>727</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="57" parent="28" name="icons">
+    <column id="67" parent="29" name="icons">
       <Position>5</Position>
       <DataType>char(24)|0s</DataType>
       <StateNumber>728</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="58" parent="28" name="father_Link">
+    <column id="68" parent="29" name="father_Link">
       <Position>6</Position>
       <DataType>char(24)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>729</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <index id="59" parent="28" name="naviList_pkey">
+    <index id="69" parent="29" name="naviList_pkey">
       <ObjectId>16544</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="60" parent="28" name="naviList_pkey">
+    <key id="70" parent="29" name="naviList_pkey">
       <ObjectId>16545</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>naviList_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="61" parent="29" name="id">
+    <column id="71" parent="30" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -381,74 +445,74 @@
       <TypeId>23</TypeId>
       <SequenceName>product_class_id_seq1</SequenceName>
     </column>
-    <column id="62" parent="29" name="name">
+    <column id="72" parent="30" name="name">
       <Position>2</Position>
       <DataType>char(24)|0s</DataType>
       <StateNumber>612</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="63" parent="29" name="is_enable">
+    <column id="73" parent="30" name="is_enable">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <StateNumber>609</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="64" parent="29" name="product_class_pkey">
+    <index id="74" parent="30" name="product_class_pkey">
       <ObjectId>16474</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="65" parent="29" name="product_class_pkey">
+    <key id="75" parent="30" name="product_class_pkey">
       <ObjectId>16475</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>product_class_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="66" parent="30" name="dateTime">
+    <column id="76" parent="31" name="dateTime">
       <Position>1</Position>
       <DataType>char(16)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>792</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="67" parent="30" name="visitIP">
+    <column id="77" parent="31" name="visitIP">
       <Position>2</Position>
       <DataType>char(16)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>792</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="68" parent="30" name="code">
+    <column id="78" parent="31" name="code">
       <Position>3</Position>
       <DataType>char(12)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>792</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="69" parent="30" name="ip_inner">
+    <column id="79" parent="31" name="ip_inner">
       <Position>4</Position>
       <DataType>char(16)|0s</DataType>
       <StateNumber>795</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="70" parent="30" name="valueindex">
+    <column id="80" parent="31" name="valueindex">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>806</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="71" parent="30" name="reserve_3">
+    <column id="81" parent="31" name="reserve_3">
       <Position>6</Position>
       <DataType>char(4)|0s</DataType>
       <StateNumber>792</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <index id="72" parent="30" name="visitRecode_pkey">
+    <index id="82" parent="31" name="visitRecode_pkey">
       <ObjectId>16605</ObjectId>
       <ColNames>dateTime</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="73" parent="30" name="visitRecode_pkey">
+    <key id="83" parent="31" name="visitRecode_pkey">
       <ObjectId>16606</ObjectId>
       <ColNames>dateTime</ColNames>
       <UnderlyingIndexName>visitRecode_pkey</UnderlyingIndexName>

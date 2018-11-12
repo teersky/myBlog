@@ -44,3 +44,10 @@
     .shadow{display: none; position: fixed; left: 0; top: 65px; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 1;}
     .shadow_SHow.shadow{display:block}
 }
+
+/* 富文本编辑器 */
+.EditorBox{width: 100%;}
+.Editor__Header{display: flex; display: -webkit-flex; display: -moz-flex; align-items: top; justify-content: center; width: 70%;}
+.Editor__Header span{display: block; width: 4em;}
+.Editor__Header button{margin: 4px 0; margin-right: 10px; }
+.Editor__Tips{padding: 5px 10px; background: #ece9e6;}
