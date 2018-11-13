@@ -51,3 +51,5 @@
 .Editor__Header span{display: block; width: 4em;}
 .Editor__Header button{margin: 4px 0; margin-right: 10px; }
 .Editor__Tips{padding: 5px 10px; background: #ece9e6;}
+.Editor-Header__type{width: 100%; display: flex; display: -webkit-flex; display: -moz-flex; align-items: top; justify-content: space-between;}
+.Editor-Header__typeInp{flex: 1;}
