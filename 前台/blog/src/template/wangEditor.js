@@ -2,36 +2,76 @@ import React, { Component } from 'react';
 import { Input,  Divider, Button  } from 'antd'
 /* import Mditor from 'mditor' */
 import './style.css'
-import Mditor from 'mditor'
-import 'mditor/dist/css/mditor.min.css'
+/* import Mditor from 'mditor'
+import 'mditor/dist/css/mditor.min.css' */
+
+import SimpleMDE from 'simplemde'
+import marked from 'marked'
+import highlight from 'highlight.js'
+import 'simplemde/dist/simplemde.min.css'
 
 export default class blogEditor extends Component {
     constructor(props){
         super(props);
         this.state = {
-            selectTips: ""
+            simplemde: "",
+            artical__tit: this.props.articalTit,
+            artical__txt: this.props.articalTXT,
+            artical__ID: this.props.articalID,
+            artical__tip: this.props.articalTip
         }
     }
     SelectTips__artical(items){
-        console.log(items);
         this.setState({
-            selectTips: items
+            artical__tip: items
         });
     }
     setSelectTips(value){
-        console.log(value);
         this.setState({
-            selectTips: value
+            artical__tip: value
         });
     }
     componentDidMount(){
-        var ele = this.refs.md_editor;
-        
-        //var mditor =  Mditor.fromTextarea(ele);
-       // var parser = new Mditor.Parser();
-        console.log(Mditor);
-        //var html = parser.parse("** Hello mditor! **");
-      }
+        this.mditor();
+        console.log(this.state.artical__txt);
+    }
+    mditor(){
+        let smde = new SimpleMDE({
+            element: document.getElementById('md_editor').childElementCount,  
+            autofocus: true,
+            autosave: true,
+            previewRender: function(plainText) {
+                return marked(plainText,{
+                        renderer: new marked.Renderer(),
+                        gfm: true,
+                        pedantic: false,
+                        sanitize: false,
+                        tables: true,
+                        breaks: true,
+                        smartLists: true,
+                        smartypants: true,
+                        highlight: function (code) {
+                                return highlight.highlightAuto(code).value;
+                        }
+                });
+            },
+        });
+        this.setState({
+            simplemde: smde
+        });
+        smde.value(this.state.artical__txt);
+    }
+    inputTitEv(value){
+        this.setState({
+            artical__tit: value
+        });
+    }
+    submitPage(){
+        var page = this.state.simplemde;
+        var artical = page.value();
+        console.log(this.state.artical__tit)
+
+    }
     render() {
         const artical__tips = this.props.artical__tips;
         return (
@@ -39,7 +79,7 @@ export default class blogEditor extends Component {
                 <Divider>头部</Divider>
                 <p className="Editor__Header">
                     <span>标题：</span>
-                    <Input placeholder="请输入文章标题" />
+                    <Input placeholder="请输入文章标题" onInput = { (e) => { this.inputTitEv(e.target.value)}}  value={ this.state.artical__tip }/>
                 </p>
                 <section className="Editor__Header">
                     <div className="Editor-Header__type">
@@ -57,9 +97,10 @@ export default class blogEditor extends Component {
                     </div>
                 </section>
                 <Divider>正文</Divider>
-                <div>
+                <div className="Editor-Body-detail">
                     <textarea id="md_editor" ref="md_editor"></textarea>
                 </div>
+                <Button onClick={ () => {this.submitPage() }}>提交</Button>
            </div>
 
         )

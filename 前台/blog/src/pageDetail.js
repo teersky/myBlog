@@ -37,6 +37,11 @@ import React, {
     left_navi: {
       height: "100%",
       overflow: 'scroll'
+    },
+    detailScroll: {
+      "overflowX": "hiddne",
+      "overflowY": "scroll",
+      "position": "relative"
     }
   }
 
@@ -171,7 +176,7 @@ import React, {
             </div>
             <div className="page_detail" style={ style.page_detail }>
                 <LeftNavi title="首页" style={style.left_navi} status={this.state.keyUp} MakeMoney={this.MakeMoney.bind(this)} />
-                <div className="detailBox"  onMouseDown={(event) => {this.mouseDownEv(event)}} onMouseMove={(event) => {this.mouseMoveEv(event)}} onMouseUp={(event) => {this.mouseUpEv(event)}} onTouchStart={(event) => {this.mouseDownEv(event)}} onTouchMove={(event) => {this.mouseMoveEv(event)}} onTouchEnd={(event) => {this.mouseUpEv(event)}}>
+                <div className="detailBox" style={ style.detailScroll } onMouseDown={(event) => {this.mouseDownEv(event)}} onMouseMove={(event) => {this.mouseMoveEv(event)}} onMouseUp={(event) => {this.mouseUpEv(event)}} onTouchStart={(event) => {this.mouseDownEv(event)}} onTouchMove={(event) => {this.mouseMoveEv(event)}} onTouchEnd={(event) => {this.mouseUpEv(event)}}>
                    <Detail />
                 </div>
             </div>

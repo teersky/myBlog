@@ -11,8 +11,6 @@ import blogEditor from "../page/BlogHandle/blogEditor/index"
 import blogList from "../page/BlogHandle/blogShow/index"
 
 const style={
-    width:'100%',
-    height:'100%',
     padding: '0px'
 };
 

@@ -53,3 +53,4 @@
 .Editor__Tips{padding: 5px 10px; background: #ece9e6;}
 .Editor-Header__type{width: 100%; display: flex; display: -webkit-flex; display: -moz-flex; align-items: top; justify-content: space-between;}
 .Editor-Header__typeInp{flex: 1;}
+.Editor-Body-detail{width: 100%;}

@@ -76,4 +76,26 @@ export default class HttpUtils{
             }
         });
     }
+    static post_noAddress=(url,data)=>{
+        let date_Str = "";
+        for(let i in data){
+            date_Str += i+ "=" + data[i] + "&"
+        }
+        return new Promise(((resolve, reject) => {
+            fetch("http://192.168.0.250:81" + url,{
+                method:'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body:date_Str.substring(0, date_Str.length - 1),//(把你想提交得数据序列化为json字符串类型，然后提交)body中的数据就是我们需要向服务器提交的数据,比如用户名,密码等
+            }).then(res => res.json())
+            .then((result) => {
+                    resolve(result);
+            }).catch(error=> {
+                    reject(error);
+                })
+            })
+        )
+    };
 }//数据转换成字符串 JSON.stringify(params)      //将数据JSON化 JSON.parse(responseJSON)

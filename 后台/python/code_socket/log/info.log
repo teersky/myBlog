@@ -4045,3 +4045,199 @@ LINE 5:             RETURNING id;
 2018-11-13 11:43:40,422 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
 2018-11-13 11:44:59,685 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
 2018-11-13 11:44:59,707 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:38:41,483 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:39:38,771 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'password': ['123456'], 'verify': ['JLLY'], 'username': ['admin'], '_method': ['put']}}
+2018-11-14 16:39:40,878 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:39:41,028 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:40:39,818 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:40:39,854 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:40:41,589 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:40:41,724 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:41:24,335 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:41:24,461 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:41:55,559 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:41:55,716 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:44:09,992 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:44:10,148 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:44:55,144 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:44:55,248 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:45:02,538 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:45:02,688 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:51:00,133 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:51:00,243 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:51:26,541 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:51:26,675 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:52:08,159 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:52:08,314 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:52:26,983 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:52:27,249 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:52:57,406 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:52:57,606 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 16:55:14,680 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 16:55:14,872 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 17:07:31,648 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 17:07:31,838 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 17:09:23,129 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 17:09:23,371 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 17:10:11,374 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 17:10:11,519 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 17:14:22,211 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 17:14:22,378 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 17:14:47,590 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 17:14:47,816 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 17:15:24,670 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 17:15:25,385 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 17:19:39,743 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 17:19:39,832 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 17:30:15,500 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 17:30:15,720 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-14 17:41:51,232 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 17:42:07,793 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'password': ['123456'], 'verify': ['FQ1E'], 'username': ['admin'], '_method': ['put']}}
+2018-11-14 17:42:09,864 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-14 17:42:10,023 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 10:45:48,996 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 10:46:01,651 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'verify': ['GKNQ'], '_method': ['put'], 'username': ['admin'], 'password': ['123456']}}
+2018-11-15 10:46:03,765 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 10:46:03,891 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 10:47:05,131 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 10:47:05,239 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 10:50:20,246 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 10:50:20,329 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 10:51:31,334 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 10:51:31,495 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 10:53:20,937 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 10:53:21,201 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 10:54:15,531 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 10:54:15,711 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 10:55:05,483 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 10:55:05,533 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 10:59:47,441 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 10:59:47,644 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:03:11,708 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:03:11,844 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:03:12,926 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:04:04,132 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:04:04,255 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:04:04,457 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:04:43,413 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:04:43,697 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:05:14,739 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:05:15,030 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:06:43,478 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:06:43,817 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:09:00,667 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:09:00,837 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:15:17,765 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:15:17,968 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:16:17,717 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:16:17,989 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:16:37,471 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:16:37,716 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:20:32,865 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:20:33,109 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:30:10,397 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:30:10,606 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:31:41,453 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:31:41,669 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:32:46,523 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:32:46,646 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:35:20,222 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:35:20,427 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:36:28,790 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:36:28,862 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:39:59,554 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:39:59,765 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:41:52,923 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:41:53,034 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:42:31,677 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:42:31,784 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:42:54,044 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:42:54,260 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:43:38,039 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:43:38,215 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:45:40,732 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:45:40,840 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 11:47:43,322 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:47:54,701 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'verify': ['rw8a'], '_method': ['put'], 'username': ['admin'], 'password': ['123456']}}
+2018-11-15 11:47:55,984 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:48:09,733 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'verify': ['ZWMM'], '_method': ['put'], 'username': ['admin'], 'password': ['123456']}}
+2018-11-15 11:48:11,454 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 11:48:11,573 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 12:01:23,609 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:28:55,962 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:29:09,722 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'username': ['admin'], 'verify': ['vb8h'], 'password': ['123456'], '_method': ['put']}}
+2018-11-15 14:29:11,479 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:29:11,779 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 14:34:18,011 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:34:18,122 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 14:34:35,548 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:34:35,643 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 14:36:41,257 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:36:41,534 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 14:37:35,588 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:37:35,704 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 14:44:48,181 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:44:48,280 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 14:50:06,216 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:50:06,456 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 14:53:56,603 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:53:56,705 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 14:55:10,215 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:55:10,410 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 14:57:20,014 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 14:57:20,395 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 15:00:01,805 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 15:00:02,069 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 15:03:50,271 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 15:03:50,342 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 15:07:09,507 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 15:07:09,693 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 15:08:07,216 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 15:08:07,428 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 15:09:26,924 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 15:09:27,099 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 15:10:58,895 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 15:10:59,061 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 15:12:36,794 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 15:12:36,973 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 15:13:04,932 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 15:13:05,005 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 15:14:29,134 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 15:14:29,348 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 16:55:56,804 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 16:56:16,647 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'username': ['admin'], 'verify': ['SIXR'], 'password': ['123456'], '_method': ['put']}}
+2018-11-15 16:56:20,162 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 16:56:20,267 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 16:56:52,301 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 16:56:52,441 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 16:57:32,085 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 16:57:32,291 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 16:59:01,849 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 16:59:02,052 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 16:59:55,453 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 16:59:55,632 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 17:01:10,293 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 17:01:10,438 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 17:03:56,349 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 17:03:56,592 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 17:05:25,896 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 17:05:26,258 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 17:20:05,221 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 17:20:05,423 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 17:26:14,451 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 17:26:14,636 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 18:06:06,247 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 18:06:19,282 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'username': ['admin'], 'password': ['123456'], '_method': ['put'], 'verify': ['iypz']}}
+2018-11-15 18:06:20,731 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 18:06:36,081 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'username': ['admin'], 'password': ['123456'], '_method': ['put'], 'verify': ['DLEO']}}
+2018-11-15 18:06:39,534 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 18:06:39,651 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 18:12:39,384 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 18:12:39,667 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 18:14:48,442 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 18:14:48,614 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 18:14:54,719 log_helper.py[line:14] INFO url:/api/uploadImage ip:192.168.0.250 params(post):{'dict': {}}
+2018-11-15 18:17:10,575 log_helper.py[line:14] INFO url:/api/uploadImage ip:192.168.0.250 params(post):{'dict': {}}
+2018-11-15 18:19:37,112 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-15 18:19:37,336 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-15 18:19:44,209 log_helper.py[line:14] INFO url:/api/uploadImage ip:192.168.0.250 params(post):{'dict': {}}
