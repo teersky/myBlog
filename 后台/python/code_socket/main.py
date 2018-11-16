@@ -6,7 +6,7 @@ import sys
 import os
 import logging
 import urllib.parse
-from bottle import default_app, get, run, request, hook
+from bottle import default_app, get, run, request, hook, static_file, route
 from beaker.middleware import SessionMiddleware
 
 # 导入工具函数包
@@ -61,7 +61,9 @@ def validate():
     # 获取当前访问的Url路径
     path_info = request.environ.get("PATH_INFO")
     # 过滤不用做任何操作的路由（即过滤不用进行判断是否登录和记录日志的url）
-    if path_info in ['/favicon.ico', '/', '/api/verify/', "/api/visitHandle/"]:
+    if path_info in ['/favicon.ico', '/', '/api/verify/', "/api/visitHandle/", "/static/"]:
+        return
+    elif path_info.find("/static/") >= 0:
         return
     ### 记录客户端提交的参数 ###
     # 获取当前访问url路径与ip
@@ -89,7 +91,7 @@ def validate():
         request.environ['REQUEST_METHOD'] = request.POST.get('_method', '')
 
     # 过滤不用进行登录权限判断的路由（登录与退出登录不用检查是否已经登录）
-    url_list = ["/apiPost/login/", "/apiPost/logout/"]
+    url_list = ["/apiPost/login/", "/apiPost/logout/" ,"/static/"]
     if path_info in url_list:
         pass
     else:
@@ -104,6 +106,15 @@ def validate():
         # else:
         #     socket = websocket_helper.new_websocket()
         #     socket.begin()
+assets_path = "./static/"
+@route('/static/<filename:re:.*\.css|.*\.js|.*\.png|.*\.jpg|.*\.gif>')
+def server_static(filename):
+    """定义/assets/下的静态(css,js,图片)资源路径"""
+    return static_file(filename, root=assets_path)
+@route('/static/<filename:re:.*\.ttf|.*\.otf|.*\.eot|.*\.woff|.*\.svg|.*\.map>')
+def server_static(filename):
+    """定义/assets/字体资源路径"""
+    return static_file(filename, root=assets_path)
 
 
 

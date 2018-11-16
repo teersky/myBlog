@@ -5,6 +5,7 @@ export default class Home extends Component {
         return (
             <div>
                 this is page_02~
+                <img src="http://192.168.0.250:81/static/images/mduploadImg/1542341013767.png"/>
             </div>
         )
     }

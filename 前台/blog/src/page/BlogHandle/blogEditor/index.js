@@ -8,7 +8,7 @@ export default class blogEditor extends Component  {
     constructor(props){
         super(props);
         this.state = {
-            artical__tips: ["Python", "Js", "HTML5", "JAVA", "随笔", "总结"],
+            artical__tipLists: ["Python", "Js", "HTML5", "JAVA", "随笔", "总结"],
             articalID: "",
             articalTit: "",
             articalTXT: "",
@@ -19,7 +19,7 @@ export default class blogEditor extends Component  {
         return (
             <div style={style} >
                 <MDitor 
-                    artical__tips = { this.state.artical__tips } 
+                    artical__tipLists = { this.state.artical__tipLists } 
                     articalID = { this.state.articalID }
                     articalTit = { this.state.articalTit }
                     articalTXT = { this.state.articalTXT }

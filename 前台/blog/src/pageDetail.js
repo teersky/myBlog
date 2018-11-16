@@ -142,7 +142,7 @@ import React, {
     
     componentWillMount(){
 /*       console.log(staticVariable); */
-      APIData.get("http://192.168.0.250:81/apiGet/dataInterface/")
+      APIData.get("/apiGet/dataInterface/")
       .then((result) => {
           this.setState({
             listArr: result.data,
