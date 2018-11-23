@@ -9,6 +9,7 @@ import highlight from 'highlight.js'
 import 'simplemde/dist/simplemde.min.css'
 
 import APIData from "../modules/get-api"
+import BaseHandle from "../modules/baseDecode"
 
 export default class blogEditor extends Component {
     constructor(props){
@@ -87,15 +88,15 @@ export default class blogEditor extends Component {
         }else{
             var json = {};
             json.id = articalID;
-            json.tit = articalTit;
-            json.tip = articalTip;
-            json.txt = articalTxt;
+            json.tit = BaseHandle.encode(articalTit);
+            json.tip = BaseHandle.encode(articalTip);
+            json.txt = BaseHandle.encode(articalTxt);
             json.new =  this.state.artical__ID == "" ? "n" : "o";
+            console.log(json)
             APIData.post("/apiPost/uploadArtical/", json).then((result) => {
                 console.log(result);
             });
         }
-        console.log(articalID, articalTit, articalTxt, articalTip, artical)
     }
 
     error(msg_tit) {

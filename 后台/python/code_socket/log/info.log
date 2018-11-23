@@ -4502,3 +4502,164 @@ LINE 5:             RETURNING id;
 2018-11-16 17:34:00,937 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
 2018-11-16 17:34:48,235 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
 2018-11-16 17:34:48,282 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 09:55:24,206 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 09:57:05,869 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 09:58:13,490 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:00:13,702 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:00:24,691 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'verify': ['0f72'], '_method': ['put'], 'password': ['123456'], 'username': ['admin']}}
+2018-11-23 10:00:26,037 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:00:46,869 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'verify': ['Q7XR'], '_method': ['put'], 'password': ['123456'], 'username': ['admin']}}
+2018-11-23 10:00:48,914 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:00:49,565 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 10:01:00,312 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:01:00,952 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 10:26:13,209 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:26:13,398 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 10:26:29,305 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'new': ['n'], 'txt': ['# test'], 'tip': ['Python'], 'id': ['1542939989299'], 'tit': ['test']}}
+2018-11-23 10:28:46,915 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:28:47,146 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 10:34:01,331 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:34:01,514 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 10:36:47,142 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:36:47,346 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 10:43:06,884 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:43:07,065 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 10:51:41,110 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:51:41,305 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 10:52:03,451 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:52:03,972 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 10:56:43,050 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:56:56,193 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'verify': ['d5pl'], 'password': ['123456'], '_method': ['put'], 'username': ['admin']}}
+2018-11-23 10:57:36,117 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:57:36,239 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 10:59:33,166 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 10:59:33,303 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:02:15,548 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:02:15,632 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:02:46,008 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:02:46,336 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:04:03,182 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:04:03,384 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:04:28,572 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:04:35,406 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:06:03,202 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:06:03,239 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:07:11,722 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:07:11,748 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:08:01,477 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:08:01,681 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:09:28,281 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:09:28,494 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:10:58,581 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:10:58,755 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:11:41,570 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:11:41,841 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:13:29,894 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:13:30,045 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:15:01,758 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:15:01,935 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:15:50,448 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:15:50,682 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:16:33,630 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:16:33,760 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:20:53,386 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:20:53,485 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:21:07,985 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'id': ['1542943263899'], 'new': ['n'], 'tip': ['6ZqP56yU'], 'tit': ['5q2k5qyh5pS/562W5omn6KGM']}}
+2018-11-23 11:21:45,803 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'new': ['n'], 'tip': ['6ZqP56yU'], 'id': ['1542943305783'], 'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'tit': ['5q2k5qyh5pS/562W5omn6KGM']}}
+2018-11-23 11:23:11,315 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'new': ['n'], 'tit': ['5q2k5qyh5pS/562W5omn6KGM'], 'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'tip': ['6ZqP56yU'], 'id': ['1542943391307']}}
+2018-11-23 11:24:41,245 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'new': ['n'], 'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'tit': ['5q2k5qyh5pS/562W5omn6KGM'], 'tip': ['6ZqP56yU'], 'id': ['1542943481237']}}
+2018-11-23 11:26:42,688 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'id': ['1542943602679'], 'tip': ['6ZqP56yU'], 'new': ['n'], 'tit': ['5q2k5qyh5pS/562W5omn6KGM'], 'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg==']}}
+2018-11-23 11:27:31,912 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'id': ['1542943651906'], 'tit': ['5q2k5qyh5pS/562W5omn6KGM'], 'new': ['n'], 'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'tip': ['6ZqP56yU']}}
+2018-11-23 11:27:54,273 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tit': ['5q2k5qyh5pS/562W5omn6KGM'], 'id': ['1542943674265'], 'new': ['n'], 'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'tip': ['6ZqP56yU']}}
+2018-11-23 11:28:50,283 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'tip': ['6ZqP56yU'], 'id': ['1542943730275'], 'new': ['n'], 'tit': ['5q2k5qyh5pS/562W5omn6KGM']}}
+2018-11-23 11:29:38,166 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'id': ['1542943778158'], 'new': ['n'], 'tip': ['6ZqP56yU'], 'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'tit': ['5q2k5qyh5pS/562W5omn6KGM']}}
+2018-11-23 11:31:15,121 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tip': ['6ZqP56yU'], 'new': ['n'], 'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'id': ['1542943875113'], 'tit': ['5q2k5qyh5pS/562W5omn6KGM']}}
+2018-11-23 11:34:21,511 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tip': ['6ZqP56yU'], 'tit': ['5q2k5qyh5pS/562W5omn6KGM'], 'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'new': ['n'], 'id': ['1542944061500']}}
+2018-11-23 11:35:28,677 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tit': ['5q2k5qyh5pS/562W5omn6KGM'], 'tip': ['6ZqP56yU'], 'txt': ['6Ieq6KGM6L2mduS v S4jeiDveebsuebrg=='], 'new': ['n'], 'id': ['1542944128668']}}
+2018-11-23 11:36:14,001 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tit': ['5q2k5qyh5pS/562W5omn6KGM'], 'tip': ['6ZqP56yU'], 'txt': ['IyDoh6rooYzovaZ25L6/5LiN6IO955uy55uuCgojIyB0ZXN0Cj4g5ZWK5Y v5piv5b2T5bm05omp5aSn5Yiw'], 'new': ['n'], 'id': ['1542944173994']}}
+2018-11-23 11:38:18,914 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tit': ['5q2k5qyh5pS/562W5omn6KGM'], 'id': ['1542944298907'], 'txt': ['IyDoh6rooYzovaZ25L6/5LiN6IO955uy55uuCgojIyB0ZXN0Cj4g5ZWK5Y v5piv5b2T5bm05omp5aSn5Yiw'], 'new': ['n'], 'tip': ['6ZqP56yU']}}
+2018-11-23 11:38:39,526 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'new': ['n'], 'tit': ['5q2k5qyh5pS/562W5omn6KGM'], 'txt': ['IyDoh6rooYzovaZ25L6/5LiN6IO955uy55uuCgojIyB0ZXN0Cj4g5ZWK5Y v5piv5b2T5bm05omp5aSn5Yiw'], 'id': ['1542944319519'], 'tip': ['6ZqP56yU']}}
+2018-11-23 11:39:48,432 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:39:48,632 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:40:15,874 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'new': ['n'], 'tit': ['5rWL6K V5paH56ug'], 'txt': ['5rWL6K V5paH56ug77yMIOS7heeuoeeQhuWRmOWPr ingQ=='], 'id': ['1542944415868'], 'tip': ['5rWL6K V']}}
+2018-11-23 11:51:47,897 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tit': ['5rWL6K V5paH56ug'], 'txt': ['5rWL6K V5paH56ug77yMIOS7heeuoeeQhuWRmOWPr ingQ=='], 'tip': ['5rWL6K V'], 'id': ['1542945107890'], 'new': ['n']}}
+2018-11-23 11:51:48,053 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 ""artical"" 或附近的\nLINE 2: ...name", "type", "likesNum", "answerNum", "readNum" "artical",...\n                                                             ^\n',) sql:
+             insert into "articalTable" ("id", "name", "type", "likesNum", "answerNum", "readNum" "artical", ) 
+             values (%s, %s, %s, 0, 0, 0, %s)
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code_socket\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+psycopg2.ProgrammingError: 错误:  语法错误 在 ""artical"" 或附近的
+LINE 2: ...name", "type", "likesNum", "answerNum", "readNum" "artical",...
+                                                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:126)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->articalHandle.py(uploadArtical:21)->db_helper.py(write:71)->log_helper.py(error:21)->
+
+2018-11-23 11:53:23,160 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tip': ['5rWL6K V'], 'txt': ['5rWL6K V5paH56ug77yMIOS7heeuoeeQhuWRmOWPr ingQ=='], 'id': ['1542945203152'], 'new': ['n'], 'tit': ['5rWL6K V5paH56ug']}}
+2018-11-23 11:53:23,292 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 ""artical"" 或附近的\nLINE 2: ... artical_type, "likesNum", "answerNum", "readNum" "artical",...\n                                                             ^\n',) sql:
+             insert into "articalTable" ("id", artical_name, artical_type, "likesNum", "answerNum", "readNum" "artical", ) 
+             values (%s, %s, %s, 0, 0, 0, %s)
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code_socket\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+psycopg2.ProgrammingError: 错误:  语法错误 在 ""artical"" 或附近的
+LINE 2: ... artical_type, "likesNum", "answerNum", "readNum" "artical",...
+                                                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:126)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->articalHandle.py(uploadArtical:21)->db_helper.py(write:71)->log_helper.py(error:21)->
+
+2018-11-23 11:54:12,113 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'txt': ['5rWL6K V5paH56ug77yMIOS7heeuoeeQhuWRmOWPr ingQ=='], 'new': ['n'], 'tit': ['5rWL6K V5paH56ug'], 'id': ['1542945252104'], 'tip': ['5rWL6K V']}}
+2018-11-23 11:55:27,290 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tit': ['5rWL6K V5paH56ug'], 'new': ['n'], 'id': ['1542945327283'], 'tip': ['5rWL6K V'], 'txt': ['5rWL6K V5paH56ug77yMIOS7heeuoeeQhuWRmOWPr ingQ==']}}
+2018-11-23 11:55:37,375 log_helper.py[line:24] INFO sql执行失败:('not all arguments converted during string formatting',) sql:
+             insert into "articalTable" ("id", "artical_name", "artical_type", "likesNum", "answerNum", "readNum" "artical", ) 
+             values (%s, %s, %s, 0, 0, 0, %s)
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code_socket\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+TypeError: not all arguments converted during string formatting
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:126)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->articalHandle.py(uploadArtical:21)->db_helper.py(write:71)->log_helper.py(error:21)->
+
+2018-11-23 11:56:51,315 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tip': ['5rWL6K V'], 'id': ['1542945411308'], 'txt': ['5rWL6K V5paH56ug77yMIOS7heeuoeeQhuWRmOWPr ingQ=='], 'new': ['n'], 'tit': ['5rWL6K V5paH56ug']}}
+2018-11-23 11:57:00,392 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:57:14,341 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'verify': ['S9IE'], 'username': ['admin'], 'password': ['123456'], '_method': ['put']}}
+2018-11-23 11:57:16,900 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:57:17,010 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:58:13,347 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tip': ['5rWL6K V'], 'id': ['1542945493340'], 'txt': ['IyDmtYvor5Xmlofnq6AKIyMg5b275pav5qCH6aKYCj4g5LuF566h55CG5ZGY5Y v6KeB'], 'new': ['n'], 'tit': ['5rWL6K V5paH56ug']}}
+2018-11-23 11:58:13,451 log_helper.py[line:24] INFO sql执行失败:('错误:  语法错误 在 ")" 或附近的\nLINE 2: ... "artical_type", likesNum, answerNum, readNum, "artical", ) \n                                                                     ^\n',) sql:
+             insert into "articalTable" ("id", "artical_name", "artical_type", likesNum, answerNum, readNum, "artical", ) 
+             values (%s, %s, %s, 0, 0, 0, %s)
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code_socket\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+psycopg2.ProgrammingError: 错误:  语法错误 在 ")" 或附近的
+LINE 2: ... "artical_type", likesNum, answerNum, readNum, "artical", ) 
+                                                                     ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:126)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->articalHandle.py(uploadArtical:21)->db_helper.py(write:71)->log_helper.py(error:21)->
+
+2018-11-23 11:58:59,256 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 11:58:59,384 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 11:59:33,361 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'id': ['1542945573352'], 'tip': ['5rWL6K V'], 'new': ['n'], 'tit': ['5rWL6K V5paH56ug'], 'txt': ['IyDmtYvor5Xmlofnq6AKIyMg5LuF55So5LqO5rWL6K VCj4g55So5oi35LiN5Y v6KeB']}}
+2018-11-23 11:59:33,477 log_helper.py[line:24] INFO sql执行失败:('错误:  关系 "articalTable" 的 "likesnum" 字段不存在\nLINE 2: ...icalTable" ("id", "artical_name", "artical_type", likesNum, ...\n                                                             ^\n',) sql:
+             insert into "articalTable" ("id", "artical_name", "artical_type", likesNum, answerNum, readNum, "artical") 
+             values (%s, %s, %s, 0, 0, 0, %s)
+        
+Traceback (most recent call last):
+  File "E:\我的博客\后台\python\code_socket\common\db_helper.py", line 64, in write
+    cursor.execute(sql, vars)
+psycopg2.ProgrammingError: 错误:  关系 "articalTable" 的 "likesnum" 字段不存在
+LINE 2: ...icalTable" ("id", "artical_name", "artical_type", likesNum, ...
+                                                             ^
+
+
+程序调用堆栈的日志：pydevd.py(<module>:1664)->pydevd.py(main:1658)->pydevd.py(run:1068)->_pydev_execfile.py(execfile:18)->main.py(<module>:126)->bottle.py(run:3123)->bottle.py(run:2782)->socketserver.py(serve_forever:234)->socketserver.py(_handle_request_noblock:313)->socketserver.py(process_request:341)->socketserver.py(finish_request:354)->socketserver.py(__init__:681)->simple_server.py(handle:138)->handlers.py(run:137)->middleware.py(__call__:156)->bottle.py(__call__:979)->bottle.py(wsgi:954)->bottle.py(_handle:862)->bottle.py(wrapper:1740)->articalHandle.py(uploadArtical:21)->db_helper.py(write:71)->log_helper.py(error:21)->
+
+2018-11-23 12:00:18,008 log_helper.py[line:14] INFO url:/apiPost/uploadArtical/ ip:127.0.0.1 params(post):{'dict': {'tit': ['5rWL6K V5paH56ug'], 'txt': ['IyDmtYvor5Xmlofnq6AKIyMg5LuF55So5LqO5rWL6K VCj4g55So5oi35LiN5Y v6KeB'], 'id': ['1542945618001'], 'new': ['n'], 'tip': ['5rWL6K V']}}

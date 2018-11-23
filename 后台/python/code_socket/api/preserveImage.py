@@ -8,7 +8,7 @@ import base64
 @get('/apiGet/uploadImage/')
 @post('/apiPost/uploadImage/')
 def uploadImage():
-    """生成验证码图片"""
+    """保存文章上传的图片"""
 
     upload_image = str(web_helper.get_form('image', '图片')).replace(" ", "+")
     upload_time = web_helper.get_form('times', '时间戳')

@@ -41,7 +41,6 @@ export default class HttpUtils{
         for(let i in data){
             date_Str += i+ "=" + data[i] + "&"
         }
-        console.log(consts.url, url);
         return new Promise(((resolve, reject) => {
             fetch(consts.url + url,{
                 method:'POST',

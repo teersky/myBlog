@@ -4,12 +4,14 @@ import React, {
 /* import Constant from "../../Constant/Constant" */
 import APIDate from "../../modules/get-api"
 import "./login.css"
+
+import consts from '../../config/const'
     
     class Login extends Component {
         constructor(props) {
             super(props);
             this.state = {
-                imgUrl:  "http://192.168.0.250:81/api/verify/?" + 100 * Math.random(),
+                imgUrl:  consts.url+"/api/verify/?" + 100 * Math.random(),
                 verifyValue: ""
             };
         }
@@ -21,7 +23,7 @@ import "./login.css"
         }
         get_verify() {
             this.setState({
-                imgUrl: "http://192.168.0.250:81/api/verify/?" + 100 * Math.random()
+                imgUrl: consts.url+"/api/verify/?" + 100 * Math.random()
             })
          }
         submitValue(){
@@ -30,7 +32,7 @@ import "./login.css"
             loginUserList.password = this.refs.password.value;
             loginUserList.verify = this.refs.verify.value;
             loginUserList._method = 'put';
-            APIDate.post("http://192.168.0.250:81/apiPost/login/",loginUserList)
+            APIDate.post("/apiPost/login/",loginUserList)
             .then( (result) => {
                 sessionStorage.setItem("key", document.cookie.split("=")[1]);
                 window.location.reload();
