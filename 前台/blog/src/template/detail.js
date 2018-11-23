@@ -8,7 +8,8 @@ import MsgShow from '../page/MsgShow/index';
 import BlogHandle from '../page/BlogHandle/index';
 import userComments from '../page/userComments/index';
 import blogEditor from "../page/BlogHandle/blogEditor/index"
-import blogList from "../page/BlogHandle/blogShow/index"
+import blogList from "../page/BlogHandle/blogList/index"
+import blogShow from "../page/BlogHandle/blogShow/index"
 
 const style={
     padding: '0px'
@@ -28,6 +29,7 @@ class Detail extends Component{
                 <Route path="/BackStage/userComments" component={userComments}></Route>   
                 <Route path="/BackStage/blogEditor" component={blogEditor}></Route>   
                 <Route path="/BackStage/blogList" component={blogList}></Route>
+                <Route path="/BackStage/blogShow" component={blogShow}></Route>
             </div>
         )
     }

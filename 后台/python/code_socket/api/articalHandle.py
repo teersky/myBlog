@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #coding: utf-8
 
-from bottle import post, request
+from bottle import get, post, request
 from common import web_helper, db_helper
 import base64
 
@@ -21,3 +21,23 @@ def uploadArtical():
         db_helper.write(insert, data)
     print(uid, tit, txt, tip)
     return web_helper.return_msg(0, '上传成功')
+
+@get('/apiGet/ArticalList/')
+def ArticalList():
+    selectArticalList = """
+       select "id", "artical_name", "artical_type", "likesNum", "answerNum", "readNum" from "articalTable"
+    """
+    recode_result = db_helper.read(selectArticalList)
+    print(recode_result)
+    return web_helper.return_msg(0, '获取成功', recode_result)
+
+@get('/apiGet/articalShow/')
+def ArticalList():
+    uid = web_helper.get_query('id', '主键（时间戳）')
+    print("uid", uid)
+    selectThisArtical = """
+       select "artical_name", "artical_type", "likesNum", "answerNum", "readNum", "artical" from "articalTable" where id = '%s'
+    """%(uid)
+    recode_result = db_helper.read(selectThisArtical)
+    print(recode_result)
+    return web_helper.return_msg(0, '查询成功', recode_result)

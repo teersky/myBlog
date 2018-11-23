@@ -26,7 +26,7 @@
     <SUITE FILE_PATH="coverage/code_socket$test.coverage" NAME="test Coverage Results" MODIFIED="1541142152820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/code$timeOut_helper.coverage" NAME="timeOut_helper Coverage Results" MODIFIED="1540888582259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/code$wevsocket_test.coverage" NAME="wevsocket_test Coverage Results" MODIFIED="1541061770235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/code_socket$main.coverage" NAME="main Coverage Results" MODIFIED="1542945317760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code_socket$main.coverage" NAME="main Coverage Results" MODIFIED="1542965938057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/code$receive_mails.coverage" NAME="receive_mails Coverage Results" MODIFIED="1540979429559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/code$mainTest.coverage" NAME="mainTest Coverage Results" MODIFIED="1540868240043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/code$websocket_helper.coverage" NAME="websocket_helper Coverage Results" MODIFIED="1541040986374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
@@ -93,23 +93,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="articalHandle.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="articalHandle.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/articalHandle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="16" column="113" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="113" />
+            <state relative-caret-position="152">
+              <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
               <folding>
-                <element signature="e#34#66#0" expanded="true" />
+                <element signature="e#34#71#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db_helper.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/db_helper.py">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f17cee8a-ecfa-4fdb-abca-c99a7b424de9/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="132">
+              <caret line="93" selection-start-line="93" selection-end-line="93" selection-end-column="132" />
             </state>
           </provider>
         </entry>
@@ -123,11 +123,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="web_helper.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/web_helper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="88" column="13" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="13" />
+              <folding>
+                <element signature="e#38#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-786">
+              <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="visitHandle.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/visitHandle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            <state relative-caret-position="264">
+              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -145,7 +166,7 @@
     <findStrings>
       <find>send</find>
       <find>10.1.80.83</find>
-      <find />
+      <find>new websocket client joined!</find>
       <find>WebSocketServer</find>
       <find>WebSocket</find>
       <find>WebSocket(</find>
@@ -161,7 +182,7 @@
       <find>connectionlist</find>
       <find>deleteconnection</find>
       <find>sendMessage_only</find>
-      <find />
+      <find>msg[1] &amp; 127</find>
       <find>get_datalength</find>
       <find>api/uploadImage</find>
       <find>visitHandle</find>
@@ -194,11 +215,9 @@
         <option value="$PROJECT_DIR$/test/mainTest.py" />
         <option value="$PROJECT_DIR$/config/__init__.py" />
         <option value="f17cee8a-ecfa-4fdb-abca-c99a7b424de9/database/TestDB/schema/public/table/naviList.sql" />
-        <option value="$PROJECT_DIR$/api/CheckLogin.py" />
         <option value="$PROJECT_DIR$/api/visitHandle" />
         <option value="$PROJECT_DIR$/common/web_helper.py" />
         <option value="$PROJECT_DIR$/test/getLocation.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f17cee8a-ecfa-4fdb-abca-c99a7b424de9/console.sql" />
         <option value="$PROJECT_DIR$/common/db_helper.py" />
         <option value="$PROJECT_DIR$/api/timeOut.py" />
         <option value="$PROJECT_DIR$/api/visitHandle.py" />
@@ -220,6 +239,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f17cee8a-ecfa-4fdb-abca-c99a7b424de9/console_2.sql" />
         <option value="$PROJECT_DIR$/api/preserveImage.py" />
         <option value="$PROJECT_DIR$/test/base64Test.py" />
+        <option value="$PROJECT_DIR$/api/CheckLogin.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f17cee8a-ecfa-4fdb-abca-c99a7b424de9/console.sql" />
         <option value="$PROJECT_DIR$/api/articalHandle.py" />
       </list>
     </option>
@@ -262,6 +283,11 @@
               <item name="code_socket" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="code_socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code_socket" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -298,7 +324,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.base64Test">
+  <component name="RunManager" selected="Python.main">
     <configuration name="base64Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -403,8 +429,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.base64Test" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.base64Test" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.wevsocket_test" />
         <item itemvalue="Python.scanEmail" />
@@ -466,7 +492,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4969743" weight="0.339934" />
@@ -476,13 +502,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="14" sideWeight="0.4969743" weight="0.32838285" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.32838285" />
-      <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.6891074" weight="0.32673267" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49452955" visible="true" weight="0.16565809" />
+      <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.6891074" weight="0.44719473" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49452955" visible="true" weight="0.16792738" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.28895614" />
       <window_info anchor="right" id="SciView" order="4" weight="0.32980332" />
       <window_info id="Structure" order="1" sideWeight="0.50547045" side_tool="true" weight="0.15885022" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.811649" visible="true" weight="0.52970296" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.811649" visible="true" weight="0.42574257" />
       <window_info id="Favorites" order="2" sideWeight="0.5042017" side_tool="true" weight="0.25567323" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -519,7 +545,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="91" />
+      <option name="time" value="93" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -531,20 +557,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/getLocation.py" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f17cee8a-ecfa-4fdb-abca-c99a7b424de9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="88" selection-start-line="88" selection-end-line="88" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/db_helper_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/log_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -656,13 +668,6 @@
     <entry file="das://f17cee8a-ecfa-4fdb-abca-c99a7b424de9/database/TestDB/schema/public/sequence/manager_id_seq">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/webSocket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://f17cee8a-ecfa-4fdb-abca-c99a7b424de9/database/TestDB/schema/public/table/navilist">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -674,20 +679,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/verify.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/dataInterface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -710,37 +701,9 @@
         <state relative-caret-position="-93341" />
       </provider>
     </entry>
-    <entry file="file://E:/python/simple/code/venv/Lib/site-packages/bottle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="909" selection-start-line="909" selection-end-line="909" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/string_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-924" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/testFNS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/CheckLogin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="26" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/log_helper_test.py">
@@ -750,24 +713,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f17cee8a-ecfa-4fdb-abca-c99a7b424de9/console_2.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="39" selection-start-line="1" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/web_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-858">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -788,20 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/db_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/preserveImage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/const.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -809,10 +744,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/db_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="120" column="7" selection-start-line="120" selection-start-column="7" selection-end-line="120" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/webSocket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/visitHandle.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/verify.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <caret line="9" column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/python/simple/code/venv/Lib/site-packages/bottle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="1739" selection-start-line="1739" selection-end-line="1739" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/db_helper_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-82">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/CheckLogin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="88" column="13" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="13" />
+          <folding>
+            <element signature="e#38#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/testFNS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/preserveImage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/dataInterface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-786">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -825,11 +847,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/articalHandle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="16" column="113" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="113" />
+        <state relative-caret-position="152">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
           <folding>
-            <element signature="e#34#66#0" expanded="true" />
+            <element signature="e#34#71#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f17cee8a-ecfa-4fdb-abca-c99a7b424de9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="93" selection-start-line="93" selection-end-line="93" selection-end-column="132" />
         </state>
       </provider>
     </entry>
