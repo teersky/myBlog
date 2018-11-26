@@ -4841,3 +4841,92 @@ LINE 2: ...eadNum", "artical" from "articalTable" where id = "154294561...
 2018-11-23 16:20:56,284 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
 2018-11-23 16:20:56,491 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
 2018-11-23 16:20:57,250 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-23 17:39:27,618 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 17:39:39,980 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'verify': ['KSVI'], 'password': ['123456'], '_method': ['put'], 'username': ['admin']}}
+2018-11-23 17:39:41,724 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 17:39:41,819 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 17:39:43,514 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-23 17:45:43,439 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 17:45:43,611 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 17:45:43,839 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-23 17:49:14,460 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 17:49:14,717 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 17:49:15,296 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-23 17:50:40,421 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 17:50:40,511 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 17:50:40,893 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-23 17:50:52,921 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 17:50:53,035 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 17:50:54,841 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-23 17:51:26,605 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 17:51:26,736 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 17:51:27,308 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-23 17:53:34,876 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 17:53:35,045 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 17:53:35,196 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-23 17:54:05,357 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 17:54:05,471 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 17:54:06,302 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-23 17:54:45,725 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-23 17:54:45,841 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-23 17:54:47,250 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:00:41,348 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:00:58,759 log_helper.py[line:14] INFO url:/apiPost/login/ ip:127.0.0.1 params(post):{'dict': {'_method': ['put'], 'verify': ['EDIZ'], 'username': ['admin'], 'password': ['123456']}}
+2018-11-26 09:01:00,739 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:01:00,941 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:01:07,532 log_helper.py[line:14] INFO url:/apiGet/ArticalList/ ip:127.0.0.1
+2018-11-26 09:01:11,229 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:14:17,784 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:14:17,873 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:14:19,511 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:14:39,794 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:14:39,891 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:14:40,085 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:14:53,627 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:14:54,303 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:14:54,431 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:16:04,171 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:16:04,233 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:16:04,376 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:16:29,753 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:16:30,363 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:16:30,488 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:18:19,647 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:18:19,756 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:18:20,317 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:19:27,407 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:19:27,540 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:19:28,135 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:21:44,601 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:21:44,863 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:21:45,130 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:23:11,380 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:23:11,600 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:23:12,040 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:24:52,006 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:24:52,074 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:24:53,891 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:26:59,664 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:27:00,001 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:27:00,357 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:34:30,919 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:34:30,989 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:34:31,436 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:37:07,843 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:37:08,004 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:37:08,195 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:40:09,498 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:40:09,515 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:40:09,616 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:43:51,948 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:43:51,981 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:43:53,654 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:44:01,063 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:44:01,202 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:44:01,401 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:50:03,570 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:50:03,690 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:50:04,558 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
+2018-11-26 09:51:59,428 log_helper.py[line:14] INFO url:/apiPost/CheckLogin/ ip:127.0.0.1 params(post):{'dict': {}}
+2018-11-26 09:51:59,446 log_helper.py[line:14] INFO url:/apiGet/dataInterface/ ip:127.0.0.1
+2018-11-26 09:52:00,574 log_helper.py[line:14] INFO url:/apiGet/articalShow/ ip:127.0.0.1 params(get):id=1542945618001
