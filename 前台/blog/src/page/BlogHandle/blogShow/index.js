@@ -14,10 +14,10 @@ export default class blogEditor extends Component {
             articalTips: ""
         };
     }
-    
+
     componentWillMount(){
         let self = this;
-        let time = "1542945618001";
+        let time = this.props.location.state.key;
         APIData.get("/apiGet/articalShow/?id="+ time).then((result) => {
             console.log(result);
             self.setState({

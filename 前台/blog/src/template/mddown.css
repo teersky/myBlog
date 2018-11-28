@@ -1,0 +1,23 @@
+p{
+    padding: 4px 0;
+}
+.markdown_white{
+    margin: 20px;
+    /* border: 1px solid #efefef; */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px #cfcfcf;
+}
+.markdown_white h1:first-child{
+    padding-bottom: 12px; 
+}
+.markdown_white blockquote{
+    background: #efefef;
+    padding-left: 1em;
+    border-radius: 6px;
+}
+.markdown_white pre{
+    padding: 4px 0;
+    background: #eeeeee;
+    border-radius: 6px;
+}

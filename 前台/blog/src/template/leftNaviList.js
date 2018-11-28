@@ -8,14 +8,13 @@ class leftNaviList extends Component{
         this.state = {
             arr: [],
             listArr : [
-                {"title": "信息展示", linkTo: "msgShow", icons: "home", child: []},
-                {"title": "博文处理", linkTo: "BlogHandle", icons: "home", child: [
-                    {"title": "博文预览", linkTo: "blogShow", icons: "home", child: []},
-                    {"title": "博文编辑", linkTo: "blogEditor", icons: "home", child: []},
-                    {"title": "博文修改", linkTo: "blogModify", icons: "home", child: []},
+                {"title": "信息展示", linkTo: "msgShow", icons: "bars", child: []},
+                {"title": "博文处理", linkTo: "", icons: "book", child: [
+                    {"title": "博文列表", linkTo: "blogList", icons: "edit", child: []},
+                    {"title": "博文编辑", linkTo: "blogEditor", icons: "highligh", child: []},
                 ]},
                 {"title": "用户评论", linkTo: "userComments", icons: "home", child: []},
-                {"title": "权限管理", linkTo: "rightsManagement", icons: "home", child: []},
+                {"title": "权限管理", linkTo: "rightsManagement", icons: "lock", child: []},
             ]
         }
     }
@@ -29,15 +28,13 @@ class leftNaviList extends Component{
             arr: arr
         })
     }
-    static contextTypes = {
-        apiData: PropTypes.string,
-    }
+
     componentDidUpdate (){
         let hei = this.ScrollBox.offsetHeight;
         this.props.callBackDate(hei);
     }
     render(){
-        const  apiData = JSON.parse(this.context.apiData) || [];
+        const  apiData = this.state.listArr;
         return (
             
             <ul ref={dom => {this.ScrollBox = dom}} style={this.props.data}>
@@ -55,7 +52,14 @@ class leftNaviList extends Component{
                         }else{
                             return (
                                 <li  className={Number(this.state.arr[0])  === val ? "li_style open": "li_style"} key = {val}>
-                                    <Link to={ "/BackStage/" + list.linkTo.split(" ")[0] } className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, val)}}><Icon type={list.icons} className="left_tit_nave_icon"/>{ list.title }</p></Link>
+                                    {
+                                        list.linkTo.split(" ")[0] == ""
+                                        ?
+                                        <a href="javascript:;" className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, val)}}><Icon type={list.icons} className="left_tit_nave_icon"/>{ list.title }</p></a>
+                                        :
+                                        <Link to={ "/BackStage/" + list.linkTo.split(" ")[0] } className="linkTo" onDragStart={(event) => {event.preventDefault()}}><p onClick={(event) => {this.listClick(event, val)}}><Icon type={list.icons} className="left_tit_nave_icon"/>{ list.title }</p></Link>
+                                    }
+                                    
                                     <ul>
                                         { 
                                             list.child.map((items, index) => {

@@ -25,7 +25,7 @@ class Detail extends Component{
             <div style={ style } >
                 <Route exact path="/BackStage" component={Home}></Route>
                 <Route path="/BackStage/msgShow" component={MsgShow}></Route>
-                <Route path="/BackStage/BlogHandle" component={BlogHandle}></Route>
+                {/* <Route path="/BackStage/BlogHandle" component={BlogHandle}></Route> */}
                 <Route path="/BackStage/userComments" component={userComments}></Route>   
                 <Route path="/BackStage/blogEditor" component={blogEditor}></Route>   
                 <Route path="/BackStage/blogList" component={blogList}></Route>

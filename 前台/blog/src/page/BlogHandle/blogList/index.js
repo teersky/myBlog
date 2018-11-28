@@ -120,8 +120,12 @@ export default class blogEditor extends Component {
             key: 'action',
             render: (text, record) => (
                 <span>
-                    {/* <Route href="javascript:;" onClick={() => { this.previewEvs(text) }}>预览</Route> */}
-                    <Link to={ "/BackStage/blogShow/" }>预览</Link>
+                    <Link to={ 
+                        {
+                            pathname : "/BackStage/blogShow/",
+                            state:{key: text.id}
+                        }
+                    } >预览</Link>
                     <Divider type="vertical" />
                     <a href="javascript:;" onClick={() => { this.modifyEvs(text) }}>修改</a>
                     <Divider type="vertical" />

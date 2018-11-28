@@ -69,7 +69,6 @@ import React, {
       windowWidth:PropTypes.string,
       mouseMoveLen:PropTypes.string,
       callback:PropTypes.func,
-      apiData: PropTypes.string,
       RouteList: PropTypes.string,
     }
    
@@ -81,7 +80,6 @@ import React, {
             windowWidth: this.state.windowWidth.toString(),
             mouseMoveLen: moveElement__Length.toString(),
             callback: this.callback.bind(this),
-            apiData: JSON.stringify(this.state.listArr),
             RouteList: JSON.stringify(this.state.RouteList),
             showListTip: this.state.showListTip
         }
