@@ -4,92 +4,95 @@ import {
 } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import APIData from "../../../modules/get-api"
-import { Table, Divider, Tag, Input, Button, Icon } from "antd"
-const List = [
-    {
-        key: '1',
-        uId: "1541994285044",
-        name: "测试文档1",
-        type: ["Js"],
-        likesNum: 126,
-        answerNum: 40,
-        readNum: 509
-    }, {
-        key: '2',
-        uId: "1541993285044",
-        name: "测试文档2",
-        type: ["Js"],
-        likesNum: 100,
-        answerNum: 21,
-        readNum: 203
-    }, {
-        key: '3',
-        uId: "1541994225044",
-        name: "测试文档3",
-        type: ["Js"],
-        likesNum: 214,
-        answerNum: 56,
-        readNum: 678
-    }
-]
-
+import moment from 'moment'
+import { Table, Divider, Tag, Modal } from "antd"
 
 export default class blogEditor extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            articalList: ""
+            articalList: "",
+            visible: false,
+            confirmLoading: false,
+            ModalText: '',
+            deleteObject: ""
         };
     }
     modifyEvs(self) {
         console.log(self);
     }
-    deleteEvs() {
-        alert("删除");
+    deleteEvs(text) {
+        console.log("删除", text);
+        this.setState({
+            visible: true,
+            ModalText: '您确定要删除《'+text.artical_name+"》吗?",
+            deleteObject: text
+        });
     }
-    previewEvs(text, recode){
-        console.log(text, recode);
-    }
-
-    state = {
-        searchText: '',
-    };
 
     componentWillMount(){
         let self = this;
         APIData.get("/apiGet/ArticalList/").then((result) => {
             var res = result.data;
-            res.map((items, index) => {
-                items.key = index;
-                let arr = [];
-                arr.push(items.artical_type);
-                items.artical_type = arr;
-            })
-            self.setState({
-                articalList: res
-            });
+            if(res != "" && res.length > 0){
+                res.map((items, index) => {
+                    items.key = index;
+                    let arr = [];
+                    arr.push(items.artical_type);
+                    items.artical_type = arr;
+                })
+                self.setState({
+                    articalList: res
+                });
+            }
             console.log(res);
         });
     }
 
-    handleSearch = (selectedKeys, confirm) => () => {
-        confirm();
-        this.setState({ searchText: selectedKeys[0] });
+    handleOk = () => {
+        let  self = this;
+        this.setState({
+            ModalText: '正在删除《'+this.state.deleteObject.artical_name+"》中， 请稍后...",
+            confirmLoading: true,
+        });
+        var json = {uid: this.state.deleteObject.id}
+        APIData.post("/apiPost/deleteArtical/", json).then((result) => {
+            console.log(result);
+            var res = result.data;
+            if(res != "" && res.length > 0){
+                res.map((items, index) => {
+                    items.key = index;
+                    let arr = [];
+                    arr.push(items.artical_type);
+                    items.artical_type = arr;
+                })
+                self.setState({
+                    articalList: res,
+                    visible: false,
+                    confirmLoading: false,
+                });
+            }
+        });
+    }
+    
+    handleCancel = () => {
+        console.log('Clicked cancel button');
+        this.setState({
+          visible: false,
+        });
     }
 
-    handleReset = clearFilters => () => {
-        clearFilters();
-        this.setState({ searchText: '' });
-    }
     render() {
         const columns = [{
             title: '文章名称',
             dataIndex: 'artical_name',
             key: 'artical_name',
+            align: "center",
         }, {
             title: '类型',
             dataIndex: 'artical_type',
             key: 'artical_type',
+            align: "center",
             render: tags => (
                 <span>
                     {tags.map(tag => <Tag color="blue" key={tag}>{tag}</Tag>)}
@@ -99,25 +102,32 @@ export default class blogEditor extends Component {
             title: '时间',
             dataIndex: 'id',
             key: 'id',
-            sorter: (a, b) => a.uId - b.uId,
+            align: "center",
+            render: tags => (
+                <span>{ moment(parseInt(tags)).format("YYYY-MM-DD HH:mm:ss") }</span>
+            ),
         }, {
             title: '点赞量',
-            dataIndex: 'likesNum',
+            dataIndex: 'likesnum',
             key: 'likesNum',
+            align: "center",
             sorter: (a, b) => a.likesNum - b.likesNum,
         }, {
             title: '回复量',
-            dataIndex: 'answerNum',
+            dataIndex: 'answernum',
             key: 'answerNum',
+            align: "center",
             sorter: (a, b) => a.answerNum - b.answerNum,
         }, {
             title: '阅读量',
-            dataIndex: 'readNum',
+            dataIndex: 'readnum',
             key: 'readNum',
+            align: "center",
             sorter: (a, b) => a.readNum - b.readNum,
         }, {
             title: 'Action',
             key: 'action',
+            align: "center",
             render: (text, record) => (
                 <span>
                     <Link to={ 
@@ -127,7 +137,12 @@ export default class blogEditor extends Component {
                         }
                     } >预览</Link>
                     <Divider type="vertical" />
-                    <a href="javascript:;" onClick={() => { this.modifyEvs(text) }}>修改</a>
+                    <Link to={ 
+                        {
+                            pathname : "/BackStage/blogChange/",
+                            state:{key: text.id}
+                        }
+                    } >修改</Link>
                     <Divider type="vertical" />
                     <a href="javascript:;" onClick={() => { this.deleteEvs(text) }}>删除</a>
                 </span>
@@ -135,7 +150,17 @@ export default class blogEditor extends Component {
         }];
 
         return (
-            <Table dataSource={ this.state.articalList } columns={columns} bordered />
+            <div>
+                <Table dataSource={ this.state.articalList } columns={columns} bordered style={{padding: "10px 6px 0 10px"}}/>
+                <Modal title="Title"
+                    visible={this.state.visible}
+                    onOk={this.handleOk}
+                    confirmLoading={this.state.confirmLoading}
+                    onCancel={this.handleCancel}
+                    >
+                    <p>{this.state.ModalText}</p>
+                </Modal>
+            </div>
         )
     }
 }

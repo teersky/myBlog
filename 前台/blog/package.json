@@ -10,6 +10,7 @@
     "highlight.js": "^9.13.1",
     "marked": "^0.5.1",
     "mditor": "^1.3.3",
+    "moment": "^2.22.2",
     "react": "^16.4.1",
     "react-axios": "^2.0.0",
     "react-dom": "^16.4.1",

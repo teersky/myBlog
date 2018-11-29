@@ -10,5 +10,14 @@
       <user-name>postgres</user-name>
       <introspection-schemas>TestDB:public</introspection-schemas>
     </data-source>
+    <data-source name="虚拟机数据库" uuid="88ff50d3-8501-4315-b51b-27d5e448f56d">
+      <database-info product="PostgreSQL" version="9.6.11" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <introspection-schemas>blogDB:public</introspection-schemas>
+    </data-source>
   </component>
 </project>

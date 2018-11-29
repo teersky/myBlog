@@ -7,11 +7,10 @@ CREATE TABLE public.manager (
  login_count integer DEFAULT 0,
  is_enable integer DEFAULT 1,
  add_time timestamp(0) WITHOUT TIME ZONE,
-CREATE TABLE public.articalTable (
  reserive_1 text DEFAULT '',
  reserive_2 text DEFAULT '',
  reserive_3 text DEFAULT '',
-  CONSTRAINT articalTable_pkey PRIMARY KEY(id)
+  CONSTRAINT manager_pkey PRIMARY KEY(id)
 )
 WITH(oids = false);
 
@@ -32,11 +31,11 @@ COMMENT ON COLUMN public.manager.is_enable IS '账号是否启用，1=true(启�
 
 COMMENT ON COLUMN public.manager.add_time IS '注册时间'; 
 
-COMMENT ON COLUMN public.articalTable.reserive_1 IS '保留字1'; 
+COMMENT ON COLUMN public.manager.reserive_1 IS '保留字1'; 
 
-COMMENT ON COLUMN public.articalTable.reserive_2 IS '保留字2'; 
+COMMENT ON COLUMN public.manager.reserive_2 IS '保留字2'; 
 
-COMMENT ON COLUMN public.articalTable.reserive_3 IS '保留字3'; 
+COMMENT ON COLUMN public.manager.reserive_3 IS '保留字3'; 
 
 
 
@@ -47,11 +46,10 @@ CREATE TABLE public.cityInfomation (
  name text DEFAULT '',
  latitude text DEFAULT '',
  longitude text DEFAULT '',
-CREATE TABLE public.articalTable (
  reserive_1 text DEFAULT '',
  reserive_2 text DEFAULT '',
  reserive_3 text DEFAULT '',
-  CONSTRAINT articalTable_pkey PRIMARY KEY(code)
+  CONSTRAINT cityInfomation_pkey PRIMARY KEY(code)
 )
 WITH(oids = false);
 
@@ -68,11 +66,11 @@ COMMENT ON COLUMN public.cityInfomation.latitude IS '纬度';
 
 COMMENT ON COLUMN public.cityInfomation.longitude IS '经度'; 
 
-COMMENT ON COLUMN public.articalTable.reserive_1 IS '保留字1'; 
+COMMENT ON COLUMN public.cityInfomation.reserive_1 IS '保留字1'; 
 
-COMMENT ON COLUMN public.articalTable.reserive_2 IS '保留字2'; 
+COMMENT ON COLUMN public.cityInfomation.reserive_2 IS '保留字2'; 
 
-COMMENT ON COLUMN public.articalTable.reserive_3 IS '保留字3'; 
+COMMENT ON COLUMN public.cityInfomation.reserive_3 IS '保留字3'; 
 
 
 
@@ -82,11 +80,10 @@ CREATE TABLE public.visitRecode (
  code integer,
  ip_inner text DEFAULT '',
  valueIndex integer,
-CREATE TABLE public.articalTable (
  reserive_1 text DEFAULT '',
  reserive_2 text DEFAULT '',
  reserive_3 text DEFAULT '',
-  CONSTRAINT articalTable_pkey PRIMARY KEY(dataTime)
+  CONSTRAINT visitRecode_pkey PRIMARY KEY(dataTime)
 )
 WITH(oids = false);
 
@@ -101,11 +98,11 @@ COMMENT ON COLUMN public.visitRecode.ip_inner IS '访问内网IP';
 
 COMMENT ON COLUMN public.visitRecode.valueIndex IS '访问次数'; 
 
-COMMENT ON COLUMN public.articalTable.reserive_1 IS '保留字1'; 
+COMMENT ON COLUMN public.visitRecode.reserive_1 IS '保留字1'; 
 
-COMMENT ON COLUMN public.articalTable.reserive_2 IS '保留字2'; 
+COMMENT ON COLUMN public.visitRecode.reserive_2 IS '保留字2'; 
 
-COMMENT ON COLUMN public.articalTable.reserive_3 IS '保留字3'; 
+COMMENT ON COLUMN public.visitRecode.reserive_3 IS '保留字3'; 
 
 
 

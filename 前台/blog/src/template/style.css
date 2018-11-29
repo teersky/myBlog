@@ -25,7 +25,7 @@
 .li_style.open >.linkTo > p, .LineStyle{border-left-color: #00AAFF; cursor: pointer; color: #fff;}
 .left_tit_nave_icon{font-size: 14px; color: #fff; display: inline-block; margin-right: 6px;}
 .li_style.open > ul p{ border-top: 1px solid #363636; cursor: pointer;}
-.linkTo{display: block; height: 46px; text-decoration: none; user-select: none}
+.linkTo{display: block; height: initial; text-decoration: none; user-select: none}
 .toRight__point{display: none; }
 
 @media screen and (max-width: 530px) {

@@ -11,7 +11,7 @@ class leftNaviList extends Component{
                 {"title": "信息展示", linkTo: "msgShow", icons: "bars", child: []},
                 {"title": "博文处理", linkTo: "", icons: "book", child: [
                     {"title": "博文列表", linkTo: "blogList", icons: "edit", child: []},
-                    {"title": "博文编辑", linkTo: "blogEditor", icons: "highligh", child: []},
+                    {"title": "新建博文", linkTo: "blogEditor", icons: "highligh", child: []},
                 ]},
                 {"title": "用户评论", linkTo: "userComments", icons: "home", child: []},
                 {"title": "权限管理", linkTo: "rightsManagement", icons: "lock", child: []},

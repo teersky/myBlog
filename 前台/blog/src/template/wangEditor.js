@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Input,  Divider, Button, Modal } from 'antd'
+import { Input,  Divider, Button, Modal, message } from 'antd'
 import './style.css'
 
+import Base64 from "../modules/baseDecode"
 
 import SimpleMDE from 'simplemde'
 import marked from 'marked'
@@ -21,7 +22,21 @@ export default class blogEditor extends Component {
             artical__txt: props.articalTXT,
             artical__ID: props.articalID,
             artical__tip: props.articalTip,
-            artical__tipList: props.artical__tipLists
+            artical__tipList: props.artical__tipLists,
+            beReady: true
+        }
+    }
+    componentDidUpdate(){
+        if(this.props.articalTit != "" && this.state.beReady){
+            this.setState({
+                artical__tit: this.props.articalTit,
+                artical__txt: this.props.articalTXT,
+                artical__ID: this.props.articalID,
+                artical__tip: this.props.articalTip,
+                artical__tipList: this.props.artical__tipLists,
+                beReady: false
+            })
+            this.state.simplemde.value(Base64.decode(this.props.articalTXT));
         }
     }
     SelectTips__artical(items){
@@ -36,7 +51,6 @@ export default class blogEditor extends Component {
     }
     componentDidMount(){
         this.mditor();
-        console.log(this.state.artical__txt);
     }
     mditor(){
         let smde = new SimpleMDE({
@@ -62,6 +76,7 @@ export default class blogEditor extends Component {
         this.setState({
             simplemde: smde
         });
+        console.log(this.state);
         smde.value(this.state.artical__txt);
     }
     inputTitEv(value){
@@ -95,6 +110,11 @@ export default class blogEditor extends Component {
             console.log(json)
             APIData.post("/apiPost/uploadArtical/", json).then((result) => {
                 console.log(result);
+                if(result.state == 0){
+                    message.success('博文上传成功');
+                }else{
+                    message.error('博文上传失败');
+                }
             });
         }
     }

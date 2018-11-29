@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Input,  Divider, Button, Modal } from 'antd'
+import Base64 from "../modules/baseDecode"
 
 
 import Marked from "marked"
@@ -12,7 +12,7 @@ export default class blogEditor extends Component {
         }
     }
     render() {
-        let articalDetail = Marked(this.props.articalTXT);
+        let articalDetail = Marked(Base64.decode(this.props.articalTXT));
         let artical__tit = this.props.articalTit;
         let artical__txt = this.props.articalTXT;
         let artical__ID = this.props.articalID;

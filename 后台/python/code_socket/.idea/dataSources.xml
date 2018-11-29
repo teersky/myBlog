@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/TestDB</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="虚拟机数据库" uuid="88ff50d3-8501-4315-b51b-27d5e448f56d">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.0.138:5432/blogDB</jdbc-url>
+    </data-source>
   </component>
 </project>

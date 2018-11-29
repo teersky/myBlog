@@ -10,6 +10,7 @@ import userComments from '../page/userComments/index';
 import blogEditor from "../page/BlogHandle/blogEditor/index"
 import blogList from "../page/BlogHandle/blogList/index"
 import blogShow from "../page/BlogHandle/blogShow/index"
+import blogChange from "../page/BlogHandle/blogChange/index"
 
 const style={
     padding: '0px'
@@ -30,6 +31,7 @@ class Detail extends Component{
                 <Route path="/BackStage/blogEditor" component={blogEditor}></Route>   
                 <Route path="/BackStage/blogList" component={blogList}></Route>
                 <Route path="/BackStage/blogShow" component={blogShow}></Route>
+                <Route path="/BackStage/blogChange" component={blogChange}></Route>
             </div>
         )
     }
