@@ -1,0 +1,255 @@
+<html>
+
+<head>
+    <title>input files的预览图||文件列表删除操作 -- By SlippersClown.黑皮</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        img {
+            width: 100%;
+        }
+        
+        div.pre-item {
+            width: 200px;
+            padding: 20px 0;
+        }
+        
+        .pre-item {
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .pre-item:hover::after {
+            content: '点击删除';
+            padding: 10px 0px;
+            border-radius: 5px;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            cursor: pointer;
+            width: 80%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .7);
+            color: #FFF;
+            transform: translate(-50%, -50%);
+        }
+        
+        input[type="file"] {
+            position: relative;
+            width: 0;
+            height: 0;
+            margin-bottom: 40px;
+            width: 200px;
+        }
+        
+        input[type="file"]::after {
+            content: '选择要上传的文件';
+            background-color: rgb(12, 150, 229);
+            border-radius: 5px;
+            position: absolute;
+            width: 200px;
+            color: #FFF;
+            line-height: 30px;
+            font-size: 14px;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+        canvas:hover{
+            cursor: crosshair;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="file" id="upload" multiple>
+    <button id="lastStep">后退</button>
+    <div id="file-list-dom"></div>
+    <input type="color" id="colorBtn">
+    <canvas id="canvas"></canvas>
+    <script>
+    let upload = document.querySelector('#upload');
+    let fileListDom = document.querySelector('#file-list-dom');
+    var canvas = document.querySelector("#canvas");
+    var lastStep = document.querySelector("#lastStep");
+    var colorBtn = document.querySelector("#colorBtn");
+    var cxt = canvas.getContext("2d");
+    var w, h;
+    var changeColor = [255, 255, 255];
+    var handleColor = [];
+    var tip__ready = true;
+    let fileList = {};
+    let tipList = [];
+    let formData = new FormData();
+
+    colorBtn.onchange = () => {
+        changeColor = showRGB2(colorBtn.value);
+        if(upload.value != "" && upload.value != undefined){
+            let oldColor = cxt.getImageData(0, 0, 1, 1);
+            changePicImg(oldColor);
+        }
+    }
+
+    upload.addEventListener('change', function() {
+        for (let i = this.files.length - 1; i >= 0; i--) {
+            let file = this.files[i];
+            let key = file.name;
+            let fileItem = {
+                'file': file,
+                'cover': ''
+            }
+
+            if (/(image\/)/.test(file.type)) {
+                let reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function() {
+                    fileItem.cover = this.result;
+                    fileList[key] = fileItem;
+                    formData.append(key, file);
+                    showFile(key, true);
+                }
+            } else {
+                fileList[key] = fileItem;
+                formData.append(key, file);
+                showFile(key, false);
+            }
+
+        }
+    });
+
+    // 触发删除事件
+    fileListDom.addEventListener('click', function(e) {
+        let target = e.target || e.srcElement;
+        if (target.classList.contains('pre-item')) {
+            delFile(target.getAttribute('key'));
+        }
+    });
+    lastStep.onclick = function() {
+        console.log(handleColor);
+        if (handleColor.length > 1) {
+            cxt.putImageData(handleColor[handleColor.length - 2], 0, 0);
+            handleColor.remove(handleColor.length - 1);
+        } else {
+            alert("您还没有操作，无法撤销");
+        }
+    }
+    // 显示图片
+    function showFile(key, isImg) {
+        let file = document.querySelector(`[key="${key}"]`);
+        if (file === null) {
+            if (isImg) {
+                var img = new Image();
+                img.src = fileList[key].cover;
+                img.onload = function() {
+                    w = img.width;
+                    h = img.height;
+                    canvas.width = w;
+                    canvas.height = h;
+                    cxt.clearRect(0, 0, w, h);
+                    cxt.drawImage(img, 0, 0, w, h);
+                    let oldColor = cxt.getImageData(0, 0, 1, 1);
+                    var colorList = cxt.getImageData(0, 0, w, h);
+                    handleColor.push(colorList);
+                    changePicImg(oldColor);
+                }
+                fileListDom.innerHTML += '<div key="' + key + '" class="pre-item"><img src="' + fileList[key].cover + '"/></div>';
+            } else {
+                fileListDom.innerHTML += '<div key="' + key + '" class="pre-item">' + key + '</div>';
+            }
+        } else {
+            file.style.display = 'block';
+        }
+    }
+    canvas.onclick = function(e) {
+        let x = e.offsetX;
+        let y = e.offsetY;
+        let oldColor = cxt.getImageData(x, y, 1, 1);
+        console.log(x, y)
+        let pointer = x + (y - 1) * w;
+        var result = relationInclusion(pointer, tipList);
+        console.log(result);
+        changePicImg(oldColor);
+    }
+    // 删除图片
+    function delFile(key) {
+        let file = document.querySelector(`[key="${key}"]`);
+        if (file !== null) {
+            delete fileList[key];
+            formData.delete(key);
+            file.style.display = 'none';
+        }
+    }
+
+    function changePicImg(oldColoe) {
+        var colorList = cxt.getImageData(0, 0, w, h);
+        for (let i = 0; i < colorList.data.length; i += 4) {
+            if (Math.abs(colorList.data[i] + colorList.data[i + 1] + colorList.data[i + 2] - colorList.data[i + 4] - colorList.data[i + 5] - colorList.data[i + 6]) < 50 && tip__ready) {
+                if (Math.abs(tipList[tipList.length - 1] - i / 4) < 0) {
+                    tipList.remove(tipList.length - 1);
+                    tipList.push(i / 4);
+                } else {
+                    tipList.push(i / 4);
+                }
+            }
+            if (Math.abs(colorList.data[i] - oldColoe.data[0]) < 20 && Math.abs(colorList.data[i + 1] - oldColoe.data[1]) < 20 && Math.abs(colorList.data[i + 2] - oldColoe.data[2]) < 20) {
+                if (!tip__ready) {
+
+                } else {
+                    colorList.data[i] = changeColor[0];
+                    colorList.data[i + 1] = changeColor[1];
+                    colorList.data[i + 2] = changeColor[2];
+                }
+            }
+        }
+        tip__ready = false;
+        handleColor.push(colorList);
+        cxt.putImageData(colorList, 0, 0);
+    }
+
+    Array.prototype.remove = function(dx) {
+        if (isNaN(dx) || dx > this.length) {
+            return false;
+        }
+        for (var i = 0, n = 0; i < this.length; i++) {
+            if (this[i] != this[dx]) {
+                this[n++] = this[i]
+            }
+        }
+        this.length -= 1
+    }
+
+    function relationInclusion(pointer, tipList) {
+        var colorList = cxt.getImageData(0, 0, w, h);
+        for (let i = 1; i < tipList.length; i++) {
+             if(pointer >= tipList[i-1] && pointer < tipList[i]){
+                 console.log(i);
+                 return i % 2 == 0 ? "in" : "out";
+             }
+            // colorList.data[tipList[i] * 4] = "255";
+            // colorList.data[tipList[i] * 4 + 1] = "255";
+            // colorList.data[tipList[i] * 4 + 2] = "120";
+        }
+        cxt.putImageData(colorList, 0, 0);
+        return false;
+    }
+
+    function showRGB2(a) {;
+        if (a.substr(0, 1) == "#") a = a.substring(1);
+        if (a.length != 6) return alert("请输入正确的十六进制颜色码！")
+        a = a.toLowerCase()
+        b = new Array();
+        for (x = 0; x < 3; x++) {
+            b[0] = a.substr(x * 2, 2)
+            b[3] = "0123456789abcdef";
+            b[1] = b[0].substr(0, 1)
+            b[2] = b[0].substr(1, 1)
+            b[20 + x] = b[3].indexOf(b[1]) * 16 + b[3].indexOf(b[2])
+        }
+        return [b[20], b[21], b[22]];
+    }
+    </script>
+</body>
+
+</html>

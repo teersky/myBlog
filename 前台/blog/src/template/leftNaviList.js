@@ -13,7 +13,10 @@ class leftNaviList extends Component{
                     {"title": "博文列表", linkTo: "blogList", icons: "edit", child: []},
                     {"title": "新建博文", linkTo: "blogEditor", icons: "highligh", child: []},
                 ]},
-                {"title": "用户评论", linkTo: "userComments", icons: "home", child: []},
+                {"title": "工具管理", linkTo: "", icons: "tool", child: [
+                    {"title": "工具列表", linkTo: "toolsList", icons: "", child: []},
+                    {"title": "新加工具", linkTo: "toolsAdd", icons: "", child: []}, 
+                ]},
                 {"title": "权限管理", linkTo: "rightsManagement", icons: "lock", child: []},
             ]
         }

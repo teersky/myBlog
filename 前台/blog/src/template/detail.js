@@ -7,10 +7,13 @@ import Home from '../page/Home/index';
 import MsgShow from '../page/MsgShow/index';
 import BlogHandle from '../page/BlogHandle/index';
 import userComments from '../page/userComments/index';
-import blogEditor from "../page/BlogHandle/blogEditor/index"
-import blogList from "../page/BlogHandle/blogList/index"
-import blogShow from "../page/BlogHandle/blogShow/index"
-import blogChange from "../page/BlogHandle/blogChange/index"
+import blogEditor from "../page/BlogHandle/blogEditor/index";
+import blogList from "../page/BlogHandle/blogList/index";
+import blogShow from "../page/BlogHandle/blogShow/index";
+import blogChange from "../page/BlogHandle/blogChange/index";
+
+import toolsList from "../page/toolsHandle/toolsList";
+import toolsAdd from "../page/toolsHandle/toolsAdd";
 
 const style={
     padding: '0px'
@@ -32,6 +35,8 @@ class Detail extends Component{
                 <Route path="/BackStage/blogList" component={blogList}></Route>
                 <Route path="/BackStage/blogShow" component={blogShow}></Route>
                 <Route path="/BackStage/blogChange" component={blogChange}></Route>
+                <Route path="/BackStage/toolsList" component={toolsList}></Route>
+                <Route path="/BackStage/toolsAdd" component={toolsAdd}></Route>
             </div>
         )
     }
